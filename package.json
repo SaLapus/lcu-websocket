@@ -1,0 +1,25 @@
+{
+  "name": "lcu-websocket",
+  "version": "0.0.1",
+  "description": "Full typed realisation of LCU WAMP",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lcu",
+    "ws",
+    "websocket",
+    "wamp",
+    "league of legends"
+  ],
+  "author": "SaLapus",
+  "license": "ISC",
+  "dependencies": {
+    "needle": "^3.2.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.4"
+  }
+}
