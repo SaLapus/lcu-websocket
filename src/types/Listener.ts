@@ -1,5 +1,7 @@
-import * as LCU_Type from "./Types";
-import { AllEvents, AllEventMap } from "./Events";
+import EventEmitter from "node:events";
+
+import { EventMap, Events } from "./Events";
+import { Paths, MethodsOf, InfoOf, PropertyOf } from "./Request/Info";
 
 export enum MESSAGE_TYPES {
   WELCOME = 0,
@@ -13,23 +15,23 @@ export enum MESSAGE_TYPES {
   EVENT = 8,
 }
 
-export interface EventData<LCUEvent extends AllEvents = "OnJsonApiEvent"> {
+export interface EventData<LCUEvent extends Events = "OnJsonApiEvent"> {
   Create: {
     data: boolean;
     eventType: "Create";
-    uri: AllEventMap[LCUEvent]["uri"];
+    uri: EventMap[LCUEvent];
   };
 
   Delete: {
     data: boolean;
     eventType: "Delete";
-    uri: AllEventMap[LCUEvent]["uri"];
+    uri: EventMap[LCUEvent];
   };
 
   Update: {
     data: object;
     eventType: "Update";
-    uri: AllEventMap[LCUEvent]["uri"];
+    uri: EventMap[LCUEvent];
   };
 }
 
@@ -42,21 +44,33 @@ export namespace WAMPMessage {
   ];
   export type Other = [
     type: Exclude<MESSAGE_TYPES, MESSAGE_TYPES.WELCOME | MESSAGE_TYPES.EVENT>,
-    event: AllEvents,
+    event: Events,
     data: any
   ];
-  export type Event<LCUEvent extends AllEvents = "OnJsonApiEvent"> = [
+  export type Event<LCUEvent extends Events = "OnJsonApiEvent"> = [
     type: MESSAGE_TYPES.EVENT,
     event: LCUEvent,
     data: EventData<LCUEvent>[keyof EventData<LCUEvent>]
   ];
 }
 
-export default interface LCU_Listener {
+export default interface LCU_Listener extends EventEmitter {
   on(event: "connect", cb: () => void): this;
 
-  subscribe<LCUEvent extends AllEvents = "OnJsonApiEvent">(
+  call<Path extends Paths, Method extends MethodsOf<Path>, Info extends InfoOf<Path, Method>>(
+    path: Path,
+    method: Method,
+    params?: PropertyOf<Info, "parameters"> & { [key: string]: any },
+    body?: PropertyOf<Info, "requestBody">
+  ): Promise<PropertyOf<Info, "responce"> | undefined>;
+
+  subscribe<LCUEvent extends Events = "OnJsonApiEvent">(
     event: LCUEvent,
-    cb: (data: AllEventMap[LCUEvent]["returnType"]) => void
+    cb: (data: EventMap[LCUEvent]) => void
+  ): void;
+
+  unsubscribe<LCUEvent extends Events = "OnJsonApiEvent">(
+    event: LCUEvent,
+    cb: (data: EventMap[LCUEvent]) => void
   ): void;
 }
