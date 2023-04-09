@@ -2,7 +2,7 @@
   "name": "lcu-websocket",
   "version": "0.0.1",
   "description": "Full typed realisation of LCU WAMP",
-  "main": "js/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,10 +16,12 @@
   "author": "SaLapus",
   "license": "ISC",
   "dependencies": {
-    "needle": "^3.2.0",
+    "axios": "^1.3.5",
     "ws": "^8.13.0"
   },
   "devDependencies": {
-    "@types/ws": "^8.5.4"
-  }
+    "@types/ws": "^8.5.4",
+    "typescript": "^5.0.4"
+  },
+  "repository": "https://github.com/SaLapus/lcu-websocket.git"
 }

@@ -1,6 +1,9 @@
 /.vscode
 /js
+/dist
 /node_modules
 /package-lock.json
 /parsers
 /test
+yarn.lock
+tsconfig.tsbuildinfo
