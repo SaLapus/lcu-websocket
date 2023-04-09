@@ -41,7 +41,7 @@ export async function authenticate() {
   }
 }
 
-export class RiotWSInterface extends EventEmitter implements LCU_Listener {
+export class LCUWebSocket extends EventEmitter implements LCU_Listener {
   ws: WebSocket;
   request: AxiosInstance;
 
@@ -138,7 +138,7 @@ export class RiotWSInterface extends EventEmitter implements LCU_Listener {
   }
 }
 
-function handleWSMessage(this: RiotWSInterface, message: WebSocket.RawData) {
+function handleWSMessage(this: LCUWebSocket, message: WebSocket.RawData) {
   const data: WAMPMessage.Welcome | WAMPMessage.Other | WAMPMessage.Event = JSON.parse(
     message.toString("utf-8")
   );
@@ -158,9 +158,3 @@ function handleWSMessage(this: RiotWSInterface, message: WebSocket.RawData) {
       break;
   }
 }
-
-// const a = new RiotWSInterface();
-// a.call("/lol-summoner/v1/current-summoner/icon", "put", undefined, {
-//   inventoryToken: "rer",
-//   profileIconId: 1
-// })

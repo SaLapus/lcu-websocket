@@ -1,5 +1,5 @@
 {
-  "name": "lcu-websocket",
+  "name": "lcu-ws",
   "version": "1.0.0",
   "description": "Full typed realisation of LCU WAMP",
   "main": "dist/index.js",
