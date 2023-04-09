@@ -4,39 +4,39 @@ export interface ActiveBoostsLcdsStoreFulfillmentNotification {
 }
 
 export interface ActiveBoostsLcdsSummonerActiveBoostsDTO {
-  ipBoostEndDate: bigint;
-  ipBoostPerWinCount: bigint;
-  ipLoyaltyBoost: bigint;
-  summonerId: bigint;
-  xpBoostEndDate: bigint;
-  xpBoostPerWinCount: bigint;
-  xpLoyaltyBoost: bigint;
+  ipBoostEndDate: number;
+  ipBoostPerWinCount: number;
+  ipLoyaltyBoost: number;
+  summonerId: number;
+  xpBoostEndDate: number;
+  xpBoostPerWinCount: number;
+  xpLoyaltyBoost: number;
 }
 
 export type AggregationType = "none" | "sum" | "average";
 
 export interface AlertDTO {
-  alertTime: bigint;
+  alertTime: number;
 }
 
 export interface BannedChampion {
-  championId: bigint;
-  pickTurn: bigint;
-  teamId: bigint;
+  championId: number;
+  pickTurn: number;
+  teamId: number;
 }
 
 export interface BasePlayerDTO {
-  code: bigint;
+  code: number;
   data: MatchedPlayerDTO;
   message: string;
 }
 
 export interface BindingAsyncCancelEvent {
-  asyncToken: bigint;
+  asyncToken: number;
 }
 
 export interface BindingAsyncFailureEvent {
-  asyncToken: bigint;
+  asyncToken: number;
   error: string;
 }
 
@@ -49,7 +49,7 @@ export type BindingAsyncState =
   | "Failed";
 
 export interface BindingCallbackEvent {
-  id: bigint;
+  id: number;
   parameters: Array<boolean | undefined>;
 }
 
@@ -69,7 +69,7 @@ export interface BindingFullArgumentHelp {
 export interface BindingFullEnumValueHelp {
   description: string;
   name: string;
-  value: bigint;
+  value: number;
 }
 
 export interface BindingFullEventHelp {
@@ -83,7 +83,7 @@ export interface BindingFullEventHelp {
 export interface BindingFullFieldHelp {
   description: string;
   name: string;
-  offset: bigint;
+  offset: number;
   optional: boolean;
   type: BindingFullTypeIdentifier;
 }
@@ -105,7 +105,7 @@ export interface BindingFullTypeHelp {
   fields: Array<BindingFullFieldHelp>;
   name: string;
   nameSpace: string;
-  size: bigint;
+  size: number;
   tags: Array<string>;
   values: Array<BindingFullEnumValueHelp>;
 }
@@ -116,7 +116,7 @@ export interface BindingFullTypeIdentifier {
 }
 
 export interface BindingGenericAsyncEvent {
-  asyncToken: bigint;
+  asyncToken: number;
   data: boolean | undefined;
 }
 
@@ -127,49 +127,49 @@ export interface BindingGenericEvent {
 export type BindingHelpFormat = "Full" | "Epytext";
 
 export interface BoostTeamSkinRentalDTO {
-  availableSkins: Array<bigint>;
-  ipReward: bigint;
-  ipRewardForPurchaser: bigint;
-  price: bigint;
+  availableSkins: Array<number>;
+  ipReward: number;
+  ipRewardForPurchaser: number;
+  price: number;
   skinUnlockMode: string;
   summonerName: string;
   unlocked: boolean;
 }
 
 export interface Bracket {
-  id: bigint;
+  id: number;
   matches: Array<BracketMatch>;
-  phaseId: bigint;
+  phaseId: number;
   rosters: Array<BracketRoster>;
-  size: bigint;
-  tournamentId: bigint;
-  version: bigint;
+  size: number;
+  tournamentId: number;
+  version: number;
 }
 
 export interface BracketMatch {
-  failRosterStatus: bigint;
-  forfeitRosterId: bigint;
-  gameId: bigint;
-  gameStartTime: bigint;
-  highestPossiblePosition: bigint;
-  id: bigint;
+  failRosterStatus: number;
+  forfeitRosterId: number;
+  gameId: number;
+  gameStartTime: number;
+  highestPossiblePosition: number;
+  id: number;
   loserBracket: boolean;
-  lowestPossiblePosition: bigint;
-  order: bigint;
+  lowestPossiblePosition: number;
+  order: number;
   resultHistory: string;
-  rosterId1: bigint;
-  rosterId2: bigint;
-  round: bigint;
-  roundStartTime: bigint;
+  rosterId1: number;
+  rosterId2: number;
+  round: number;
+  roundStartTime: number;
   status: ClientBracketMatchStatus;
-  winnerId: bigint;
+  winnerId: number;
 }
 
 export interface BracketRoster {
-  logo: bigint;
-  logoColor: bigint;
+  logo: number;
+  logoColor: number;
   name: string;
-  rosterId: bigint;
+  rosterId: number;
   shortName: string;
 }
 
@@ -186,16 +186,16 @@ export interface ChampSelectLcdsGameDTO {
   bannedChampions: Array<BannedChampion>;
   gameMutators: Array<string>;
   gameState: string;
-  id: bigint;
+  id: number;
   multiUserChatJwtMap: string | undefined;
   name: string;
-  optimisticLock: bigint;
-  pickTurn: bigint;
+  optimisticLock: number;
+  pickTurn: number;
   playerChampionSelections: Array<ChampSelectLcdsPlayerChampionSelectionDTO>;
   queueTypeName: string;
   roomName: string;
   roomPassword: string;
-  spectatorDelay: bigint;
+  spectatorDelay: number;
   statusOfParticipants: string;
   teamOne: Array<boolean | undefined>;
   teamTwo: Array<boolean | undefined>;
@@ -207,31 +207,31 @@ export interface ChampSelectLcdsGameTimerDTO {
 }
 
 export interface ChampSelectLcdsObfuscatedParticipant {
-  gameUniqueId: bigint;
+  gameUniqueId: number;
 }
 
 export interface ChampSelectLcdsPlayerChampionSelectionDTO {
-  championId: bigint;
-  selectedSkinIndex: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
+  championId: number;
+  selectedSkinIndex: number;
+  spell1Id: number;
+  spell2Id: number;
   summonerInternalName: string;
 }
 
 export interface ChampSelectLcdsPlayerParticipant {
-  pickMode: bigint;
-  pickTurn: bigint;
-  summonerId: bigint;
+  pickMode: number;
+  pickTurn: number;
+  summonerId: number;
   summonerInternalName: string;
   summonerName: string;
 }
 
 export interface ChampSelectLcdsPointSummary {
-  currentPoints: bigint;
-  maxRolls: bigint;
-  numberOfRolls: bigint;
-  pointsCostToRoll: bigint;
-  pointsToNextRoll: bigint;
+  currentPoints: number;
+  maxRolls: number;
+  numberOfRolls: number;
+  pointsCostToRoll: number;
+  pointsToNextRoll: number;
 }
 
 export interface ChampSelectLcdsPotentialTradersDTO {
@@ -239,53 +239,53 @@ export interface ChampSelectLcdsPotentialTradersDTO {
 }
 
 export interface ChampSelectLcdsRollResult {
-  championId: bigint;
+  championId: number;
   pointSummary: ChampSelectLcdsPointSummary;
 }
 
 export interface ChampSelectLcdsTradeContractDTO {
-  requesterChampionId: bigint;
+  requesterChampionId: number;
   requesterInternalSummonerName: string;
-  responderChampionId: bigint;
+  responderChampionId: number;
   responderInternalSummonerName: string;
   state: string;
 }
 
 export interface ChampionMasteryPublicDTO {
-  championId: bigint;
-  championLevel: bigint;
-  championPoints: bigint;
+  championId: number;
+  championLevel: number;
+  championPoints: number;
 }
 
 export interface ChampionScoutingDTO {
-  championId: bigint;
-  gameCount: bigint;
+  championId: number;
+  gameCount: number;
   kda: number;
-  winCount: bigint;
+  winCount: number;
 }
 
 export interface ClashEventData {
-  bracket: bigint;
+  bracket: number;
   earnedDate: string;
   playerUUIDs: Array<string>;
   rewardSpec: ClashRewardSpec;
   rewardType: string;
-  rosterId: bigint;
-  seasonId: bigint;
+  rosterId: number;
+  seasonId: number;
   teamLogoChromaId: string;
   teamLogoName: string;
   teamName: string;
   teamShortName: string;
   theme: string;
   tier: string;
-  tournamentId: bigint;
+  tournamentId: number;
   tournamentName: string;
 }
 
 export interface ClashOfflineNotification {
   metaData: string | undefined;
   reason: string;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export interface ClashRewardConfigClient {
@@ -346,29 +346,29 @@ export type ClashRewardType = "TROPHY" | "FLAG" | "FRAME" | "LOGO" | "LOOT" | "V
 export interface ClashSeasonRewardResult {
   banned: boolean;
   eligible: boolean;
-  honorLevel: bigint;
-  playerId: bigint;
+  honorLevel: number;
+  playerId: number;
   rewards: Array<ClashRewardDefinition>;
-  seasonId: bigint;
-  seasonVp: bigint;
+  seasonId: number;
+  seasonVp: number;
 }
 
 export type ClientBracketMatchStatus = "UPCOMING" | "STARTED" | "COMPLETED";
 
 export interface ClientConfigAuthenticatedConnection {
   authToken: string;
-  connectionId: bigint;
+  connectionId: number;
   subscribed: boolean;
 }
 
 export interface ClientConfigBuildInfo {
   branch: string;
   branchFull: string;
-  codeBuildId: bigint;
-  contentBuildId: bigint;
+  codeBuildId: number;
+  contentBuildId: number;
   gameBranch: string;
   gameBranchFull: string;
-  gameDataBuildId: bigint;
+  gameDataBuildId: number;
   patchline: string;
   patchlineVisibleName: string;
   version: string;
@@ -377,7 +377,7 @@ export interface ClientConfigBuildInfo {
 export interface ClientConfigClientConfig {
   data: boolean | undefined | undefined;
   params: ClientConfigConfigParams;
-  updateTime: bigint;
+  updateTime: number;
 }
 
 export interface ClientConfigConfigNamespaceUpdate {
@@ -398,7 +398,7 @@ export type ClientConfigConfigReadinessEnum = "NotReady" | "Ready" | "Disabled";
 
 export interface ClientConfigConfigStatus {
   readiness: ClientConfigConfigReadinessEnum;
-  updateId: bigint;
+  updateId: number;
 }
 
 export type ClientConfigConfigType = "public" | "player";
@@ -541,30 +541,30 @@ export type ClientRequestError =
 export interface CollectionsLcdsChampionDTO {
   active: boolean;
   botEnabled: boolean;
-  championId: bigint;
+  championId: number;
   championSkins: Array<CollectionsLcdsChampionSkinDTO>;
-  endDate: bigint;
+  endDate: number;
   freeToPlay: boolean;
   freeToPlayReward: boolean;
   owned: boolean;
-  purchaseDate: bigint;
-  purchased: bigint;
+  purchaseDate: number;
+  purchased: number;
   rankedPlayEnabled: boolean;
   sources: Array<string>;
-  winCountRemaining: bigint;
+  winCountRemaining: number;
 }
 
 export interface CollectionsLcdsChampionSkinDTO {
-  championId: bigint;
-  endDate: bigint;
+  championId: number;
+  endDate: number;
   freeToPlayReward: boolean;
   lastSelected: boolean;
   owned: boolean;
-  purchaseDate: bigint;
-  skinId: bigint;
+  purchaseDate: number;
+  skinId: number;
   sources: Array<string>;
   stillObtainable: boolean;
-  winCountRemaining: bigint;
+  winCountRemaining: number;
 }
 
 export interface CollectionsLcdsClientDynamicConfigurationNotification {
@@ -584,17 +584,17 @@ export interface CollectionsLcdsStoreFulfillmentNotification {
 
 export interface ContentItemIdentifier {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface CraftLootRefTransactionDTO {
-  accountId: bigint;
+  accountId: number;
   clientId: string;
   lootNameRefIds: Array<LootNameRefId>;
-  playerId: bigint;
+  playerId: number;
   puuid: string;
   recipeName: string;
-  repeat: bigint;
+  repeat: number;
 }
 
 export interface CrashReportingEnvironment {
@@ -604,7 +604,7 @@ export interface CrashReportingEnvironment {
 }
 
 export interface DownloadUrlRequestV2 {
-  gameId: bigint;
+  gameId: number;
   platformId: string;
 }
 
@@ -620,102 +620,102 @@ export interface ElevationRequest {
 
 export interface EndOfGameLcdsClientReportV1 {
   comments: string;
-  gameId: bigint;
-  offenderSummonerId: bigint;
+  gameId: number;
+  offenderSummonerId: number;
   offenses: string;
 }
 
 export interface EndOfGameLcdsEndOfGameStats {
-  basePoints: bigint;
-  battleBoostIpEarned: bigint;
-  boostIpEarned: bigint;
-  boostXpEarned: bigint;
+  basePoints: number;
+  battleBoostIpEarned: number;
+  boostIpEarned: number;
+  boostXpEarned: number;
   causedEarlySurrender: boolean;
-  coOpVsAiMinutesLeftToday: bigint;
-  coOpVsAiMsecsUntilReset: bigint;
-  completionBonusPoints: bigint;
-  customMinutesLeftToday: bigint;
-  customMsecsUntilReset: bigint;
+  coOpVsAiMinutesLeftToday: number;
+  coOpVsAiMsecsUntilReset: number;
+  completionBonusPoints: number;
+  customMinutesLeftToday: number;
+  customMsecsUntilReset: number;
   difficulty: string;
   earlySurrenderAccomplice: boolean;
-  elo: bigint;
-  eloChange: bigint;
-  experienceEarned: bigint;
-  experienceTotal: bigint;
-  firstWinBonus: bigint;
+  elo: number;
+  eloChange: number;
+  experienceEarned: number;
+  experienceTotal: number;
+  firstWinBonus: number;
   gameEndedInEarlySurrender: boolean;
-  gameId: bigint;
-  gameLength: bigint;
+  gameId: number;
+  gameLength: number;
   gameMode: string;
   gameMutators: Array<string>;
   gameType: string;
   imbalancedTeamsNoPoints: boolean;
   invalid: boolean;
-  ipEarned: bigint;
-  ipTotal: bigint;
+  ipEarned: number;
+  ipTotal: number;
   leveledUp: boolean;
-  loyaltyBoostIpEarned: bigint;
-  loyaltyBoostXpEarned: bigint;
+  loyaltyBoostIpEarned: number;
+  loyaltyBoostXpEarned: number;
   multiUserChatJwt: string;
   myTeamInfo: EndOfGameLcdsTeamInfo;
   myTeamStatus: string;
   newSpells: Array<EndOfGameLcdsSpell>;
-  odinBonusIp: bigint;
+  odinBonusIp: number;
   otherTeamInfo: EndOfGameLcdsTeamInfo;
   otherTeamPlayerParticipantStats: Array<EndOfGameLcdsPlayerParticipantStatsSummary>;
-  partyRewardsBonusIpEarned: bigint;
+  partyRewardsBonusIpEarned: number;
   pointsPenalties: Array<EndOfGameLcdsPointsPenalty>;
-  previousLevel: bigint;
-  previousXpTotal: bigint;
-  queueBonusEarned: bigint;
+  previousLevel: number;
+  previousXpTotal: number;
+  queueBonusEarned: number;
   queueType: string;
   ranked: boolean;
-  reportGameId: bigint;
+  reportGameId: number;
   roomName: string;
   roomPassword: string;
-  rpEarned: bigint;
+  rpEarned: number;
   sendStatsToTournamentProvider: boolean;
-  skinId: bigint;
-  skinIndex: bigint;
+  skinId: number;
+  skinIndex: number;
   summonerName: string;
-  talentPointsGained: bigint;
+  talentPointsGained: number;
   teamEarlySurrendered: boolean;
   teamPlayerParticipantStats: Array<EndOfGameLcdsPlayerParticipantStatsSummary>;
-  timeUntilNextFirstWinBonus: bigint;
-  userId: bigint;
+  timeUntilNextFirstWinBonus: number;
+  userId: number;
 }
 
 export interface EndOfGameLcdsHarassmentReport {
   comment: string;
-  gameId: bigint;
+  gameId: number;
   offense: string;
   reportSource: string;
-  reportedSummonerId: bigint;
-  reportingSummonerId: bigint;
+  reportedSummonerId: number;
+  reportingSummonerId: number;
 }
 
 export interface EndOfGameLcdsPlayerParticipantStatsSummary {
   botPlayer: boolean;
-  championId: bigint;
+  championId: number;
   detectedTeamPosition: string;
-  elo: bigint;
-  eloChange: bigint;
-  gameId: bigint;
+  elo: number;
+  eloChange: number;
+  gameId: number;
   leaver: boolean;
-  leaves: bigint;
-  level: bigint;
-  losses: bigint;
-  profileIconId: bigint;
+  leaves: number;
+  level: number;
+  losses: number;
+  profileIconId: number;
   selectedPosition: string;
-  skinIndex: bigint;
+  skinIndex: number;
   skinName: string;
-  spell1Id: bigint;
-  spell2Id: bigint;
+  spell1Id: number;
+  spell2Id: number;
   statistics: Array<EndOfGameLcdsRawStatDTO>;
   summonerName: string;
-  teamId: bigint;
-  userId: bigint;
-  wins: bigint;
+  teamId: number;
+  userId: number;
+  wins: number;
 }
 
 export interface EndOfGameLcdsPointsPenalty {
@@ -725,11 +725,11 @@ export interface EndOfGameLcdsPointsPenalty {
 
 export interface EndOfGameLcdsRawStatDTO {
   statTypeName: string;
-  value: bigint;
+  value: number;
 }
 
 export interface EndOfGameLcdsSpell {
-  spellId: bigint;
+  spellId: number;
 }
 
 export interface EndOfGameLcdsTeamId {
@@ -739,7 +739,7 @@ export interface EndOfGameLcdsTeamId {
 export interface EndOfGameLcdsTeamInfo {
   memberStatusString: string;
   name: string;
-  secondsUntilEligibleForDeletion: bigint;
+  secondsUntilEligibleForDeletion: number;
   tag: string;
   teamId: EndOfGameLcdsTeamId;
 }
@@ -755,7 +755,7 @@ export interface EntitlementsToken {
 export interface EogLcdsGameDTO {
   bannedChampions: Array<BannedChampion>;
   gameState: string;
-  id: bigint;
+  id: number;
   teamOne: Array<PlayerParticipant>;
   teamTwo: Array<PlayerParticipant>;
 }
@@ -774,31 +774,31 @@ export interface ExternalPluginsResource {
 
 export interface FailedInvite {
   exception: ClientRequestError;
-  playerId: bigint;
+  playerId: number;
 }
 
 export type GameQueuesLcdsAllowSpectators = "NONE" | "LOBBYONLY" | "DROPINONLY" | "ALL";
 
 export interface GameQueuesLcdsGameQueueConfig {
-  blockedMinutesThreshold: bigint;
+  blockedMinutesThreshold: number;
   botsCanSpawnOnBlueSide: boolean;
   cacheName: string;
   disallowFreeChampions: boolean;
   gameMode: string;
   gameMutators: Array<string>;
-  gameTypeConfigId: bigint;
-  id: bigint;
-  lastToggledOffTime: bigint;
-  lastToggledOnTime: bigint;
+  gameTypeConfigId: number;
+  id: number;
+  lastToggledOffTime: number;
+  lastToggledOnTime: number;
   mapSelectionAlgorithm: string;
   matchingThrottleConfig: GameQueuesLcdsMatchingThrottleConfig;
-  maxLevel: bigint;
-  maxSummonerLevelForFirstWinOfTheDay: bigint;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
-  minimumQueueDodgeDelayTime: bigint;
-  numPlayersPerTeam: bigint;
+  maxLevel: number;
+  maxSummonerLevelForFirstWinOfTheDay: number;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
+  minimumQueueDodgeDelayTime: number;
+  numPlayersPerTeam: number;
   pointsConfigKey: string;
   queueBonusKey: string;
   queueState: string;
@@ -806,52 +806,52 @@ export interface GameQueuesLcdsGameQueueConfig {
   randomizeTeamSizes: boolean;
   ranked: boolean;
   removalFromGameAllowed: boolean;
-  removalFromGameDelayMinutes: bigint;
-  supportedMapIds: Array<bigint>;
+  removalFromGameDelayMinutes: number;
+  supportedMapIds: Array<number>;
   teamOnly: boolean;
   thresholdEnabled: boolean;
-  thresholdSize: bigint;
+  thresholdSize: number;
   type: string;
   typeString: string;
 }
 
 export interface GameQueuesLcdsMatchingThrottleConfig {
   cacheName: string;
-  limit: bigint;
+  limit: number;
 }
 
 export interface GameflowLcdsGameDTO {
   gameMode: string;
-  gameQueueConfigId: bigint;
+  gameQueueConfigId: number;
   gameState: string;
   gameType: string;
-  gameTypeConfigId: bigint;
-  id: bigint;
-  mapId: bigint;
-  maxNumPlayers: bigint;
+  gameTypeConfigId: number;
+  id: number;
+  mapId: number;
+  maxNumPlayers: number;
   playerChampionSelections: Array<boolean | undefined>;
   queueTypeName: string;
-  spectatorDelay: bigint;
+  spectatorDelay: number;
   teamOne: Array<boolean | undefined>;
   teamTwo: Array<boolean | undefined>;
 }
 
 export interface GameflowLcdsPlayerCredentialsDto {
   encryptionKey: string;
-  gameId: bigint;
+  gameId: number;
   observer: boolean;
   observerEncryptionKey: string;
   observerServerIp: string;
-  observerServerPort: bigint;
+  observerServerPort: number;
   serverIp: string;
-  serverPort: bigint;
-  summonerId: bigint;
+  serverPort: number;
+  summonerId: number;
 }
 
 export interface GameflowLcdsReconnectInfoDto {
   game: GameflowLcdsGameDTO;
   playerCredentials: GameflowLcdsPlayerCredentialsDto;
-  reconnectDelay: bigint;
+  reconnectDelay: number;
 }
 
 export interface IdsDTO {
@@ -866,8 +866,8 @@ export interface LCDSBroadcastNotification {
 }
 
 export interface LCDSChampionReward {
-  championId: bigint;
-  skins: Array<bigint>;
+  championId: number;
+  skins: Array<number>;
 }
 
 export interface LCDSGlobalRewards {
@@ -877,12 +877,12 @@ export interface LCDSGlobalRewards {
 export interface LCDSLoyaltyRewards {
   champions: Array<LCDSChampionReward>;
   global: LCDSGlobalRewards;
-  ipBoost: bigint;
-  xpBoost: bigint;
+  ipBoost: number;
+  xpBoost: number;
 }
 
 export interface LCDSLoyaltyStateChangeNotification {
-  accountId: bigint;
+  accountId: number;
   notificationCategory: LCDSLoyaltyStateChangeNotificationCategory;
   rewards: LCDSLoyaltyRewards;
 }
@@ -896,7 +896,7 @@ export type LCDSLoyaltyStateChangeNotificationCategory =
   | "disabled";
 
 export interface LCDSPlayerMessagingSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   bodyCode: string;
   msgId: string;
   params: Array<string>;
@@ -905,14 +905,14 @@ export interface LCDSPlayerMessagingSimpleMessage {
 }
 
 export interface LCDSPlayerMessagingSimpleMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
 
 export interface LcdsBotParticipant {
-  botSkillLevel: bigint;
-  summonerId: bigint;
+  botSkillLevel: number;
+  summonerId: number;
   summonerInternalName: string;
   summonerName: string;
   teamId: string;
@@ -928,14 +928,14 @@ export interface LcdsGameDTO {
   gameMutators: Array<string>;
   gameState: string;
   gameType: string;
-  gameTypeConfigId: bigint;
-  id: bigint;
-  mapId: bigint;
-  maxNumPlayers: bigint;
+  gameTypeConfigId: number;
+  id: number;
+  mapId: number;
+  maxNumPlayers: number;
   multiUserChatJwtMap: string | undefined;
   name: string;
   observers: Array<LcdsPlayerParticipant>;
-  optimisticLock: bigint;
+  optimisticLock: number;
   ownerSummary: LcdsPlayerParticipant;
   passbackDataPacket: string;
   passbackUrl: string;
@@ -954,10 +954,10 @@ export interface LcdsGameInviteBaseRuntimeException {
 export interface LcdsGameMap {
   description: string;
   displayName: string;
-  mapId: bigint;
-  minCustomPlayers: bigint;
+  mapId: number;
+  minCustomPlayers: number;
   name: string;
-  totalPlayers: bigint;
+  totalPlayers: number;
 }
 
 export interface LcdsGameNotification {
@@ -980,7 +980,7 @@ export type LcdsInvitationState = "ACTIVE" | "ON_HOLD" | "REVOKED";
 
 export interface LcdsInviteFailed {
   exception: LcdsGameInviteBaseRuntimeException;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
@@ -990,7 +990,7 @@ export interface LcdsInvitePrivileges {
 
 export interface LcdsInvitee {
   inviteeState: LcdsInviteeState;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
@@ -1007,7 +1007,7 @@ export type LcdsInviteeState =
 
 export interface LcdsInviter {
   previousSeasonHighestTier: string;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
@@ -1022,7 +1022,7 @@ export interface LcdsLobbyStatus {
 
 export interface LcdsMember {
   hasDelegatedInvitePower: boolean;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
@@ -1034,13 +1034,13 @@ export interface LcdsPayloadDto {
 }
 
 export interface LcdsPlayer {
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
 export interface LcdsPlayerParticipant {
-  botSkillLevel: bigint;
-  summonerId: bigint;
+  botSkillLevel: number;
+  summonerId: number;
   summonerInternalName: string;
   summonerName: string;
 }
@@ -1052,9 +1052,9 @@ export interface LcdsPracticeGameConfig {
   gameMutators: Array<string>;
   gameName: string;
   gamePassword: string;
-  gameTypeConfig: bigint;
+  gameTypeConfig: number;
   gameVersion: string;
-  maxNumPlayers: bigint;
+  maxNumPlayers: number;
   passbackDataPacket: string;
   passbackUrl: string;
   region: string;
@@ -1063,17 +1063,17 @@ export interface LcdsPracticeGameConfig {
 export interface LcdsPracticeGameSearchResult {
   allowSpectators: string;
   gameMap: LcdsGameMap;
-  gameMapId: bigint;
+  gameMapId: number;
   gameMode: string;
-  id: bigint;
-  maxNumPlayers: bigint;
+  id: number;
+  maxNumPlayers: number;
   name: string;
   owner: LcdsPlayerParticipant;
   pickType: string;
   privateGame: boolean;
-  spectatorCount: bigint;
-  team1Count: bigint;
-  team2Count: bigint;
+  spectatorCount: number;
+  team1Count: number;
+  team2Count: number;
 }
 
 export type LcdsRemovalReason = "KICKED" | "DESTROYED" | "PROGRESSED";
@@ -1083,14 +1083,14 @@ export interface LcdsRemovedFromLobbyNotification {
 }
 
 export interface LcdsSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
 }
 
 export interface LcdsSimpleMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
@@ -1101,7 +1101,7 @@ export interface LcdsStartChampSelectDto {
 
 export interface LcdsSummoner {
   name: string;
-  sumId: bigint;
+  sumId: number;
 }
 
 export interface LeaverBusterLcdsMatchmakingNotification {
@@ -1109,14 +1109,14 @@ export interface LeaverBusterLcdsMatchmakingNotification {
 }
 
 export interface LeaverBusterLcdsSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
 }
 
 export interface LeaverBusterSimpleMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
@@ -1145,33 +1145,33 @@ export interface LolAccountVerificationAuthenticateRequest {
 
 export interface LolAccountVerificationAuthenticateResponse {
   message: string;
-  status: bigint;
+  status: number;
   success: boolean;
 }
 
 export interface LolAccountVerificationDeviceResponse {
   message: string;
-  status: bigint;
+  status: number;
   success: boolean;
 }
 
 export interface LolAccountVerificationInvalidateResponse {
   message: string;
-  smsTokenExpireDurationInSec: bigint;
-  status: bigint;
+  smsTokenExpireDurationInSec: number;
+  status: number;
   success: boolean;
 }
 
 export interface LolAccountVerificationIsVerifiedResponse {
   message: string;
-  status: bigint;
+  status: number;
   success: boolean;
 }
 
 export interface LolAccountVerificationLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolAccountVerificationLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
   username: string;
 }
 
@@ -1189,8 +1189,8 @@ export interface LolAccountVerificationSendTokenRequest {
 
 export interface LolAccountVerificationSendTokenResponse {
   message: string;
-  smsTokenExpireDurationInSec: bigint;
-  status: bigint;
+  smsTokenExpireDurationInSec: number;
+  status: number;
   success: boolean;
 }
 
@@ -1201,27 +1201,27 @@ export interface LolAccountVerificationVerifyRequest {
 
 export interface LolAccountVerificationVerifyResponse {
   message: string;
-  status: bigint;
+  status: number;
   success: boolean;
 }
 
 export interface LolActiveBoostsActiveBoosts {
   firstWinOfTheDayStartTime: string;
   ipBoostEndDate: string;
-  ipBoostPerWinCount: bigint;
-  ipLoyaltyBoost: bigint;
-  summonerId: bigint;
+  ipBoostPerWinCount: number;
+  ipLoyaltyBoost: number;
+  summonerId: number;
   xpBoostEndDate: string;
-  xpBoostPerWinCount: bigint;
-  xpLoyaltyBoost: bigint;
+  xpBoostPerWinCount: number;
+  xpLoyaltyBoost: number;
 }
 
 export interface LolActiveBoostsEndOfGameStats {
-  timeUntilNextFirstWinBonus: bigint;
+  timeUntilNextFirstWinBonus: number;
 }
 
 export interface LolActiveBoostsLoginDataPacket {
-  timeUntilFirstWinOfDay: bigint;
+  timeUntilFirstWinOfDay: number;
 }
 
 export interface LolAntiAddictionAntiAddictionState {
@@ -1241,14 +1241,14 @@ export type LolAntiAddictionPolicyType =
 
 export interface LolBannersBannerFlag {
   earnedDateIso8601: string;
-  itemId: bigint;
-  level: bigint;
-  seasonId: bigint;
+  itemId: number;
+  level: number;
+  seasonId: number;
   theme: string;
 }
 
 export interface LolBannersBannerFrame {
-  level: bigint;
+  level: number;
 }
 
 export interface LolBannersCapClashFlagEntitlementPayload {
@@ -1274,7 +1274,7 @@ export interface LolBannersClashV2FrameRewardSpec {
 
 export interface LolBannersInventoryItemWithPayload {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   payload: boolean | undefined;
   purchaseDate: string;
   uuid: string;
@@ -1298,7 +1298,7 @@ export interface LolBannersLoadout {
 
 export interface LolBannersLoadoutsSlot {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolBannersSummonerProfileUpdate {
@@ -1307,7 +1307,7 @@ export interface LolBannersSummonerProfileUpdate {
 }
 
 export interface LolBannersTournamentFlagInventoryItem {
-  itemId: bigint;
+  itemId: number;
   payload: LolBannersCapClashFlagEntitlementPayload;
   purchaseDate: string;
 }
@@ -1328,7 +1328,7 @@ export type LolCareerStatsCareerStatsQueueType =
   | "other";
 
 export interface LolCareerStatsChampionQueueStatsResponse {
-  championId: bigint;
+  championId: number;
   position: LolCareerStatsSummonersRiftPosition;
   queueType: LolCareerStatsCareerStatsQueueType;
   rankTier: LolCareerStatsRankedTier;
@@ -1336,7 +1336,7 @@ export interface LolCareerStatsChampionQueueStatsResponse {
 }
 
 export interface LolCareerStatsChampionStatistics {
-  championId: bigint;
+  championId: number;
   experts: Array<LolCareerStatsExpertPlayer>;
   queueStats: Array<LolCareerStatsStatisticsByQueue>;
 }
@@ -1346,11 +1346,11 @@ export interface LolCareerStatsEntitlementsToken {
 }
 
 export interface LolCareerStatsExpertPlayer {
-  championId: bigint;
-  expertRank: bigint;
-  numOfGames: bigint;
+  championId: number;
+  expertRank: number;
+  numOfGames: number;
   position: LolCareerStatsSummonersRiftPosition;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
   winRate: number;
 }
@@ -1365,7 +1365,7 @@ export interface LolCareerStatsPositionStatsQueryRequest {
   position: LolCareerStatsSummonersRiftPosition;
   queueType: LolCareerStatsCareerStatsQueueType;
   rankTier: LolCareerStatsRankedTier;
-  season: bigint;
+  season: number;
 }
 
 export type LolCareerStatsRankedTier =
@@ -1387,20 +1387,20 @@ export interface LolCareerStatsStatisticsByQueue {
 }
 
 export interface LolCareerStatsStatisticsPercentilesResponse {
-  championId: bigint;
+  championId: number;
   position: LolCareerStatsSummonersRiftPosition;
   queueType: LolCareerStatsCareerStatsQueueType;
   rankTier: LolCareerStatsRankedTier;
-  season: bigint;
+  season: number;
   stats: boolean | undefined;
 }
 
 export interface LolCareerStatsStatsQueryRequest {
-  championId: bigint;
+  championId: number;
   position: LolCareerStatsSummonersRiftPosition;
   queueType: LolCareerStatsCareerStatsQueueType;
   rankTier: LolCareerStatsRankedTier;
-  season: bigint;
+  season: number;
 }
 
 export type LolCareerStatsSummonersRiftPosition =
@@ -1421,12 +1421,12 @@ export interface LolCatalogBundled {
 export interface LolCatalogBundledItem {
   discountPrices: Array<LolCatalogBundledItemCost>;
   inventoryType: string;
-  itemId: bigint;
-  quantity: bigint;
+  itemId: number;
+  quantity: number;
 }
 
 export interface LolCatalogBundledItemCost {
-  cost: bigint;
+  cost: number;
   costType: string;
   currency: string;
   discount: number;
@@ -1438,7 +1438,7 @@ export interface LolCatalogCatalogItem {
   iconUrl: string;
   inactiveDate: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
   itemRequirements: Array<LolCatalogItemKey>;
   localizations: LolCatalogItemLocalization | undefined;
@@ -1455,9 +1455,9 @@ export interface LolCatalogCatalogPluginItem {
   active: boolean;
   description: string;
   imagePath: string;
-  inactiveDate: bigint;
+  inactiveDate: number;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
   metadata: Array<LolCatalogItemMetadataEntry>;
   name: string;
@@ -1465,9 +1465,9 @@ export interface LolCatalogCatalogPluginItem {
   owned: boolean;
   ownershipType: LolCatalogInventoryOwnership;
   prices: Array<LolCatalogCatalogPluginPrice>;
-  purchaseDate: bigint;
+  purchaseDate: number;
   questSkinInfo: LolCatalogSkinLineInfo;
-  releaseDate: bigint;
+  releaseDate: number;
   sale: LolCatalogSale;
   subInventoryType: string;
   subTitle: string;
@@ -1488,19 +1488,19 @@ export interface LolCatalogCatalogPluginItemWithDetails {
   bundledItems: Array<LolCatalogCatalogPluginItemWithDetails>;
   item: LolCatalogCatalogPluginItem;
   minimumBundlePrices: Array<LolCatalogCatalogPluginPrice>;
-  quantity: bigint;
+  quantity: number;
   requiredItems: Array<LolCatalogCatalogPluginItemWithDetails>;
 }
 
 export interface LolCatalogCatalogPluginPrice {
-  cost: bigint;
+  cost: number;
   costType: string;
   currency: string;
   sale: LolCatalogCatalogPluginRetailDiscount;
 }
 
 export interface LolCatalogCatalogPluginRetailDiscount {
-  cost: bigint;
+  cost: number;
   discount: number;
   endDate: string;
   startDate: string;
@@ -1529,7 +1529,7 @@ export interface LolCatalogGameDataChampion {
 export interface LolCatalogGameDataChampionChroma {
   chromaPath: string;
   colors: Array<string>;
-  id: bigint;
+  id: number;
   name: string;
 }
 
@@ -1538,7 +1538,7 @@ export interface LolCatalogGameDataChampionSkin {
   chromas: Array<LolCatalogGameDataChampionChroma>;
   colors: Array<string>;
   emblems: Array<LolCatalogChampionSkinEmblem>;
-  id: bigint;
+  id: number;
   name: string;
   questSkinInfo: LolCatalogSkinLineInfo;
   splashPath: string;
@@ -1547,7 +1547,7 @@ export interface LolCatalogGameDataChampionSkin {
 }
 
 export interface LolCatalogGameDataChampionSummary {
-  id: bigint;
+  id: number;
   name: string;
   skins: Array<LolCatalogGameDataChampionSkin>;
   squarePortraitPath: string;
@@ -1556,7 +1556,7 @@ export interface LolCatalogGameDataChampionSummary {
 export interface LolCatalogGameDataItemReference {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolCatalogGameDataStatstone {
@@ -1567,14 +1567,14 @@ export interface LolCatalogGameDataStatstone {
   isDuration: boolean;
   isEpic: boolean;
   isRetired: boolean;
-  itemId: bigint;
+  itemId: number;
   name: string;
 }
 
 export interface LolCatalogGameDataStatstonePack {
   contentId: string;
   description: string;
-  itemId: bigint;
+  itemId: number;
   name: string;
 }
 
@@ -1596,26 +1596,26 @@ export interface LolCatalogGameDataStatstonesInfo {
 
 export interface LolCatalogGameDataSummonerEmote {
   description: string;
-  id: bigint;
+  id: number;
   inventoryIcon: string;
   name: string;
 }
 
 export interface LolCatalogGameDataSummonerIcon {
-  id: bigint;
+  id: number;
   imagePath: string;
   title: string;
 }
 
 export interface LolCatalogGameDataWardSkin {
   description: string;
-  id: bigint;
+  id: number;
   name: string;
   wardImagePath: string;
 }
 
 export interface LolCatalogInventoryContent {
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolCatalogInventoryOwnership;
   purchaseDate: string;
 }
@@ -1627,13 +1627,13 @@ export interface LolCatalogItemChoiceDetails {
   contents: Array<LolCatalogItemDetails>;
   discount: string;
   displayType: string;
-  fullPrice: bigint;
+  fullPrice: number;
   item: LolCatalogCatalogPluginItem;
   metadata: boolean | undefined;
 }
 
 export interface LolCatalogItemCost {
-  cost: bigint;
+  cost: number;
   currency: string;
   discount: number;
 }
@@ -1647,7 +1647,7 @@ export interface LolCatalogItemDetails {
 
 export interface LolCatalogItemKey {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolCatalogItemLocalization {
@@ -1687,13 +1687,13 @@ export interface LolCatalogSkinLineInfo {
 export interface LolCatalogSkinLineTier {
   collectionSplashVideoPath: string;
   description: string;
-  id: bigint;
+  id: number;
   loadScreenPath: string;
   name: string;
   shortName: string;
   splashPath: string;
   splashVideoPath: string;
-  stage: bigint;
+  stage: number;
   tilePath: string;
   uncenteredSplashPath: string;
 }
@@ -1701,23 +1701,23 @@ export interface LolCatalogSkinLineTier {
 export interface LolChallengesChallengeData {
   category: string;
   currentLevel: string;
-  currentLevelAchievedTime: bigint;
+  currentLevelAchievedTime: number;
   currentThreshold: number;
   currentValue: number;
   friendsAtLevels: Array<LolChallengesFriendLevelsData>;
-  id: bigint;
+  id: number;
   initValue: number;
   legacy: boolean;
   newLevels: Array<string>;
   nextLevel: string;
   nextThreshold: number;
   percentile: number;
-  playersInLevel: bigint;
-  position: bigint;
+  playersInLevel: number;
+  position: number;
   previousLevel: string;
   previousThreshold: number;
   previousValue: number;
-  seasonId: bigint;
+  seasonId: number;
   seasonal: boolean;
 }
 
@@ -1726,10 +1726,10 @@ export interface LolChallengesChallengeLevelData {
 }
 
 export interface LolChallengesChallengePlayerData {
-  apexLaderUpdateTime: bigint;
+  apexLaderUpdateTime: number;
   categoryPoints: LolChallengesChallengePoints | undefined;
   id: string;
-  levelPoints: bigint | undefined;
+  levelPoints: number | undefined;
   playerChallenges: Array<LolChallengesChallengeData>;
   preferences: LolChallengesPlayerClientPreferences;
   puuid: string;
@@ -1739,9 +1739,9 @@ export interface LolChallengesChallengePlayerData {
 }
 
 export interface LolChallengesChallengePoints {
-  current: bigint;
+  current: number;
   level: string;
-  max: bigint;
+  max: number;
   percentile: number;
 }
 
@@ -1758,12 +1758,12 @@ export interface LolChallengesChallengeThreshold {
 export interface LolChallengesChallengeThresholdReward {
   category: string;
   id: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolChallengesChallengesPlayerPreferences {
   bannerAccent: string;
-  challengeIds: Array<bigint>;
+  challengeIds: Array<number>;
   signedJWTPayload: LolChallengesChallengeSignedUpdatePayload;
   title: string;
 }
@@ -1784,7 +1784,7 @@ export interface LolChallengesChallengesRMSPlayerKey {
 }
 
 export interface LolChallengesEndOfGameStats {
-  gameId: bigint;
+  gameId: number;
 }
 
 export interface LolChallengesFriendLevelsData {
@@ -1803,7 +1803,7 @@ export interface LolChallengesGameDataChallengeConfig {
   leaderboard: boolean;
   levelToIconPath: string | undefined;
   name: string;
-  queueIds: Array<bigint>;
+  queueIds: Array<number>;
   reverseDirection: boolean;
   source: string;
   tags: string | undefined;
@@ -1811,7 +1811,7 @@ export interface LolChallengesGameDataChallengeConfig {
 }
 
 export interface LolChallengesGameDataChallengeTitle {
-  itemId: bigint;
+  itemId: number;
   name: string;
 }
 
@@ -1821,19 +1821,19 @@ export interface LolChallengesGameDataChallengesData {
 }
 
 export interface LolChallengesInventoryTypeAchievementTitle {
-  itemId: bigint;
+  itemId: number;
   uuid: string;
 }
 
 export interface LolChallengesPlayerClientPreferences {
   tabard: string;
   title: string;
-  tokens: Array<bigint>;
+  tokens: Array<number>;
 }
 
 export interface LolChallengesQueue {
   gameMode: string;
-  id: bigint;
+  id: number;
 }
 
 export type LolChallengesSource =
@@ -1849,19 +1849,19 @@ export type LolChallengesSource =
 
 export interface LolChallengesUICategoryProgress {
   category: string;
-  current: bigint;
+  current: number;
   level: string;
-  max: bigint;
+  max: number;
   positionPercentile: number;
 }
 
 export interface LolChallengesUIChallenge {
-  capstoneGroupId: bigint;
+  capstoneGroupId: number;
   capstoneGroupName: string;
-  capstoneId: bigint;
+  capstoneId: number;
   category: string;
   currentLevel: string;
-  currentLevelAchievedTime: bigint;
+  currentLevelAchievedTime: number;
   currentThreshold: number;
   currentValue: number;
   description: string;
@@ -1870,7 +1870,7 @@ export interface LolChallengesUIChallenge {
   gameModes: Array<string>;
   hasLeaderboard: boolean;
   iconPath: string;
-  id: bigint;
+  id: number;
   isApex: boolean;
   isCapstone: boolean;
   isReverseDirection: boolean;
@@ -1880,8 +1880,8 @@ export interface LolChallengesUIChallenge {
   nextLevelIconPath: string;
   nextThreshold: number;
   percentile: number;
-  pointsAwarded: bigint;
-  position: bigint;
+  pointsAwarded: number;
+  position: number;
   previousLevel: string;
   previousValue: number;
   source: string;
@@ -1893,7 +1893,7 @@ export interface LolChallengesUIChallengeReward {
   asset: string;
   category: string;
   name: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolChallengesUIChallengeThreshold {
@@ -1902,19 +1902,19 @@ export interface LolChallengesUIChallengeThreshold {
 }
 
 export interface LolChallengesUIPlayerSummary {
-  apexLadderUpdateTime: bigint;
+  apexLadderUpdateTime: number;
   categoryProgress: Array<LolChallengesUICategoryProgress>;
   overallChallengeLevel: string;
-  pointsUntilNextRank: bigint;
+  pointsUntilNextRank: number;
   positionPercentile: number;
   title: LolChallengesUITitle;
   topChallenges: Array<LolChallengesUIChallenge>;
-  totalChallengeScore: bigint;
+  totalChallengeScore: number;
 }
 
 export interface LolChallengesUITitle {
   contentId: string;
-  itemId: bigint;
+  itemId: number;
   name: string;
 }
 
@@ -1923,10 +1923,10 @@ export interface LolChampSelectChampGridChampion {
   freeToPlay: boolean;
   freeToPlayForQueue: boolean;
   freeToPlayReward: boolean;
-  id: bigint;
+  id: number;
   masteryChestGranted: boolean;
-  masteryLevel: bigint;
-  masteryPoints: bigint;
+  masteryLevel: number;
+  masteryPoints: number;
   name: string;
   owned: boolean;
   positionsFavorited: Array<string>;
@@ -1937,18 +1937,18 @@ export interface LolChampSelectChampGridChampion {
 }
 
 export interface LolChampSelectChampSelectAction {
-  actorCellId: bigint;
-  championId: bigint;
+  actorCellId: number;
+  championId: number;
   completed: boolean;
-  id: bigint;
+  id: number;
   isAllyAction: boolean;
   type: string;
 }
 
 export interface LolChampSelectChampSelectBannedChampions {
-  myTeamBans: Array<bigint>;
-  numBans: bigint;
-  theirTeamBans: Array<bigint>;
+  myTeamBans: Array<number>;
+  numBans: number;
+  theirTeamBans: Array<number>;
 }
 
 export interface LolChampSelectChampSelectChatRoomDetails {
@@ -1957,10 +1957,10 @@ export interface LolChampSelectChampSelectChatRoomDetails {
 }
 
 export interface LolChampSelectChampSelectMySelection {
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  wardSkinId: number;
 }
 
 export interface LolChampSelectChampSelectPinDropNotification {
@@ -1972,23 +1972,23 @@ export interface LolChampSelectChampSelectPinDropSummoner {
   isLocalSummoner: boolean;
   isPlaceholder: boolean;
   lane: string;
-  lanePosition: bigint;
+  lanePosition: number;
   position: string;
-  slotId: bigint;
+  slotId: number;
 }
 
 export interface LolChampSelectChampSelectPlayerSelection {
   assignedPosition: string;
-  cellId: bigint;
-  championId: bigint;
-  championPickIntent: bigint;
+  cellId: number;
+  championId: number;
+  championPickIntent: number;
   entitledFeatureType: string;
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  summonerId: bigint;
-  team: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  summonerId: number;
+  team: number;
+  wardSkinId: number;
 }
 
 export interface LolChampSelectChampSelectSession {
@@ -1999,22 +1999,22 @@ export interface LolChampSelectChampSelectSession {
   allowRerolling: boolean;
   allowSkinSelection: boolean;
   bans: LolChampSelectChampSelectBannedChampions;
-  benchChampionIds: Array<bigint>;
+  benchChampionIds: Array<number>;
   benchEnabled: boolean;
-  boostableSkinCount: bigint;
+  boostableSkinCount: number;
   chatDetails: LolChampSelectChampSelectChatRoomDetails;
-  counter: bigint;
+  counter: number;
   entitledFeatureState: LolChampSelectEntitledFeatureState;
-  gameId: bigint;
+  gameId: number;
   hasSimultaneousBans: boolean;
   hasSimultaneousPicks: boolean;
   isCustomGame: boolean;
   isSpectating: boolean;
-  localPlayerCellId: bigint;
-  lockedEventIndex: bigint;
+  localPlayerCellId: number;
+  lockedEventIndex: number;
   myTeam: Array<LolChampSelectChampSelectPlayerSelection>;
-  recoveryCounter: bigint;
-  rerollsRemaining: bigint;
+  recoveryCounter: number;
+  rerollsRemaining: number;
   skipChampionSelect: boolean;
   theirTeam: Array<LolChampSelectChampSelectPlayerSelection>;
   timer: LolChampSelectChampSelectTimer;
@@ -2027,10 +2027,10 @@ export interface LolChampSelectChampSelectSummoner {
   areSummonerActionsComplete: boolean;
   assignedPosition: string;
   banIntentSquarePortratPath: string;
-  cellId: bigint;
+  cellId: number;
   championIconStyle: string;
   championName: string;
-  currentChampionVotePercentInteger: bigint;
+  currentChampionVotePercentInteger: number;
   entitledFeatureType: string;
   isActingNow: boolean;
   isDonePicking: boolean;
@@ -2047,38 +2047,38 @@ export interface LolChampSelectChampSelectSummoner {
   shouldShowSpells: boolean;
   showMuted: boolean;
   showTrades: boolean;
-  skinId: bigint;
+  skinId: number;
   skinSplashPath: string;
-  slotId: bigint;
+  slotId: number;
   spell1IconPath: string;
   spell2IconPath: string;
   statusMessageKey: string;
-  summonerId: bigint;
-  tradeId: bigint;
+  summonerId: number;
+  tradeId: number;
 }
 
 export interface LolChampSelectChampSelectTimer {
-  adjustedTimeLeftInPhase: bigint;
-  internalNowInEpochMs: bigint;
+  adjustedTimeLeftInPhase: number;
+  internalNowInEpochMs: number;
   isInfinite: boolean;
   phase: string;
-  totalTimeInPhase: bigint;
+  totalTimeInPhase: number;
 }
 
 export interface LolChampSelectChampSelectTradeContract {
-  cellId: bigint;
-  id: bigint;
+  cellId: number;
+  id: number;
   state: LolChampSelectChampSelectTradeState;
 }
 
 export interface LolChampSelectChampSelectTradeNotification {
-  id: bigint;
+  id: number;
   initiatedByLocalPlayer: boolean;
-  otherSummonerId: bigint;
+  otherSummonerId: number;
   requesterChampionName: string;
   requesterChampionSplashPath: string;
   responderChampionName: string;
-  responderIndex: bigint;
+  responderIndex: number;
   state: LolChampSelectChampSelectTradeState;
 }
 
@@ -2110,20 +2110,20 @@ export interface LolChampSelectChampionSelection {
 }
 
 export interface LolChampSelectCollectionsChampionChroma {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   colors: Array<string>;
   disabled: boolean;
-  id: bigint;
+  id: number;
   name: string;
   ownership: LolChampSelectCollectionsOwnership;
   stillObtainable: boolean;
 }
 
 export interface LolChampSelectCollectionsChampionMastery {
-  championId: bigint;
-  championLevel: bigint;
-  championPoints: bigint;
+  championId: number;
+  championLevel: number;
+  championPoints: number;
   chestGranted: boolean;
 }
 
@@ -2133,7 +2133,7 @@ export interface LolChampSelectCollectionsChampionMinimal {
   chooseVoPath: string;
   disabledQueues: Array<string>;
   freeToPlay: boolean;
-  id: bigint;
+  id: number;
   name: string;
   ownership: LolChampSelectCollectionsOwnership;
   roles: Array<string>;
@@ -2142,28 +2142,28 @@ export interface LolChampSelectCollectionsChampionMinimal {
 }
 
 export interface LolChampSelectCollectionsChampionQuestSkin {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   disabled: boolean;
-  id: bigint;
+  id: number;
   isBase: boolean;
   name: string;
   ownership: LolChampSelectCollectionsOwnership;
   shortName: string;
   splashPath: string;
   splashVideoPath: string;
-  stage: bigint;
+  stage: number;
   stillObtainable: boolean;
   tilePath: string;
 }
 
 export interface LolChampSelectCollectionsChampionSkin {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   chromas: Array<LolChampSelectCollectionsChampionChroma>;
   disabled: boolean;
   emblems: Array<LolChampSelectCollectionsChampionSkinEmblem>;
-  id: bigint;
+  id: number;
   isBase: boolean;
   name: string;
   ownership: LolChampSelectCollectionsOwnership;
@@ -2192,10 +2192,10 @@ export interface LolChampSelectCollectionsChampionSkinEmblemPosition {
 }
 
 export interface LolChampSelectCollectionsChampionSkinMinimal {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   disabled: boolean;
-  id: bigint;
+  id: number;
   isBase: boolean;
   name: string;
   ownership: LolChampSelectCollectionsOwnership;
@@ -2215,30 +2215,30 @@ export interface LolChampSelectCollectionsRental {
 }
 
 export interface LolChampSelectEntitledFeatureState {
-  additionalRerolls: bigint;
-  unlockedSkinIds: Array<bigint>;
+  additionalRerolls: number;
+  unlockedSkinIds: Array<number>;
 }
 
 export interface LolChampSelectGameDataSummonerSpell {
   iconPath: string;
-  id: bigint;
+  id: number;
 }
 
 export interface LolChampSelectLegacyChampSelectAction {
-  actorCellId: bigint;
-  championId: bigint;
+  actorCellId: number;
+  championId: number;
   completed: boolean;
-  id: bigint;
+  id: number;
   isAllyAction: boolean;
   isInProgress: boolean;
-  pickTurn: bigint;
+  pickTurn: number;
   type: string;
 }
 
 export interface LolChampSelectLegacyChampSelectBannedChampions {
-  myTeamBans: Array<bigint>;
-  numBans: bigint;
-  theirTeamBans: Array<bigint>;
+  myTeamBans: Array<number>;
+  numBans: number;
+  theirTeamBans: Array<number>;
 }
 
 export interface LolChampSelectLegacyChampSelectChatRoomDetails {
@@ -2247,24 +2247,24 @@ export interface LolChampSelectLegacyChampSelectChatRoomDetails {
 }
 
 export interface LolChampSelectLegacyChampSelectMySelection {
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  wardSkinId: number;
 }
 
 export interface LolChampSelectLegacyChampSelectPlayerSelection {
   assignedPosition: string;
-  cellId: bigint;
-  championId: bigint;
-  championPickIntent: bigint;
+  cellId: number;
+  championId: number;
+  championPickIntent: number;
   playerType: string;
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  summonerId: bigint;
-  team: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  summonerId: number;
+  team: number;
+  wardSkinId: number;
 }
 
 export interface LolChampSelectLegacyChampSelectSession {
@@ -2278,25 +2278,25 @@ export interface LolChampSelectLegacyChampSelectSession {
   hasSimultaneousPicks: boolean;
   isCustomGame: boolean;
   isSpectating: boolean;
-  localPlayerCellId: bigint;
+  localPlayerCellId: number;
   myTeam: Array<LolChampSelectLegacyChampSelectPlayerSelection>;
-  rerollsRemaining: bigint;
+  rerollsRemaining: number;
   theirTeam: Array<LolChampSelectLegacyChampSelectPlayerSelection>;
   timer: LolChampSelectLegacyChampSelectTimer;
   trades: Array<LolChampSelectLegacyChampSelectTradeContract>;
 }
 
 export interface LolChampSelectLegacyChampSelectTimer {
-  adjustedTimeLeftInPhase: bigint;
-  internalNowInEpochMs: bigint;
+  adjustedTimeLeftInPhase: number;
+  internalNowInEpochMs: number;
   isInfinite: boolean;
   phase: string;
-  totalTimeInPhase: bigint;
+  totalTimeInPhase: number;
 }
 
 export interface LolChampSelectLegacyChampSelectTradeContract {
-  cellId: bigint;
-  id: bigint;
+  cellId: number;
+  id: number;
   state: LolChampSelectLegacyChampSelectTradeState;
 }
 
@@ -2308,7 +2308,7 @@ export type LolChampSelectLegacyChampSelectTradeState =
   | "SENT";
 
 export interface LolChampSelectLegacyChampionSelectPreferences {
-  skins: bigint | undefined;
+  skins: number | undefined;
   spells: boolean | undefined | undefined;
 }
 
@@ -2316,7 +2316,7 @@ export interface LolChampSelectLegacyCollectionsChampion {
   active: boolean;
   disabledQueues: Array<string>;
   freeToPlay: boolean;
-  id: bigint;
+  id: number;
   ownership: LolChampSelectLegacyCollectionsOwnership;
 }
 
@@ -2340,7 +2340,7 @@ export interface LolChampSelectLegacyGameflowGameData {
 }
 
 export interface LolChampSelectLegacyGameflowGameDodge {
-  dodgeIds: Array<bigint>;
+  dodgeIds: Array<number>;
   state: LolChampSelectLegacyGameflowGameDodgeState;
 }
 
@@ -2373,7 +2373,7 @@ export interface LolChampSelectLegacyGameflowSession {
 }
 
 export interface LolChampSelectLegacyInventoryItemWithPayload {
-  itemId: bigint;
+  itemId: number;
   payload: boolean | undefined;
 }
 
@@ -2382,14 +2382,14 @@ export interface LolChampSelectLegacyLobbyStatus {
   isCustom: boolean;
   isLeader: boolean;
   isSpectator: boolean;
-  memberSummonerIds: Array<bigint>;
-  queueId: bigint;
+  memberSummonerIds: Array<number>;
+  queueId: number;
 }
 
 export interface LolChampSelectLegacyLoginSession {
   connected: boolean;
   state: LolChampSelectLegacyLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolChampSelectLegacyLoginSessionStates =
@@ -2411,66 +2411,66 @@ export interface LolChampSelectLegacyQueue {
 export interface LolChampSelectLegacyQueueGameTypeConfig {
   allowTrades: boolean;
   battleBoost: boolean;
-  maxAllowableBans: bigint;
+  maxAllowableBans: number;
   name: string;
 }
 
 export interface LolChampSelectLegacySettingCategoryResource {
   data: LolChampSelectLegacyChampionSelectPreferences;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolChampSelectLegacySummoner {
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolChampSelectLegacyTeamBoost {
-  availableSkins: Array<bigint>;
-  ipReward: bigint;
-  ipRewardForPurchaser: bigint;
-  price: bigint;
+  availableSkins: Array<number>;
+  ipReward: number;
+  ipRewardForPurchaser: number;
+  price: number;
   skinUnlockMode: string;
   summonerName: string;
   unlocked: boolean;
 }
 
 export interface LolChampSelectLoginSession {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolChampSelectMutedPlayerInfo {
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolChampSelectSettingsResource {
   data: boolean | undefined;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolChampSelectSfxNotification {
-  delayMillis: bigint;
+  delayMillis: number;
   eventType: string;
   path: string;
 }
 
 export interface LolChampSelectSkinSelectorChildSkin {
-  championId: bigint;
+  championId: number;
   chromaPreviewPath: string;
   colors: Array<string>;
   disabled: boolean;
-  id: bigint;
+  id: number;
   isBase: boolean;
   isChampionUnlocked: boolean;
   isUnlockedFromEntitledFeature: boolean;
   name: string;
   ownership: LolChampSelectCollectionsOwnership;
-  parentSkinId: bigint;
+  parentSkinId: number;
   shortName: string;
   splashPath: string;
   splashVideoPath: string;
-  stage: bigint;
+  stage: number;
   stillObtainable: boolean;
   tilePath: string;
   unlocked: boolean;
@@ -2479,20 +2479,20 @@ export interface LolChampSelectSkinSelectorChildSkin {
 export interface LolChampSelectSkinSelectorInfo {
   championName: string;
   isSkinGrantedFromBoost: boolean;
-  selectedChampionId: bigint;
-  selectedSkinId: bigint;
+  selectedChampionId: number;
+  selectedSkinId: number;
   showSkinSelector: boolean;
   skinSelectionDisabled: boolean;
 }
 
 export interface LolChampSelectSkinSelectorSkin {
-  championId: bigint;
+  championId: number;
   childSkins: Array<LolChampSelectSkinSelectorChildSkin>;
   chromaPreviewPath: string;
   disabled: boolean;
   emblems: Array<LolChampSelectCollectionsChampionSkinEmblem>;
   groupSplash: string;
-  id: bigint;
+  id: number;
   isBase: boolean;
   isChampionUnlocked: boolean;
   isUnlockedFromEntitledFeature: boolean;
@@ -2507,12 +2507,12 @@ export interface LolChampSelectSkinSelectorSkin {
 }
 
 export interface LolChampSelectTeamBoost {
-  availableSkins: Array<bigint>;
-  ipReward: bigint;
-  ipRewardForPurchaser: bigint;
-  price: bigint;
+  availableSkins: Array<number>;
+  ipReward: number;
+  ipRewardForPurchaser: number;
+  price: number;
   skinUnlockMode: string;
-  summonerId: bigint;
+  summonerId: number;
   unlocked: boolean;
 }
 
@@ -2537,11 +2537,11 @@ export interface LolChampionsCollectionsChampion {
   chooseVoPath: string;
   disabledQueues: Array<string>;
   freeToPlay: boolean;
-  id: bigint;
+  id: number;
   name: string;
   ownership: LolChampionsCollectionsOwnership;
   passive: LolChampionsCollectionsChampionSpell;
-  purchased: bigint;
+  purchased: number;
   rankedPlayEnabled: boolean;
   roles: Array<string>;
   skins: Array<LolChampionsCollectionsChampionSkin>;
@@ -2553,11 +2553,11 @@ export interface LolChampionsCollectionsChampion {
 }
 
 export interface LolChampionsCollectionsChampionChroma {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   colors: Array<string>;
   disabled: boolean;
-  id: bigint;
+  id: number;
   lastSelected: boolean;
   name: string;
   ownership: LolChampionsCollectionsOwnership;
@@ -2574,10 +2574,10 @@ export interface LolChampionsCollectionsChampionMinimal {
   chooseVoPath: string;
   disabledQueues: Array<string>;
   freeToPlay: boolean;
-  id: bigint;
+  id: number;
   name: string;
   ownership: LolChampionsCollectionsOwnership;
-  purchased: bigint;
+  purchased: number;
   rankedPlayEnabled: boolean;
   roles: Array<string>;
   squarePortraitPath: string;
@@ -2586,19 +2586,19 @@ export interface LolChampionsCollectionsChampionMinimal {
 }
 
 export interface LolChampionsCollectionsChampionPlayableCounts {
-  championsFreeToPlay: bigint;
-  championsFreeToPlayReward: bigint;
-  championsOwned: bigint;
-  championsRented: bigint;
+  championsFreeToPlay: number;
+  championsFreeToPlayReward: number;
+  championsOwned: number;
+  championsRented: number;
 }
 
 export interface LolChampionsCollectionsChampionQuestSkin {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   collectionSplashVideoPath: string;
   description: string;
   disabled: boolean;
-  id: bigint;
+  id: number;
   isBase: boolean;
   lastSelected: boolean;
   loadScreenPath: string;
@@ -2607,21 +2607,21 @@ export interface LolChampionsCollectionsChampionQuestSkin {
   shortName: string;
   splashPath: string;
   splashVideoPath: string;
-  stage: bigint;
+  stage: number;
   stillObtainable: boolean;
   tilePath: string;
   uncenteredSplashPath: string;
 }
 
 export interface LolChampionsCollectionsChampionSkin {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   chromas: Array<LolChampionsCollectionsChampionChroma>;
   collectionSplashVideoPath: string;
   disabled: boolean;
   emblems: Array<LolChampionsCollectionsChampionSkinEmblem>;
   featuresText: string;
-  id: bigint;
+  id: number;
   isBase: boolean;
   lastSelected: boolean;
   loadScreenPath: string;
@@ -2654,10 +2654,10 @@ export interface LolChampionsCollectionsChampionSkinEmblemPosition {
 }
 
 export interface LolChampionsCollectionsChampionSkinMinimal {
-  championId: bigint;
+  championId: number;
   chromaPath: string;
   disabled: boolean;
-  id: bigint;
+  id: number;
   isBase: boolean;
   lastSelected: boolean;
   name: string;
@@ -2674,8 +2674,8 @@ export interface LolChampionsCollectionsChampionSpell {
 
 export interface LolChampionsCollectionsChampionTacticalInfo {
   damageType: string;
-  difficulty: bigint;
-  style: bigint;
+  difficulty: number;
+  style: number;
 }
 
 export interface LolChampionsCollectionsOwnership {
@@ -2685,17 +2685,17 @@ export interface LolChampionsCollectionsOwnership {
 }
 
 export interface LolChampionsCollectionsRental {
-  endDate: bigint;
-  purchaseDate: bigint;
+  endDate: number;
+  purchaseDate: number;
   rented: boolean;
-  winCountRemaining: bigint;
+  winCountRemaining: number;
 }
 
 export interface LolChampionsGameDataChampion {
   alias: string;
   banVoPath: string;
   chooseVoPath: string;
-  id: bigint;
+  id: number;
   name: string;
   passive: LolChampionsGameDataChampionSpell;
   roles: Array<string>;
@@ -2710,19 +2710,19 @@ export interface LolChampionsGameDataChampion {
 export interface LolChampionsGameDataChampionChroma {
   chromaPath: string;
   colors: Array<string>;
-  id: bigint;
+  id: number;
 }
 
 export interface LolChampionsGameDataChampionQuestSkin {
   collectionSplashVideoPath: string;
   description: string;
-  id: bigint;
+  id: number;
   loadScreenPath: string;
   name: string;
   shortName: string;
   splashPath: string;
   splashVideoPath: string;
-  stage: bigint;
+  stage: number;
   tilePath: string;
   uncenteredSplashPath: string;
 }
@@ -2733,7 +2733,7 @@ export interface LolChampionsGameDataChampionSkin {
   collectionSplashVideoPath: string;
   emblems: Array<LolChampionsCollectionsChampionSkinEmblem>;
   featuresText: string;
-  id: bigint;
+  id: number;
   loadScreenPath: string;
   name: string;
   questSkinInfo: LolChampionsGameDataQuestSkinInfo;
@@ -2751,13 +2751,13 @@ export interface LolChampionsGameDataChampionSpell {
 }
 
 export interface LolChampionsGameDataChampionSummary {
-  id: bigint;
+  id: number;
 }
 
 export interface LolChampionsGameDataChampionTacticalInfo {
   damageType: string;
-  difficulty: bigint;
-  style: bigint;
+  difficulty: number;
+  style: number;
 }
 
 export interface LolChampionsGameDataQuestSkinDescriptionInfo {
@@ -2784,7 +2784,7 @@ export interface LolChampionsLcdsDynamicClientConfig {
 export interface LolChampionsLoginSession {
   connected: boolean;
   state: LolChampionsLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolChampionsLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -2807,7 +2807,7 @@ export interface LolChampionsPlayerNotification {
   data: string | undefined;
   detailKey: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -2821,8 +2821,8 @@ export interface LolChampionsQuestSkinDescriptionInfo {
 }
 
 export interface LolChampionsSummoner {
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export type LolChatAccountState = "offline" | "mobile" | "away" | "chat" | "dnd";
@@ -2838,7 +2838,7 @@ export interface LolChatAuthResourcePlain {
 }
 
 export interface LolChatAuthResourceRsoAccessToken {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
@@ -2859,17 +2859,17 @@ export interface LolChatBlockedList {
 export interface LolChatBlockedPlayerResource {
   gameName: string;
   gameTag: string;
-  icon: bigint;
+  icon: number;
   id: string;
   name: string;
   pid: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolChatChampSelection {
-  championId: bigint;
-  selectedSkinIndex: bigint;
+  championId: number;
+  selectedSkinIndex: number;
   summonerInternalName: string;
 }
 
@@ -2906,13 +2906,13 @@ export interface LolChatChatMessageList {
 }
 
 export interface LolChatChatPlatformLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   idToken: string;
   isNewPlayer: boolean;
   puuid: string;
   state: LolChatChatPlatformLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
   userAuthToken: string;
   username: string;
 }
@@ -2938,14 +2938,14 @@ export interface LolChatChatSettings {
   chatGroupMobile: boolean;
   chatGroupOffline: boolean;
   chatWindow: LolChatChatWindowSettings;
-  chatWindowDockedHeight: bigint;
-  "closed-conversations": bigint | undefined;
+  chatWindowDockedHeight: number;
+  "closed-conversations": number | undefined;
   friendRequestToastsDisabled: boolean;
-  "hidden-conversations": bigint | undefined;
+  "hidden-conversations": number | undefined;
   linkClickWarningEnabled: boolean;
   messageNotificationsEnabled: boolean;
   moreUnreadsEnabled: boolean;
-  "muted-conversations": bigint | undefined;
+  "muted-conversations": number | undefined;
   recentlyPlayedFirstOpen: boolean;
   recentlyPlayedOpen: boolean;
   "roster-group-collapsed": boolean | undefined;
@@ -2956,19 +2956,19 @@ export interface LolChatChatSettings {
 
 export interface LolChatChatSummoner {
   displayName: string;
-  profileIconId: bigint;
+  profileIconId: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
   unnamed: boolean;
 }
 
 export interface LolChatChatWindowSettings {
   detached: boolean;
-  height: bigint;
-  left: bigint;
-  top: bigint;
-  width: bigint;
+  height: number;
+  left: number;
+  top: number;
+  width: number;
 }
 
 export interface LolChatCidBody {
@@ -2994,7 +2994,7 @@ export interface LolChatConversation {
   mid: string;
   muted: boolean;
   type: string;
-  unread_count: bigint;
+  unread_count: number;
 }
 
 export interface LolChatConversationJoinFederated {
@@ -3014,7 +3014,7 @@ export interface LolChatConversationMessageResource {
   body: string;
   fromId: string;
   fromPid: string;
-  fromSummonerId: bigint;
+  fromSummonerId: number;
   id: string;
   isHistorical: boolean;
   timestamp: string;
@@ -3033,7 +3033,7 @@ export interface LolChatConversationResource {
   pid: string;
   targetRegion: string;
   type: string;
-  unreadMessageCount: bigint;
+  unreadMessageCount: number;
 }
 
 export interface LolChatConversationUpdate {
@@ -3043,16 +3043,16 @@ export interface LolChatConversationUpdate {
 }
 
 export interface LolChatDebugResource {
-  asyncWaitInterval: bigint;
+  asyncWaitInterval: number;
   enableChatFiltering: boolean;
   failAllChatLogin: boolean;
   failNextChatLogin: boolean;
   failNextChatLogout: boolean;
   failNextKeepAlive: boolean;
   isXMPPLoggingEnabled: boolean;
-  keepAliveInterval: bigint;
-  maxReconnectInterval: bigint;
-  minReconnectInterval: bigint;
+  keepAliveInterval: number;
+  maxReconnectInterval: number;
+  minReconnectInterval: number;
   silenceChatWhileInGame: boolean;
   triggerChatDisconnect: boolean;
 }
@@ -3074,9 +3074,9 @@ export interface LolChatErrorList {
 }
 
 export interface LolChatErrorResource {
-  code: bigint;
+  code: number;
   from: string;
-  id: bigint;
+  id: number;
   message: string;
   text: string;
 }
@@ -3094,14 +3094,14 @@ export interface LolChatFriend {
 }
 
 export interface LolChatFriendCountsResource {
-  numFriends: bigint;
-  numFriendsAvailable: bigint;
-  numFriendsAway: bigint;
-  numFriendsInChampSelect: bigint;
-  numFriendsInGame: bigint;
-  numFriendsInQueue: bigint;
-  numFriendsMobile: bigint;
-  numFriendsOnline: bigint;
+  numFriends: number;
+  numFriendsAvailable: number;
+  numFriendsAway: number;
+  numFriendsInChampSelect: number;
+  numFriendsInGame: number;
+  numFriendsInQueue: number;
+  numFriendsMobile: number;
+  numFriendsOnline: number;
 }
 
 export interface LolChatFriendGroup {
@@ -3164,24 +3164,24 @@ export interface LolChatFriendRequestResource {
   direction: LolChatFriendRequestDirection;
   gameName: string;
   gameTag: string;
-  icon: bigint;
+  icon: number;
   id: string;
   name: string;
   note: string;
   pid: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolChatFriendResource {
   availability: string;
-  displayGroupId: bigint;
+  displayGroupId: number;
   displayGroupName: string;
   gameName: string;
   gameTag: string;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
-  icon: bigint;
+  icon: number;
   id: string;
   isP2PConversationMuted: boolean;
   lastSeenOnlineTimestamp: string;
@@ -3196,19 +3196,19 @@ export interface LolChatFriendResource {
   puuid: string;
   statusMessage: string;
   summary: string;
-  summonerId: bigint;
-  time: bigint;
+  summonerId: number;
+  time: number;
 }
 
 export type LolChatFriendSubscriptionType = "pending_out" | "pending_in";
 
 export interface LolChatGameDataChampionSummary {
   alias: string;
-  id: bigint;
+  id: number;
 }
 
 export interface LolChatGameflowGameData {
-  gameId: bigint;
+  gameId: number;
   playerChampionSelections: Array<LolChatChampSelection>;
   queue: LolChatQueue;
   teamOne: Array<LolChatTeamPlayerEntry>;
@@ -3216,7 +3216,7 @@ export interface LolChatGameflowGameData {
 }
 
 export interface LolChatGameflowGameMap {
-  id: bigint;
+  id: number;
 }
 
 export type LolChatGameflowPhase =
@@ -3243,11 +3243,11 @@ export interface LolChatGameflowSession {
 
 export interface LolChatGroupResource {
   collapsed: boolean;
-  id: bigint;
+  id: number;
   isLocalized: boolean;
   isMetaGroup: boolean;
   name: string;
-  priority: bigint;
+  priority: number;
 }
 
 export interface LolChatIdBody {
@@ -3257,7 +3257,7 @@ export interface LolChatIdBody {
 export interface LolChatLcuSocialConfig {
   AggressiveScanning: boolean;
   ForceChatFilter: boolean;
-  QueueJobGraceSeconds: bigint;
+  QueueJobGraceSeconds: number;
   ReplaceRichMessages: boolean;
   SilenceChatWhileInGame: boolean;
   allowGroupByGame: boolean;
@@ -3287,7 +3287,7 @@ export type LolChatLeagueTier =
   | "CHALLENGER";
 
 export interface LolChatLobbyMember {
-  id: bigint;
+  id: number;
   isOwner: boolean;
 }
 
@@ -3301,7 +3301,7 @@ export interface LolChatLobbyStatus {
   isCustom: boolean;
   isLeader: boolean;
   isPracticeTool: boolean;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolChatMessage {
@@ -3354,7 +3354,7 @@ export interface LolChatMultiGamePresence {
   resource: string;
   state: LolChatAccountState;
   summary: string;
-  time: bigint;
+  time: number;
 }
 
 export interface LolChatMultiGamePresenceList {
@@ -3368,7 +3368,7 @@ export interface LolChatMultiGamePresenceSharedPayload {
   patchline: string;
   platform: string;
   product: string;
-  time: bigint;
+  time: number;
 }
 
 export interface LolChatMultiGamePresenceUpdate {
@@ -3382,7 +3382,7 @@ export interface LolChatMultiGamePresenceUpdate {
 
 export interface LolChatMutedPlayerInfo {
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolChatNameBody {
@@ -3418,7 +3418,7 @@ export interface LolChatPidBody {
 export interface LolChatPlayerPreferences {
   data: string;
   hash: string;
-  modified: bigint;
+  modified: number;
   type: string;
 }
 
@@ -3444,7 +3444,7 @@ export interface LolChatProductMetadataMap {
 export interface LolChatQueue {
   gameMode: string;
   gameTypeConfig: LolChatQueueGameTypeConfig;
-  id: bigint;
+  id: number;
   type: string;
 }
 
@@ -3455,35 +3455,35 @@ export type LolChatQueueCustomGameSpectatorPolicy =
   | "AllAllowed";
 
 export interface LolChatQueueGameTypeConfig {
-  id: bigint;
+  id: number;
   name: string;
 }
 
 export interface LolChatRankedQueueStats {
   division: LolChatLeagueDivision;
-  games: bigint;
+  games: number;
   isProvisional: boolean;
   queueType: LolChatLeagueQueueType;
   tier: LolChatLeagueTier;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolChatRankedStats {
   highestPreviousSeasonAchievedDivision: LolChatLeagueDivision;
   highestPreviousSeasonAchievedTier: LolChatLeagueTier;
   highestRankedEntry: LolChatRankedQueueStats;
-  rankedRegaliaLevel: bigint;
+  rankedRegaliaLevel: number;
 }
 
 export interface LolChatRsoAuthorization {
-  currentAccountId: bigint;
+  currentAccountId: number;
   currentPlatformId: string;
   subject: string;
 }
 
 export interface LolChatSanitizeRequest {
   aggressiveScan: boolean;
-  level: bigint;
+  level: number;
   texts: Array<string>;
 }
 
@@ -3509,7 +3509,7 @@ export interface LolChatSession {
 }
 
 export interface LolChatSessionResource {
-  sessionExpire: bigint;
+  sessionExpire: number;
   sessionState: LolChatSessionState;
 }
 
@@ -3536,7 +3536,7 @@ export interface LolChatSummonerStatus {
 }
 
 export interface LolChatTeamPlayerEntry {
-  summonerId: bigint;
+  summonerId: number;
   summonerInternalName: string;
   summonerName: string;
 }
@@ -3564,7 +3564,7 @@ export interface LolChatUserResource {
   availability: string;
   gameName: string;
   gameTag: string;
-  icon: bigint;
+  icon: number;
   id: string;
   lastSeenOnlineTimestamp: string;
   lol: string | undefined;
@@ -3577,13 +3577,13 @@ export interface LolChatUserResource {
   puuid: string;
   statusMessage: string;
   summary: string;
-  summonerId: bigint;
-  time: bigint;
+  summonerId: number;
+  time: number;
 }
 
 export interface LolChatcookie {
   domain: string;
-  expires: bigint;
+  expires: number;
   httponly: boolean;
   name: string;
   path: string;
@@ -3594,35 +3594,35 @@ export interface LolChatcookie {
 
 export interface LolClashBlockedPlayerResource {
   name: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolClashBracket {
-  id: bigint;
+  id: number;
   isComplete: boolean;
   matches: Array<BracketMatch>;
-  period: bigint;
+  period: number;
   rosters: Array<BracketRoster>;
-  size: bigint;
-  tournamentId: bigint;
-  version: bigint;
+  size: number;
+  tournamentId: number;
+  version: number;
 }
 
 export interface LolClashBracketReadyNotification {
-  bracketId: bigint;
-  tournamentId: bigint;
+  bracketId: number;
+  tournamentId: number;
 }
 
 export interface LolClashBracketUpdateNotification {
-  bracketId: bigint;
-  currentMatchId: bigint;
+  bracketId: number;
+  currentMatchId: number;
   notifyReason: LolClashRosterNotifyReason;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export interface LolClashChangeIconRequest {
-  iconColorId: bigint;
-  iconId: bigint;
+  iconColorId: number;
+  iconId: number;
 }
 
 export interface LolClashChangeNameRequest {
@@ -3634,28 +3634,28 @@ export interface LolClashClashConfig {
   DisabledEvents: Array<string>;
   DisabledReason: string;
   EnabledState: LolClashClashState;
-  EstimatedEnableTimeMillis: bigint;
+  EstimatedEnableTimeMillis: number;
   EventSendingEnabled: boolean;
-  HonorLevelRequired: bigint;
-  HonorRefreshRetrySeconds: bigint;
+  HonorLevelRequired: number;
+  HonorRefreshRetrySeconds: number;
   IconConfig: string;
   IsPlaymodeRestrictionEnabled: boolean;
-  MaxTimeBeforeLockinNotifySeconds: bigint;
-  MinClashNotificationsSummonerLevel: bigint;
-  MinClashSummonerLevel: bigint;
-  RewardGrantRetryIntervalSeconds: bigint;
+  MaxTimeBeforeLockinNotifySeconds: number;
+  MinClashNotificationsSummonerLevel: number;
+  MinClashSummonerLevel: number;
+  RewardGrantRetryIntervalSeconds: number;
   Visibility: LolClashClashVisibility;
-  VoiceEobQuitDelaySeconds: bigint;
-  VoiceNoDelayAutoStartSeconds: bigint;
-  VoiceRandomStartMaxSeconds: bigint;
-  VoiceRandomStartMinSeconds: bigint;
-  VoiceRetryCountLimit: bigint;
-  VoiceRetryDelaySeconds: bigint;
+  VoiceEobQuitDelaySeconds: number;
+  VoiceNoDelayAutoStartSeconds: number;
+  VoiceRandomStartMaxSeconds: number;
+  VoiceRandomStartMinSeconds: number;
+  VoiceRetryCountLimit: number;
+  VoiceRetryDelaySeconds: number;
 }
 
 export interface LolClashClashDisabledConfig {
   disabledReason: string;
-  estimatedEnableTimeMillis: bigint;
+  estimatedEnableTimeMillis: number;
 }
 
 export interface LolClashClashSettingCategory {
@@ -3668,41 +3668,41 @@ export type LolClashClashVisibility = "Hidden" | "Visible";
 
 export interface LolClashClientFailedInvite {
   exception: string;
-  playerId: bigint;
+  playerId: number;
 }
 
 export interface LolClashClubsSummoner {
   displayName: string;
-  profileIconId: bigint;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  profileIconId: number;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolClashEogPlayerUpdateDTO {
-  bid: bigint;
-  bracketSize: bigint;
+  bid: number;
+  bracketSize: number;
   earnedRewards: Array<ClashRewardDefinition>;
-  gameId: bigint;
-  lowestPosition: bigint;
+  gameId: number;
+  lowestPosition: number;
   rewardProgress: Array<ClashRewardDefinition>;
-  seasonVp: bigint;
-  themeVp: bigint;
-  tier: bigint;
-  tournamentId: bigint;
+  seasonVp: number;
+  themeVp: number;
+  tier: number;
+  tournamentId: number;
   winner: boolean;
 }
 
 export interface LolClashFindPlayers {
-  count: bigint;
+  count: number;
   invitationId: string;
-  memberId: bigint;
-  page: bigint;
+  memberId: number;
+  page: number;
 }
 
 export interface LolClashFindTeams {
-  count: bigint;
-  page: bigint;
-  tournamentId: bigint;
+  count: number;
+  page: number;
+  tournamentId: number;
 }
 
 export type LolClashFoundationError =
@@ -3718,7 +3718,7 @@ export interface LolClashGameflowAvailability {
 }
 
 export interface LolClashGameflowGameDodge {
-  dodgeIds: Array<bigint>;
+  dodgeIds: Array<number>;
   state: LolClashMatchmakingDodgeState;
 }
 
@@ -3748,14 +3748,14 @@ export interface LolClashGameflowSession {
 }
 
 export interface LolClashInviteSubRequest {
-  replacedSummonerId: bigint;
-  substituteSummonerId: bigint;
+  replacedSummonerId: number;
+  substituteSummonerId: number;
 }
 
 export type LolClashKdaClassification = "LOW" | "AVERAGE" | "HIGH";
 
 export interface LolClashKickRequest {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolClashLftState {
@@ -3766,13 +3766,13 @@ export interface LolClashLftState {
 
 export interface LolClashLoginSession {
   state: LolClashLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolClashLoginSessionState = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolClashMatchmakingDodgeData {
-  dodgerId: bigint;
+  dodgerId: number;
   state: LolClashMatchmakingDodgeState;
 }
 
@@ -3785,7 +3785,7 @@ export type LolClashMatchmakingDodgeState =
 export type LolClashMatchmakingDodgeWarning = "None" | "Warning" | "Penalty";
 
 export interface LolClashMatchmakingReadyCheckResource {
-  declinerIds: Array<bigint>;
+  declinerIds: Array<number>;
   dodgeWarning: LolClashMatchmakingDodgeWarning;
   playerResponse: LolClashMatchmakingReadyCheckResponse;
   state: LolClashMatchmakingReadyCheckState;
@@ -3804,37 +3804,37 @@ export type LolClashMatchmakingReadyCheckState =
 
 export interface LolClashMatchmakingSearchResource {
   dodgeData: LolClashMatchmakingDodgeData;
-  queueId: bigint;
+  queueId: number;
   readyCheck: LolClashMatchmakingReadyCheckResource;
 }
 
 export interface LolClashMemberBanUnbanNotification {
-  notifyPlayerId: bigint;
+  notifyPlayerId: number;
   notifyPuuid: string;
   notifyReason: LolClashNotifyReason;
-  playerId: bigint;
+  playerId: number;
   reason: string;
   tournaments: Array<MemberBanUnbanTournament>;
 }
 
 export interface LolClashNoShowPingDTO {
-  dodgeTime: bigint;
-  matchId: bigint;
-  tournamentId: bigint;
+  dodgeTime: number;
+  matchId: number;
+  tournamentId: number;
 }
 
 export interface LolClashNoShowPingResponse {
   data: string;
-  dodgeTime: bigint;
-  matchId: bigint;
-  tournamentId: bigint;
+  dodgeTime: number;
+  matchId: number;
+  tournamentId: number;
 }
 
 export interface LolClashNoShowPingResponseData {
-  dodgeTime: bigint;
+  dodgeTime: number;
   gameflowState: LolClashGameflowPhase;
   isPlaymodeRestricted: boolean;
-  loginTime: bigint;
+  loginTime: number;
   readyCheckInfo: LolClashReadyCheckInfo;
 }
 
@@ -3882,21 +3882,21 @@ export type LolClashNotifyReason =
   | "TEAMMATE_UNBAN";
 
 export interface LolClashOfferTicketRequest {
-  ticketAmount: bigint;
+  ticketAmount: number;
   ticketType: TicketType;
 }
 
 export interface LolClashPendingRosterNotification {
   notifyReason: LolClashNotifyReason;
   pendingRoster: PendingRosterDTO;
-  sourcePlayerId: bigint;
-  targetPlayerId: bigint;
+  sourcePlayerId: number;
+  targetPlayerId: number;
 }
 
 export interface LolClashPlayerChatRoster {
-  endTimeMs: bigint;
-  iconColorId: bigint;
-  iconId: bigint;
+  endTimeMs: number;
+  iconColorId: number;
+  iconId: number;
   invitationId: string;
   isRegistered: boolean;
   key: string;
@@ -3904,8 +3904,8 @@ export interface LolClashPlayerChatRoster {
   name: string;
   playerState: LolClashPlayerState;
   shortName: string;
-  startTimeMs: bigint;
-  tournamentId: bigint;
+  startTimeMs: number;
+  tournamentId: number;
   tournamentState: LolClashTournamentState;
 }
 
@@ -3914,8 +3914,8 @@ export interface LolClashPlayerData {
   lft: boolean;
   primaryPos: string;
   secondaryPos: string;
-  tickets: bigint | undefined;
-  tier: bigint;
+  tickets: number | undefined;
+  tier: number;
 }
 
 export interface LolClashPlayerNotification {
@@ -3927,7 +3927,7 @@ export interface LolClashPlayerNotification {
   dismissible: boolean;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -3939,13 +3939,13 @@ export interface LolClashPlayerNotificationData {
   notification: LolClashPlayerNotification;
   notifyReason: LolClashNotifyReason;
   rosterNotifyReason: LolClashRosterNotifyReason;
-  sourceSummonerId: bigint;
-  targetSummonerId: bigint;
+  sourceSummonerId: number;
+  targetSummonerId: number;
   tournamentNotifyReason: LolClashTournamentNotifyReason;
 }
 
 export interface LolClashPlayerRewards {
-  seasonVp: bigint;
+  seasonVp: number;
   themeVp: Array<LolClashThemeVp>;
 }
 
@@ -3957,7 +3957,7 @@ export type LolClashPlayerState =
   | "ELIMINATED";
 
 export interface LolClashPlayerTournamentData {
-  bracketId: bigint;
+  bracketId: number;
   isSub: boolean;
   rosterId: string;
   state: LolClashPlayerState;
@@ -3970,17 +3970,17 @@ export interface LolClashPlayerUpdateNotification {
 
 export interface LolClashPlaymodeRestrictedInfo {
   isRestricted: boolean;
-  phaseId: bigint;
+  phaseId: number;
   presenceState: LolClashPresenceState;
   readyForVoice: boolean;
   rosterId: string;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export type LolClashPresenceState = "NONE" | "LOCKED_IN" | "SCOUTING";
 
 export interface LolClashProfileInfo {
-  honorLevel: bigint;
+  honorLevel: number;
 }
 
 export interface LolClashQueue {
@@ -3990,18 +3990,18 @@ export interface LolClashQueue {
   detailedDescription: string;
   gameMode: string;
   gameTypeConfig: LolClashQueueGameTypeConfig;
-  id: bigint;
+  id: number;
   isRanked: boolean;
   isTeamBuilderManaged: boolean;
   isTeamOnly: boolean;
-  mapId: bigint;
-  maxLevel: bigint;
-  maxSummonerLevelForFirstWinOfTheDay: bigint;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
+  mapId: number;
+  maxLevel: number;
+  maxSummonerLevelForFirstWinOfTheDay: number;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
   name: string;
-  numPlayersPerTeam: bigint;
+  numPlayersPerTeam: number;
   queueAvailability: LolClashQueueAvailability;
   queueRewards: LolClashQueueReward;
   shortName: string;
@@ -4017,21 +4017,21 @@ export interface LolClashQueueGameTypeConfig {
   advancedLearningQuests: boolean;
   allowTrades: boolean;
   banMode: string;
-  banTimerDuration: bigint;
+  banTimerDuration: number;
   battleBoost: boolean;
   crossTeamChampionPool: boolean;
   deathMatch: boolean;
   doNotRemove: boolean;
   duplicatePick: boolean;
   exclusivePick: boolean;
-  id: bigint;
+  id: number;
   learningQuests: boolean;
-  mainPickTimerDuration: bigint;
-  maxAllowableBans: bigint;
+  mainPickTimerDuration: number;
+  maxAllowableBans: number;
   name: string;
   onboardCoopBeginner: boolean;
   pickMode: string;
-  postPickTimerDuration: bigint;
+  postPickTimerDuration: number;
   reroll: boolean;
   teamChampionPool: boolean;
 }
@@ -4040,32 +4040,32 @@ export interface LolClashQueueReward {
   isChampionPointsEnabled: boolean;
   isIpEnabled: boolean;
   isXpEnabled: boolean;
-  partySizeIpRewards: Array<bigint>;
+  partySizeIpRewards: Array<number>;
 }
 
 export interface LolClashRankedScoutingMember {
   championScoutingData: Array<LolClashRankedScoutingTopChampion>;
-  playerId: bigint;
+  playerId: number;
 }
 
 export interface LolClashRankedScoutingTopChampion {
-  championId: bigint;
-  gameCount: bigint;
+  championId: number;
+  gameCount: number;
   kda: string;
   kdaClassification: LolClashKdaClassification;
-  rank: bigint;
-  winCount: bigint;
-  winRate: bigint;
+  rank: number;
+  winCount: number;
+  winRate: number;
 }
 
 export interface LolClashReadyCheckInfo {
   acceptError: string;
   isAcceptSuccessful: boolean;
-  queueId: bigint;
+  queueId: number;
   readyCheckResource: LolClashMatchmakingReadyCheckResource;
-  timestampLastClashGameflowDodge: bigint;
-  timestampReceived: bigint;
-  timestampResponseComplete: bigint;
+  timestampLastClashGameflowDodge: number;
+  timestampReceived: number;
+  timestampResponseComplete: number;
 }
 
 export interface LolClashRegisteredRosterNotification {
@@ -4075,11 +4075,11 @@ export interface LolClashRegisteredRosterNotification {
 
 export interface LolClashRoster {
   availableLogos: Array<RewardLogo>;
-  captainSummonerId: bigint;
-  currentBracketWins: bigint;
+  captainSummonerId: number;
+  currentBracketWins: number;
   highTierVariance: boolean;
-  iconColorId: bigint;
-  iconId: bigint;
+  iconColorId: number;
+  iconId: number;
   id: string;
   invitationId: string;
   isActiveInCurrentPhase: boolean;
@@ -4088,23 +4088,23 @@ export interface LolClashRoster {
   isEliminated: boolean;
   isRegistered: boolean;
   lft: boolean;
-  losses: bigint;
+  losses: number;
   members: Array<LolClashRosterMember>;
   name: string;
-  numCompletedPeriods: bigint;
+  numCompletedPeriods: number;
   phaseInfos: Array<LolClashRosterPhaseInfo>;
-  points: bigint;
+  points: number;
   shortName: string;
   suggestedInvites: Array<LolClashSuggestedInvite>;
-  tier: bigint;
-  tournamentId: bigint;
-  wins: bigint;
+  tier: number;
+  tournamentId: number;
+  wins: number;
   withdraw: RosterWithdraw;
 }
 
 export interface LolClashRosterDetails {
-  iconColorId: bigint;
-  iconId: bigint;
+  iconColorId: number;
+  iconId: number;
   name: string;
   shortName: string;
 }
@@ -4112,38 +4112,38 @@ export interface LolClashRosterDetails {
 export interface LolClashRosterDynamicStateNotification {
   notifyReason: LolClashRosterNotifyReason;
   rosterDynamicState: RosterDynamicStateDTO;
-  sourcePlayerId: bigint;
+  sourcePlayerId: number;
 }
 
 export interface LolClashRosterMatchAggregatedStats {
-  durationMs: bigint;
-  gameId: bigint;
-  kills: bigint;
+  durationMs: number;
+  gameId: number;
+  kills: number;
   loserBracket: boolean;
-  opponentIconColorId: bigint;
-  opponentIconId: bigint;
-  opponentKills: bigint;
+  opponentIconColorId: number;
+  opponentIconId: number;
+  opponentKills: number;
   opponentShortName: string;
-  playerChampionIds: bigint | undefined;
-  round: bigint;
+  playerChampionIds: number | undefined;
+  round: number;
   win: boolean;
 }
 
 export interface LolClashRosterMember {
   buyinType: TicketType;
-  currentBuyin: bigint;
+  currentBuyin: number;
   incomingOffers: Array<LolClashTicketOffer>;
   inviteType: InviteType;
-  inviterId: bigint;
+  inviterId: number;
   isSubForOtherTeam: boolean;
   isSubbedOut: boolean;
   isSubstitute: boolean;
   position: Position;
-  previousBuyin: bigint;
-  replacedSummonerId: bigint;
+  previousBuyin: number;
+  replacedSummonerId: number;
   state: LolClashRosterMemberState;
-  summonerId: bigint;
-  tier: bigint;
+  summonerId: number;
+  tier: number;
 }
 
 export type LolClashRosterMemberState =
@@ -4215,23 +4215,23 @@ export type LolClashRosterNotifyReason =
   | "GAME_RESCHEDULED";
 
 export interface LolClashRosterPeriodAggregatedStats {
-  bracketSize: bigint;
+  bracketSize: number;
   matchStats: Array<LolClashRosterMatchAggregatedStats>;
-  period: bigint;
-  playerBids: bigint | undefined;
-  time: bigint;
+  period: number;
+  playerBids: number | undefined;
+  time: number;
 }
 
 export interface LolClashRosterPhaseInfo {
-  checkinTime: bigint;
+  checkinTime: number;
   isBracketComplete: boolean;
-  period: bigint;
-  phaseId: bigint;
+  period: number;
+  phaseId: number;
 }
 
 export interface LolClashRosterPlayerAggregatedStats {
-  rawStatsMax: bigint | undefined;
-  rawStatsSum: bigint | undefined;
+  rawStatsMax: number | undefined;
+  rawStatsSum: number | undefined;
   sub: boolean;
 }
 
@@ -4239,55 +4239,55 @@ export interface LolClashRosterPlayerNotification {
   notifyReason: LolClashRosterNotifyReason;
   playerNotificationDTO: PlayerDTO;
   roster: RosterDTO;
-  sourcePlayerId: bigint;
+  sourcePlayerId: number;
 }
 
 export interface LolClashRosterStats {
-  endTimeMs: bigint;
+  endTimeMs: number;
   periodStats: Array<LolClashRosterPeriodAggregatedStats>;
   playerStats: LolClashRosterPlayerAggregatedStats | undefined;
-  rosterIconColorId: bigint;
-  rosterIconId: bigint;
-  rosterId: bigint;
+  rosterIconColorId: number;
+  rosterIconId: number;
+  rosterId: number;
   rosterName: string;
   rosterShortName: string;
-  startTimeMs: bigint;
-  tier: bigint;
+  startTimeMs: number;
+  tier: number;
   tournamentNameLocKey: string;
   tournamentNameLocKeySecondary: string;
-  tournamentPeriods: bigint;
-  tournamentThemeId: bigint;
+  tournamentPeriods: number;
+  tournamentThemeId: number;
 }
 
 export interface LolClashRosterWithdrawNotification {
   notifyReason: LolClashRosterNotifyReason;
-  rosterId: bigint;
-  sourcePlayerId: bigint;
-  tournamentId: bigint;
-  version: bigint;
+  rosterId: number;
+  sourcePlayerId: number;
+  tournamentId: number;
+  version: number;
   withdraw: RosterWithdraw;
 }
 
 export interface LolClashScoutingChampionMastery {
-  championId: bigint;
-  championLevel: bigint;
-  championPoints: bigint;
+  championId: number;
+  championLevel: number;
+  championPoints: number;
 }
 
 export interface LolClashScoutingChampions {
-  playerId: bigint;
+  playerId: number;
   topMasteries: Array<LolClashScoutingChampionMastery>;
   topSeasonChampions: Array<LolClashScoutingSeasonChampion>;
-  totalMasteryScore: bigint;
+  totalMasteryScore: number;
 }
 
 export interface LolClashScoutingSeasonChampion {
-  championId: bigint;
-  gameCount: bigint;
+  championId: number;
+  gameCount: number;
   kda: string;
   kdaClassification: LolClashKdaClassification;
-  winCount: bigint;
-  winRate: bigint;
+  winCount: number;
+  winRate: number;
 }
 
 export interface LolClashSetPositionRequest {
@@ -4295,13 +4295,13 @@ export interface LolClashSetPositionRequest {
 }
 
 export interface LolClashSetTicketRequest {
-  ticketAmount: bigint;
+  ticketAmount: number;
   ticketType: TicketType;
 }
 
 export interface LolClashSettingCategory {
   data: boolean | undefined;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolClashSimpleStateFlag {
@@ -4312,34 +4312,34 @@ export interface LolClashSimpleStateFlag {
 export type LolClashSimpleStateStatus = "UNACKNOWLEDGED" | "ACKNOWLEDGED";
 
 export interface LolClashSuggestedInvite {
-  suggesterSummonerId: bigint;
-  summonerId: bigint;
+  suggesterSummonerId: number;
+  summonerId: number;
 }
 
 export interface LolClashSuggestionInvite {
-  inviteePlayers: Array<bigint>;
-  inviterId: bigint;
+  inviteePlayers: Array<number>;
+  inviterId: number;
 }
 
 export interface LolClashSuggestionInvitee {
-  captainId: bigint;
-  inviteeId: bigint;
+  captainId: number;
+  inviteeId: number;
 }
 
 export interface LolClashTeamOpenState {
-  captainId: bigint;
+  captainId: number;
   invitationId: string;
   openTeam: boolean;
 }
 
 export interface LolClashThemeVp {
-  themeId: bigint;
-  vp: bigint;
+  themeId: number;
+  vp: number;
 }
 
 export interface LolClashThirdPartyApiPlayer {
   role: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolClashThirdPartyApiRoster {
@@ -4348,48 +4348,48 @@ export interface LolClashThirdPartyApiRoster {
 }
 
 export interface LolClashTicketOffer {
-  amount: bigint;
+  amount: number;
   isAccepted: boolean;
-  summonerId: bigint;
+  summonerId: number;
   ticketType: TicketType;
 }
 
 export interface LolClashTournament {
   allowRosterCreation: boolean;
-  bracketFormationInitDelayMs: bigint;
-  bracketFormationIntervalMs: bigint;
+  bracketFormationInitDelayMs: number;
+  bracketFormationIntervalMs: number;
   bracketSize: string;
-  buyInOptions: Array<bigint>;
-  buyInOptionsPremium: Array<bigint>;
-  endTimeMs: bigint;
-  entryFee: bigint;
-  id: bigint;
+  buyInOptions: Array<number>;
+  buyInOptionsPremium: Array<number>;
+  endTimeMs: number;
+  entryFee: number;
+  id: number;
   isHonorRestrictionEnabled: boolean;
   isRankedRestrictionEnabled: boolean;
   isSmsRestrictionEnabled: boolean;
   lastThemeOfSeason: boolean;
   lft: boolean;
-  maxInvites: bigint;
-  maxSubstitutes: bigint;
-  maxSuggestionsPerPlayer: bigint;
+  maxInvites: number;
+  maxSubstitutes: number;
+  maxSuggestionsPerPlayer: number;
   nameLocKey: string;
   nameLocKeySecondary: string;
   phases: Array<LolClashTournamentPhase>;
-  resumeTime: bigint;
+  resumeTime: number;
   rewardConfig: Array<ClashRewardConfigClient>;
-  rosterCreateDeadline: bigint;
-  rosterSize: bigint;
-  scoutingDurationMs: bigint;
-  startTimeMs: bigint;
+  rosterCreateDeadline: number;
+  rosterSize: number;
+  scoutingDurationMs: number;
+  startTimeMs: number;
   status: TournamentStatusEnum;
-  themeId: bigint;
+  themeId: number;
   tierConfigs: Array<TierConfig>;
 }
 
 export interface LolClashTournamentGameEnd {
-  bracketId: bigint;
+  bracketId: number;
   oldBracket: LolClashBracket;
-  tournamentId: bigint;
+  tournamentId: number;
   tournamentNameLocKey: string;
   tournamentNameLocKeySecondary: string;
 }
@@ -4412,18 +4412,18 @@ export type LolClashTournamentNotifyReason =
 export interface LolClashTournamentPhase {
   cancelled: boolean;
   capacityStatus: CapacityEnum;
-  id: bigint;
-  limitTiers: Array<bigint>;
-  lockinStartTime: bigint;
-  period: bigint;
-  scoutingStartTime: bigint;
-  tournamentId: bigint;
+  id: number;
+  limitTiers: Array<number>;
+  lockinStartTime: number;
+  period: number;
+  scoutingStartTime: number;
+  tournamentId: number;
 }
 
 export interface LolClashTournamentPhaseProgressNotificationDTO {
   capacityStatus: CapacityEnum;
-  phaseId: bigint;
-  tournamentId: bigint;
+  phaseId: number;
+  tournamentId: number;
 }
 
 export type LolClashTournamentState =
@@ -4435,81 +4435,81 @@ export type LolClashTournamentState =
   | "RESULTS";
 
 export interface LolClashTournamentStateInfo {
-  currentPhaseId: bigint;
-  nextPhaseId: bigint;
-  nextStateChangeTime: bigint;
-  numRemainingPeriods: bigint;
+  currentPhaseId: number;
+  nextPhaseId: number;
+  nextStateChangeTime: number;
+  numRemainingPeriods: number;
   state: LolClashTournamentState;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export interface LolClashTournamentSummary {
-  bracketId: bigint;
+  bracketId: number;
   rosterId: string;
   state: LolClashTournamentState;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export interface LolClashTournamentUpdatedNotification {
-  currentRetry: bigint;
-  maxRetry: bigint;
-  missingPlayerIds: Array<bigint>;
+  currentRetry: number;
+  maxRetry: number;
+  missingPlayerIds: Array<number>;
   notifyReason: LolClashRosterNotifyReason;
-  retrySeconds: bigint;
+  retrySeconds: number;
 }
 
 export interface LolClashTournamentUpdatedNotificationDTO {
   reason: LolClashTournamentNotifyReason;
-  relevantPhaseId: bigint;
+  relevantPhaseId: number;
   tournament: TournamentDTO;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export interface LolClashTournamentWinnerHistory {
-  tournamentId: bigint;
+  tournamentId: number;
   winners: Array<LolClashTournamentWinnerInfo>;
 }
 
 export interface LolClashTournamentWinnerInfo {
-  averageWinDuration: bigint;
-  createTime: bigint;
-  logo: bigint;
-  logoColor: bigint;
+  averageWinDuration: number;
+  createTime: number;
+  logo: number;
+  logoColor: number;
   name: string;
-  playerIds: Array<bigint>;
-  rosterId: bigint;
+  playerIds: Array<number>;
+  rosterId: number;
   shortName: string;
-  tier: bigint;
+  tier: number;
 }
 
 export interface LolClashUserResource {
   lol: string | undefined;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolCollectionsAccountIdAndSummonerId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolCollectionsCollectionsChampionMastery {
-  championId: bigint;
-  championLevel: bigint;
-  championPoints: bigint;
-  championPointsSinceLastLevel: bigint;
-  championPointsUntilNextLevel: bigint;
+  championId: number;
+  championLevel: number;
+  championPoints: number;
+  championPointsSinceLastLevel: number;
+  championPointsUntilNextLevel: number;
   chestGranted: boolean;
   formattedChampionPoints: string;
   formattedMasteryGoal: string;
   highestGrade: string;
-  lastPlayTime: bigint;
-  playerId: bigint;
-  tokensEarned: bigint;
+  lastPlayTime: number;
+  playerId: number;
+  tokensEarned: number;
 }
 
 export interface LolCollectionsCollectionsChestEligibility {
-  earnableChests: bigint;
-  maximumChests: bigint;
-  nextChestRechargeTime: bigint;
+  earnableChests: number;
+  maximumChests: number;
+  nextChestRechargeTime: number;
 }
 
 export interface LolCollectionsCollectionsOwnership {
@@ -4519,22 +4519,22 @@ export interface LolCollectionsCollectionsOwnership {
 }
 
 export interface LolCollectionsCollectionsRental {
-  endDate: bigint;
-  purchaseDate: bigint;
+  endDate: number;
+  purchaseDate: number;
   rented: boolean;
-  winCountRemaining: bigint;
+  winCountRemaining: number;
 }
 
 export interface LolCollectionsCollectionsSummonerBackdrop {
-  accountId: bigint;
+  accountId: number;
   backdropImage: string;
   backdropMaskColor: string;
   backdropType: LolCollectionsCollectionsSummonerBackdropType;
   backdropVideo: string;
-  championId: bigint;
-  profileIconId: bigint;
+  championId: number;
+  profileIconId: number;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolCollectionsCollectionsSummonerBackdropType =
@@ -4544,19 +4544,19 @@ export type LolCollectionsCollectionsSummonerBackdropType =
   | "specified-skin";
 
 export interface LolCollectionsCollectionsSummonerSpells {
-  spells: Array<bigint>;
-  summonerId: bigint;
+  spells: Array<number>;
+  summonerId: number;
 }
 
 export interface LolCollectionsCollectionsTopChampionMasteries {
   masteries: Array<LolCollectionsCollectionsChampionMastery>;
-  score: bigint;
-  summonerId: bigint;
+  score: number;
+  summonerId: number;
 }
 
 export interface LolCollectionsCollectionsWardSkin {
   description: string;
-  id: bigint;
+  id: number;
   name: string;
   ownership: LolCollectionsCollectionsOwnership;
   wardImagePath: string;
@@ -4564,7 +4564,7 @@ export interface LolCollectionsCollectionsWardSkin {
 }
 
 export interface LolCollectionsCollectionsWardSkinList {
-  wardSkinList: Array<bigint>;
+  wardSkinList: Array<number>;
 }
 
 export interface LolCollectionsGameDataChampionMasteries {
@@ -4572,12 +4572,12 @@ export interface LolCollectionsGameDataChampionMasteries {
 }
 
 export interface LolCollectionsGameDataChampionMasteryGroup {
-  id: bigint;
+  id: number;
   rows: Array<LolCollectionsGameDataChampionMasteryRow>;
 }
 
 export interface LolCollectionsGameDataChampionMasteryRow {
-  masteries: Array<bigint>;
+  masteries: Array<number>;
 }
 
 export interface LolCollectionsGameDataChampionMasteryTree {
@@ -4585,14 +4585,14 @@ export interface LolCollectionsGameDataChampionMasteryTree {
 }
 
 export interface LolCollectionsGameDataChampionQuestSkin {
-  id: bigint;
+  id: number;
   name: string;
   splashPath: string;
   splashVideoPath: string;
 }
 
 export interface LolCollectionsGameDataChampionSkin {
-  id: bigint;
+  id: number;
   isBase: boolean;
   name: string;
   questSkinInfo: LolCollectionsGameDataQuestSkinInfo;
@@ -4601,7 +4601,7 @@ export interface LolCollectionsGameDataChampionSkin {
 }
 
 export interface LolCollectionsGameDataChampionSummary {
-  id: bigint;
+  id: number;
 }
 
 export interface LolCollectionsGameDataQuestSkinInfo {
@@ -4615,10 +4615,10 @@ export interface LolCollectionsGameDataSplashMetadata {
 
 export interface LolCollectionsInventoryItem {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolCollectionsItemOwnershipType;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   uuid: string;
 }
 
@@ -4630,24 +4630,24 @@ export interface LolCollectionsInventoryItemDTO {
   instanceId: string;
   instanceTypeId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   loyalty: boolean;
   lsb: boolean;
   payload: boolean | undefined;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   rental: boolean;
   usedInGameDate: string;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolCollectionsInventoryItemWithPayload {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolCollectionsItemOwnershipType;
   payload: boolean | undefined;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   uuid: string;
 }
 
@@ -4660,7 +4660,7 @@ export interface LolCollectionsLcdsDynamicClientConfig {
 export interface LolCollectionsLoginSession {
   connected: boolean;
   state: LolCollectionsLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolCollectionsLoginSessionStates =
@@ -4670,7 +4670,7 @@ export type LolCollectionsLoginSessionStates =
   | "ERROR";
 
 export interface LolCollectionsNumberFormattingBehavior {
-  digitsForThousandsSeperator: bigint;
+  digitsForThousandsSeperator: number;
   trimTrailingZerosAfterDecimal: boolean;
   westernNumberGrouping: boolean;
 }
@@ -4699,7 +4699,7 @@ export interface LolCollectionsPlayerNotification {
   data: string | undefined;
   detailKey: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -4707,15 +4707,15 @@ export interface LolCollectionsPlayerNotification {
 }
 
 export interface LolCollectionsSummoner {
-  accountId: bigint;
-  profileIconId: bigint;
+  accountId: number;
+  profileIconId: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolCollectionsSummonerProfile {
-  backgroundSkinId: bigint;
+  backgroundSkinId: number;
 }
 
 export interface LolCollectionsSummonerProfileUpdate {
@@ -4728,15 +4728,15 @@ export interface LolCollectionsTPVSaveResponseDTO {
 }
 
 export interface LolContentTargetingAccountIdAndSummonerId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolContentTargetingCollectionsChampionMastery {
-  championId: bigint;
-  championLevel: bigint;
-  championPoints: bigint;
-  lastPlayTime: bigint;
-  playerId: bigint;
+  championId: number;
+  championLevel: number;
+  championPoints: number;
+  lastPlayTime: number;
+  playerId: number;
 }
 
 export interface LolContentTargetingContentTargetingFilterResponse {
@@ -4748,7 +4748,7 @@ export interface LolContentTargetingContentTargetingLocaleResponse {
 }
 
 export interface LolContentTargetingGameflowGameData {
-  gameId: bigint;
+  gameId: number;
   queue: LolContentTargetingQueue;
 }
 
@@ -4791,7 +4791,7 @@ export interface LolContentTargetingLoginSession {
   idToken: string;
   puuid: string;
   state: LolContentTargetingLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolContentTargetingLoginSessionState =
@@ -4801,7 +4801,7 @@ export type LolContentTargetingLoginSessionState =
   | "ERROR";
 
 export interface LolContentTargetingMission {
-  completedDate: bigint;
+  completedDate: number;
   id: string;
   internalName: string;
   status: string;
@@ -4809,9 +4809,9 @@ export interface LolContentTargetingMission {
 
 export interface LolContentTargetingPlatformConfig {
   ABTestFilterEnabled: boolean;
-  ABTestFilterGroups: bigint;
-  ABTestFilterSalt: bigint;
-  AsynchronousEventHandlerSetupDelayInSeconds: bigint;
+  ABTestFilterGroups: number;
+  ABTestFilterSalt: number;
+  AsynchronousEventHandlerSetupDelayInSeconds: number;
   Enabled: boolean;
   EntitlementsFilterEnabled: boolean;
   EntitlementsPrefix: string;
@@ -4819,24 +4819,24 @@ export interface LolContentTargetingPlatformConfig {
   LocationFiltersEnabled: boolean;
   MainFilterEnabled: boolean;
   Mapping: string;
-  MasteryFilterChampionLimit: bigint;
-  MasteryFilterDaysSinceLastPlayed: bigint;
+  MasteryFilterChampionLimit: number;
+  MasteryFilterDaysSinceLastPlayed: number;
   MasteryFilterEnabled: boolean;
-  MasteryFilterLevelThreshold: bigint;
+  MasteryFilterLevelThreshold: number;
   MissionsFilterEnabled: boolean;
   RankFilterEnabled: boolean;
   RankedFilterEnabled: boolean;
   SummonerIconFilterEnabled: boolean;
   TargetingAttributeStorageBaseUri: string;
   TargetingAttributeStorageEnabled: boolean;
-  TasIngestionDelayInSeconds: bigint;
+  TasIngestionDelayInSeconds: number;
 }
 
 export interface LolContentTargetingQueue {
   category: LolContentTargetingQueueGameCategory;
   gameMode: string;
-  id: bigint;
-  mapId: bigint;
+  id: number;
+  mapId: number;
 }
 
 export type LolContentTargetingQueueGameCategory = "None" | "Custom" | "PvP" | "VersusAi" | "Alpha";
@@ -4883,8 +4883,8 @@ export interface LolContentTargetingSettingsResource {
 }
 
 export interface LolContentTargetingSummoner {
-  profileIconId: bigint;
-  summonerLevel: bigint;
+  profileIconId: number;
+  summonerLevel: number;
 }
 
 export interface LolContentTargetingTargetingAttributes {
@@ -4896,7 +4896,7 @@ export interface LolContentTargetingToken {
 }
 
 export interface LolCosmeticsAccountSettingsCategoryDataResource {
-  typeToLastOpenedDate: bigint | undefined;
+  typeToLastOpenedDate: number | undefined;
 }
 
 export interface LolCosmeticsCapOffer {
@@ -4915,26 +4915,26 @@ export interface LolCosmeticsCapOfferPayloadEntry {
   fulfillmentTypeId: string;
   inventoryTypeUUID: string;
   itemInstanceId: string;
-  itemPriceMap: bigint | undefined;
+  itemPriceMap: number | undefined;
 }
 
 export interface LolCosmeticsCompanionsGroupViewModel {
-  groupId: bigint;
+  groupId: number;
   groupName: string;
   items: Array<LolCosmeticsCosmeticsCompanionViewModel>;
-  numAvailable: bigint;
-  numOwned: bigint;
+  numAvailable: number;
+  numOwned: number;
 }
 
 export interface LolCosmeticsCompanionsGroupedViewModel {
-  defaultItemId: bigint;
+  defaultItemId: number;
   groups: Array<LolCosmeticsCompanionsGroupViewModel>;
   selectedLoadoutItem: LolCosmeticsCosmeticsCompanionViewModel;
 }
 
 export interface LolCosmeticsCosmeticSettingsResource {
   data: LolCosmeticsAccountSettingsCategoryDataResource;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolCosmeticsCosmeticsCompanion {
@@ -4942,15 +4942,15 @@ export interface LolCosmeticsCosmeticsCompanion {
   contentId: string;
   description: string;
   f2p: boolean;
-  groupId: bigint;
-  itemId: bigint;
-  level: bigint;
+  groupId: number;
+  itemId: number;
+  level: number;
   loadoutsIcon: string;
   loyalty: boolean;
   name: string;
   owned: boolean;
   purchaseDate: string;
-  rarityValue: bigint;
+  rarityValue: number;
   selected: boolean;
   species: string;
   upgrades: Array<string>;
@@ -4961,17 +4961,17 @@ export interface LolCosmeticsCosmeticsCompanionViewModel {
   contentId: string;
   description: string;
   f2p: boolean;
-  groupId: bigint;
+  groupId: number;
   isRecentItem: boolean;
-  itemId: bigint;
-  level: bigint;
+  itemId: number;
+  level: number;
   loadoutsIcon: string;
   loyalty: boolean;
   name: string;
   offerData: LolCosmeticsCapOffer;
   owned: boolean;
   purchaseDate: string;
-  rarityValue: bigint;
+  rarityValue: number;
   selected: boolean;
   species: string;
   starShardsPrice: LolCosmeticsCosmeticsOfferPrice;
@@ -4980,23 +4980,23 @@ export interface LolCosmeticsCosmeticsCompanionViewModel {
 
 export interface LolCosmeticsCosmeticsOfferPrice {
   offerId: string;
-  price: bigint;
+  price: number;
 }
 
 export interface LolCosmeticsCosmeticsTFTDamageSkin {
   contentId: string;
   description: string;
   f2p: boolean;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
-  itemId: bigint;
-  level: bigint;
+  itemId: number;
+  level: number;
   loadoutsIcon: string;
   loyalty: boolean;
   name: string;
   owned: boolean;
   purchaseDate: string;
-  rarityValue: bigint;
+  rarityValue: number;
   selected: boolean;
   upgrades: Array<string>;
 }
@@ -5005,17 +5005,17 @@ export interface LolCosmeticsCosmeticsTFTDamageSkinViewModel {
   contentId: string;
   description: string;
   f2p: boolean;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
   isRecentItem: boolean;
-  itemId: bigint;
-  level: bigint;
+  itemId: number;
+  level: number;
   loadoutsIcon: string;
   loyalty: boolean;
   name: string;
   owned: boolean;
   purchaseDate: string;
-  rarityValue: bigint;
+  rarityValue: number;
   selected: boolean;
   upgrades: Array<LolCosmeticsCosmeticsTFTDamageSkinViewModel>;
 }
@@ -5024,15 +5024,15 @@ export interface LolCosmeticsCosmeticsTFTMapSkin {
   contentId: string;
   description: string;
   f2p: boolean;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
-  itemId: bigint;
+  itemId: number;
   loadoutsIcon: string;
   loyalty: boolean;
   name: string;
   owned: boolean;
   purchaseDate: string;
-  rarityValue: bigint;
+  rarityValue: number;
   selected: boolean;
 }
 
@@ -5040,16 +5040,16 @@ export interface LolCosmeticsCosmeticsTFTMapSkinViewModel {
   contentId: string;
   description: string;
   f2p: boolean;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
   isRecentItem: boolean;
-  itemId: bigint;
+  itemId: number;
   loadoutsIcon: string;
   loyalty: boolean;
   name: string;
   owned: boolean;
   purchaseDate: string;
-  rarityValue: bigint;
+  rarityValue: number;
   selected: boolean;
 }
 
@@ -5058,12 +5058,12 @@ export interface LolCosmeticsGameDataCompanion {
   colorName: string;
   contentId: string;
   description: string;
-  itemId: bigint;
-  level: bigint;
+  itemId: number;
+  level: number;
   loadoutsIcon: string;
   name: string;
-  rarityValue: bigint;
-  speciesId: bigint;
+  rarityValue: number;
+  speciesId: number;
   speciesName: string;
   upgrades: Array<string>;
 }
@@ -5071,29 +5071,29 @@ export interface LolCosmeticsGameDataCompanion {
 export interface LolCosmeticsGameDataTFTDamageSkin {
   contentId: string;
   description: string;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
-  itemId: bigint;
-  level: bigint;
+  itemId: number;
+  level: number;
   loadoutsIcon: string;
   name: string;
-  rarityValue: bigint;
+  rarityValue: number;
 }
 
 export interface LolCosmeticsGameDataTFTMapSkin {
   contentId: string;
   description: string;
-  groupId: bigint;
+  groupId: number;
   groupName: string;
-  itemId: bigint;
+  itemId: number;
   loadoutsIcon: string;
   name: string;
-  rarityValue: bigint;
+  rarityValue: number;
 }
 
 export interface LolCosmeticsLoadout {
   id: string;
-  itemId: bigint;
+  itemId: number;
   loadout: LolCosmeticsLoadoutItem | undefined;
   name: string;
   scope: string;
@@ -5102,7 +5102,7 @@ export interface LolCosmeticsLoadout {
 export interface LolCosmeticsLoadoutItem {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolCosmeticsLoadoutUpdateDto {
@@ -5110,29 +5110,29 @@ export interface LolCosmeticsLoadoutUpdateDto {
 }
 
 export interface LolCosmeticsTFTDamageSkinGroupViewModel {
-  groupId: bigint;
+  groupId: number;
   groupName: string;
   items: Array<LolCosmeticsCosmeticsTFTDamageSkinViewModel>;
-  numAvailable: bigint;
-  numOwned: bigint;
+  numAvailable: number;
+  numOwned: number;
 }
 
 export interface LolCosmeticsTFTDamageSkinGroupedViewModel {
-  defaultItemId: bigint;
+  defaultItemId: number;
   groups: Array<LolCosmeticsTFTDamageSkinGroupViewModel>;
   selectedLoadoutItem: LolCosmeticsCosmeticsTFTDamageSkinViewModel;
 }
 
 export interface LolCosmeticsTFTMapSkinGroupViewModel {
-  groupId: bigint;
+  groupId: number;
   groupName: string;
   items: Array<LolCosmeticsCosmeticsTFTMapSkinViewModel>;
-  numAvailable: bigint;
-  numOwned: bigint;
+  numAvailable: number;
+  numOwned: number;
 }
 
 export interface LolCosmeticsTFTMapSkinGroupedViewModel {
-  defaultItemId: bigint;
+  defaultItemId: number;
   groups: Array<LolCosmeticsTFTMapSkinGroupViewModel>;
   selectedLoadoutItem: LolCosmeticsCosmeticsTFTMapSkinViewModel;
 }
@@ -5143,29 +5143,29 @@ export interface LolCosmeticsTFTSettingsDataResource {
 
 export interface LolCosmeticsTFTSettingsResource {
   data: LolCosmeticsTFTSettingsDataResource;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolCosmeticsUserResource {
   lol: string | undefined;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolDiscordRpGameDataChampionSummary {
   alias: string;
-  id: bigint;
+  id: number;
   name: string;
 }
 
 export interface LolDiscordRpPartyPresenceData {
-  maxPlayers: bigint;
+  maxPlayers: number;
   partyId: string;
-  queueId: bigint;
-  summoners: Array<bigint>;
+  queueId: number;
+  summoners: Array<number>;
 }
 
 export interface LolEmailVerificationAccessToken {
-  expiry: bigint;
+  expiry: number;
   token: string;
 }
 
@@ -5197,157 +5197,157 @@ export interface LolEmailVerificationValidationStatus {
 }
 
 export interface LolEndOfGameChampionMasteryGrade {
-  championId: bigint;
+  championId: number;
   grade: string;
-  playerId: bigint;
+  playerId: number;
 }
 
 export interface LolEndOfGameChampionMasteryMini {
-  championId: bigint;
-  championLevel: bigint;
-  playerId: bigint;
+  championId: number;
+  championLevel: number;
+  playerId: number;
 }
 
 export interface LolEndOfGameChampionMasteryUpdate {
-  bonusPointsGained: bigint;
-  championId: bigint;
-  gameId: bigint;
+  bonusPointsGained: number;
+  championId: number;
+  gameId: number;
   grade: string;
   hasLeveledUp: boolean;
   id: string;
-  level: bigint;
+  level: number;
   levelUpList: Array<LolEndOfGameChampionMasteryMini>;
   memberGrades: Array<LolEndOfGameChampionMasteryGrade>;
-  playerId: bigint;
-  pointsBeforeGame: bigint;
-  pointsGained: bigint;
-  pointsGainedIndividualContribution: bigint;
-  pointsSinceLastLevelBeforeGame: bigint;
-  pointsUntilNextLevelAfterGame: bigint;
-  pointsUntilNextLevelBeforeGame: bigint;
-  score: bigint;
+  playerId: number;
+  pointsBeforeGame: number;
+  pointsGained: number;
+  pointsGainedIndividualContribution: number;
+  pointsSinceLastLevelBeforeGame: number;
+  pointsUntilNextLevelAfterGame: number;
+  pointsUntilNextLevelBeforeGame: number;
+  score: number;
 }
 
 export interface LolEndOfGameEndOfGamePlayer {
   botPlayer: boolean;
-  championId: bigint;
+  championId: number;
   detectedTeamPosition: string;
-  elo: bigint;
-  eloChange: bigint;
-  gameId: bigint;
+  elo: number;
+  eloChange: number;
+  gameId: number;
   isReportingDisabled: boolean;
-  items: Array<bigint>;
+  items: Array<number>;
   leaver: boolean;
-  leaves: bigint;
-  level: bigint;
-  losses: bigint;
-  profileIconId: bigint;
+  leaves: number;
+  level: number;
+  losses: number;
+  profileIconId: number;
   selectedPosition: string;
-  skinIndex: bigint;
+  skinIndex: number;
   skinName: string;
-  spell1Id: bigint;
-  spell2Id: bigint;
+  spell1Id: number;
+  spell2Id: number;
   stats: boolean | undefined;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
-  teamId: bigint;
-  userId: bigint;
-  wins: bigint;
+  teamId: number;
+  userId: number;
+  wins: number;
 }
 
 export interface LolEndOfGameEndOfGamePlayerComplaintV2 {
   comment: string;
-  gameId: bigint;
+  gameId: number;
   offenses: string;
-  reportedSummonerId: bigint;
+  reportedSummonerId: number;
 }
 
 export interface LolEndOfGameEndOfGamePlayerReport {
   comment: string;
-  gameId: bigint;
+  gameId: number;
   offense: string;
   reportedPuuid: string;
 }
 
 export interface LolEndOfGameEndOfGamePoints {
-  pointChangeFromChampionsOwned: bigint;
-  pointChangeFromGameplay: bigint;
-  pointsUntilNextReroll: bigint;
-  pointsUsed: bigint;
-  previousPoints: bigint;
-  rerollCount: bigint;
-  totalPoints: bigint;
+  pointChangeFromChampionsOwned: number;
+  pointChangeFromGameplay: number;
+  pointsUntilNextReroll: number;
+  pointsUsed: number;
+  previousPoints: number;
+  rerollCount: number;
+  totalPoints: number;
 }
 
 export interface LolEndOfGameEndOfGameStats {
-  accountId: bigint;
-  basePoints: bigint;
-  battleBoostIpEarned: bigint;
-  boostIpEarned: bigint;
-  boostXpEarned: bigint;
+  accountId: number;
+  basePoints: number;
+  battleBoostIpEarned: number;
+  boostIpEarned: number;
+  boostXpEarned: number;
   causedEarlySurrender: boolean;
-  championId: bigint;
-  coOpVsAiMinutesLeftToday: bigint;
-  coOpVsAiMsecsUntilReset: bigint;
-  completionBonusPoints: bigint;
-  currentLevel: bigint;
-  customMinutesLeftToday: bigint;
-  customMsecsUntilReset: bigint;
+  championId: number;
+  coOpVsAiMinutesLeftToday: number;
+  coOpVsAiMsecsUntilReset: number;
+  completionBonusPoints: number;
+  currentLevel: number;
+  customMinutesLeftToday: number;
+  customMsecsUntilReset: number;
   difficulty: string;
   earlySurrenderAccomplice: boolean;
-  elo: bigint;
-  eloChange: bigint;
-  experienceEarned: bigint;
-  experienceTotal: bigint;
-  firstWinBonus: bigint;
+  elo: number;
+  eloChange: number;
+  experienceEarned: number;
+  experienceTotal: number;
+  firstWinBonus: number;
   gameEndedInEarlySurrender: boolean;
-  gameId: bigint;
-  gameLength: bigint;
+  gameId: number;
+  gameLength: number;
   gameMode: string;
   gameMutators: Array<string>;
   gameType: string;
-  globalBoostXpEarned: bigint;
+  globalBoostXpEarned: number;
   imbalancedTeamsNoPoints: boolean;
   invalid: boolean;
-  ipEarned: bigint;
-  ipTotal: bigint;
+  ipEarned: number;
+  ipTotal: number;
   leveledUp: boolean;
-  loyaltyBoostIpEarned: bigint;
-  loyaltyBoostXpEarned: bigint;
-  missionsXpEarned: bigint;
+  loyaltyBoostIpEarned: number;
+  loyaltyBoostXpEarned: number;
+  missionsXpEarned: number;
   myTeamStatus: string;
-  newSpells: Array<bigint>;
-  nextLevelXp: bigint;
-  odinBonusIp: bigint;
-  partyRewardsBonusIpEarned: bigint;
+  newSpells: Array<number>;
+  nextLevelXp: number;
+  odinBonusIp: number;
+  partyRewardsBonusIpEarned: number;
   pointsPenalties: boolean | undefined;
-  preLevelUpExperienceTotal: bigint;
-  preLevelUpNextLevelXp: bigint;
-  previousLevel: bigint;
-  previousXpTotal: bigint;
-  queueBonusEarned: bigint;
+  preLevelUpExperienceTotal: number;
+  preLevelUpNextLevelXp: number;
+  previousLevel: number;
+  previousXpTotal: number;
+  queueBonusEarned: number;
   queueType: string;
   ranked: boolean;
-  reportGameId: bigint;
+  reportGameId: number;
   rerollData: LolEndOfGameEndOfGamePoints;
   roomName: string;
   roomPassword: string;
-  rpEarned: bigint;
+  rpEarned: number;
   sendStatsToTournamentProvider: boolean;
-  skinId: bigint;
-  skinIndex: bigint;
-  summonerId: bigint;
+  skinId: number;
+  skinIndex: number;
+  summonerId: number;
   summonerName: string;
-  talentPointsGained: bigint;
+  talentPointsGained: number;
   teamBoost: LolEndOfGameEndOfGameTeamBoost;
   teamEarlySurrendered: boolean;
   teams: Array<LolEndOfGameEndOfGameTeam>;
-  timeUntilNextFirstWinBonus: bigint;
-  userId: bigint;
+  timeUntilNextFirstWinBonus: number;
+  userId: number;
 }
 
 export interface LolEndOfGameEndOfGameTeam {
-  championBans: Array<bigint>;
+  championBans: Array<number>;
   fullId: string;
   isBottomTeam: boolean;
   isPlayerTeam: boolean;
@@ -5357,14 +5357,14 @@ export interface LolEndOfGameEndOfGameTeam {
   players: Array<LolEndOfGameEndOfGamePlayer>;
   stats: boolean | undefined;
   tag: string;
-  teamId: bigint;
+  teamId: number;
 }
 
 export interface LolEndOfGameEndOfGameTeamBoost {
-  availableSkins: Array<bigint>;
-  ipReward: bigint;
-  ipRewardForPurchaser: bigint;
-  price: bigint;
+  availableSkins: Array<number>;
+  ipReward: number;
+  ipRewardForPurchaser: number;
+  price: number;
   skinUnlockMode: string;
   summonerName: string;
   unlocked: boolean;
@@ -5375,17 +5375,17 @@ export interface LolEndOfGameGameClientEndOfGame {
 }
 
 export interface LolEndOfGameGameClientEndOfGameStats {
-  gameId: bigint;
+  gameId: number;
   gameMode: string;
   isRanked: boolean;
-  queueId: bigint;
+  queueId: number;
   queueType: string;
   statsBlock: boolean | undefined;
 }
 
 export interface LolEndOfGameGameDataChampionSummary {
   alias: string;
-  id: bigint;
+  id: number;
   name: string;
   squarePortraitPath: string;
 }
@@ -5401,13 +5401,13 @@ export interface LolEndOfGameGameDataTftChampion {
   character_id: string;
   display_name: string;
   path: string;
-  rarity: bigint;
+  rarity: number;
   squareIconPath: string;
   traits: Array<LolEndOfGameGameDataTftTrait>;
 }
 
 export interface LolEndOfGameGameDataTftItem {
-  id: bigint;
+  id: number;
   loadoutsIcon: string;
   name: string;
 }
@@ -5423,12 +5423,12 @@ export interface LolEndOfGameGameflowAvailability {
 
 export interface LolEndOfGameGameflowClient {
   observerServerIp: string;
-  observerServerPort: bigint;
+  observerServerPort: number;
   running: boolean;
 }
 
 export interface LolEndOfGameGameflowGameData {
-  gameId: bigint;
+  gameId: number;
   queue: LolEndOfGameQueue;
 }
 
@@ -5464,15 +5464,15 @@ export interface LolEndOfGameLoginDataPacket {
 }
 
 export interface LolEndOfGameLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolEndOfGameLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolEndOfGameLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolEndOfGameQueue {
-  id: bigint;
+  id: number;
   isRanked: boolean;
   type: string;
 }
@@ -5480,16 +5480,16 @@ export interface LolEndOfGameQueue {
 export type LolEndOfGameReportRecipientMode = "Legacy" | "Game-Agnostic" | "Combined";
 
 export interface LolEndOfGameRerollDataBagForClientV1 {
-  maximumRerolls: bigint;
-  pointCostOfReroll: bigint;
-  pointsGainedLastGame: bigint;
-  pointsUntilNextReroll: bigint;
-  rerollCount: bigint;
-  totalPoints: bigint;
+  maximumRerolls: number;
+  pointCostOfReroll: number;
+  pointsGainedLastGame: number;
+  pointsUntilNextReroll: number;
+  rerollCount: number;
+  totalPoints: number;
 }
 
 export interface LolEndOfGameSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
@@ -5497,10 +5497,10 @@ export interface LolEndOfGameSimpleMessage {
 
 export interface LolEndOfGameSummoner {
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
-  xpSinceLastLevel: bigint;
-  xpUntilNextLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
+  xpSinceLastLevel: number;
+  xpUntilNextLevel: number;
 }
 
 export interface LolEndOfGameTFTEndOfGameCompanionViewModel {
@@ -5511,30 +5511,30 @@ export interface LolEndOfGameTFTEndOfGameCompanionViewModel {
 
 export interface LolEndOfGameTFTEndOfGameItemViewModel {
   icon: string;
-  id: bigint;
+  id: number;
   name: string;
 }
 
 export interface LolEndOfGameTFTEndOfGamePieceViewModel {
   icon: string;
   items: Array<LolEndOfGameTFTEndOfGameItemViewModel>;
-  level: bigint;
+  level: number;
   name: string;
-  price: bigint;
+  price: number;
   traits: Array<LolEndOfGameTFTEndOfGameTraitViewModel>;
 }
 
 export interface LolEndOfGameTFTEndOfGamePlayerViewModel {
   boardPieces: Array<LolEndOfGameTFTEndOfGamePieceViewModel>;
   companion: LolEndOfGameTFTEndOfGameCompanionViewModel;
-  ffaStanding: bigint;
-  health: bigint;
-  iconId: bigint;
+  ffaStanding: number;
+  health: number;
+  iconId: number;
   isLocalPlayer: boolean;
-  partnerGroupId: bigint;
+  partnerGroupId: number;
   puuid: string;
-  rank: bigint;
-  summonerId: bigint;
+  rank: number;
+  summonerId: number;
   summonerName: string;
 }
 
@@ -5544,23 +5544,23 @@ export interface LolEndOfGameTFTEndOfGameTraitViewModel {
 }
 
 export interface LolEndOfGameTFTEndOfGameViewModel {
-  gameId: bigint;
-  gameLength: bigint;
+  gameId: number;
+  gameLength: number;
   isRanked: boolean;
   localPlayer: LolEndOfGameTFTEndOfGamePlayerViewModel;
   players: Array<LolEndOfGameTFTEndOfGamePlayerViewModel>;
-  queueId: bigint;
+  queueId: number;
   queueType: string;
 }
 
 export interface LolEsportStreamNotificationsESportStreamNotificationsConfig {
-  beappFailureLongPollMinutes: bigint;
+  beappFailureLongPollMinutes: number;
   notificationsAssetMagickURL: string;
   notificationsEnabled: boolean;
-  notificationsLongPollMinutes: bigint;
+  notificationsLongPollMinutes: number;
   notificationsServiceEndpoint: string;
   notificationsServiceEndpointV2: string;
-  notificationsShortPollMinutes: bigint;
+  notificationsShortPollMinutes: number;
   notificationsStreamGroupSlug: string;
   notificationsStreamURL: string;
   useServiceEndpointV2: boolean;
@@ -5568,7 +5568,7 @@ export interface LolEsportStreamNotificationsESportStreamNotificationsConfig {
 
 export interface LolEsportStreamNotificationsESportsAPI_streamgroups {
   content: string;
-  id: bigint;
+  id: number;
   live: boolean;
   slug: string;
   title: string;
@@ -5587,12 +5587,12 @@ export interface LolEsportStreamNotificationsESportsLiveStreams {
 export interface LolEsportStreamNotificationsESportsStreams {
   teamAAcronym: string;
   teamAGuid: string;
-  teamAId: bigint;
+  teamAId: number;
   teamALogoUrl: string;
   teamAName: string;
   teamBAcronym: string;
   teamBGuid: string;
-  teamBId: bigint;
+  teamBId: number;
   teamBLogoUrl: string;
   teamBName: string;
   title: string;
@@ -5624,13 +5624,13 @@ export interface LolEsportStreamNotificationsEsportsAPI_highlanderTournaments_ro
 export interface LolEsportStreamNotificationsEsportsAPI_highlanderTournaments_rosters {
   id: string;
   name: string;
-  team: bigint;
+  team: number;
 }
 
 export interface LolEsportStreamNotificationsEsportsAPI_teams {
   acronym: string;
   guid: string;
-  id: bigint;
+  id: number;
   logoUrl: string;
   name: string;
   slug: string;
@@ -5678,7 +5678,7 @@ export interface LolEsportStreamNotificationsPlayerNotificationResource {
   detailKey: string;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -5686,7 +5686,7 @@ export interface LolEsportStreamNotificationsPlayerNotificationResource {
 }
 
 export interface LolFeaturedModesAccountIdAndSummonerId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolFeaturedModesCollectionsOwnership {
@@ -5695,21 +5695,21 @@ export interface LolFeaturedModesCollectionsOwnership {
 }
 
 export interface LolFeaturedModesCollectionsSummonerIcon {
-  iconId: bigint;
+  iconId: number;
   ownership: LolFeaturedModesCollectionsOwnership;
 }
 
 export interface LolFeaturedModesEligibility {
   eligible: boolean;
-  queueId: bigint;
+  queueId: number;
   restrictions: Array<LolFeaturedModesEligibilityRestriction>;
 }
 
 export interface LolFeaturedModesEligibilityRestriction {
-  expiredTimestamp: bigint;
+  expiredTimestamp: number;
   restrictionArgs: string | undefined;
   restrictionCode: LolFeaturedModesEligibilityRestrictionCode;
-  summonerIds: Array<bigint>;
+  summonerIds: Array<number>;
 }
 
 export type LolFeaturedModesEligibilityRestrictionCode =
@@ -5742,9 +5742,9 @@ export type LolFeaturedModesEligibilityRestrictionCode =
   | "UnknownRestriction";
 
 export interface LolFeaturedModesFeaturedModesConfig {
-  MaxNotificationSaveDelayMinutes: bigint;
+  MaxNotificationSaveDelayMinutes: number;
   NotificationsEnabled: boolean;
-  QueueToggleNotificationMinutesThreshold: bigint;
+  QueueToggleNotificationMinutesThreshold: number;
 }
 
 export interface LolFeaturedModesGameflowAvailability {
@@ -5782,7 +5782,7 @@ export interface LolFeaturedModesGameflowSession {
 
 export interface LolFeaturedModesLoginSession {
   state: LolFeaturedModesLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolFeaturedModesLoginSessionStates =
@@ -5804,7 +5804,7 @@ export interface LolFeaturedModesPlayerNotificationResource {
   detailKey: string;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -5814,10 +5814,10 @@ export interface LolFeaturedModesPlayerNotificationResource {
 export interface LolFeaturedModesQueue {
   category: LolFeaturedModesQueueGameCategory;
   gameMode: string;
-  id: bigint;
-  lastToggledOffTime: bigint;
-  lastToggledOnTime: bigint;
-  mapId: bigint;
+  id: number;
+  lastToggledOffTime: number;
+  lastToggledOnTime: number;
+  mapId: number;
   name: string;
   queueAvailability: LolFeaturedModesQueueAvailability;
 }
@@ -5836,7 +5836,7 @@ export interface LolGameClientChatGameClientChatMessageResource {
 
 export interface LolGameClientChatMutedPlayerInfo {
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolGameQueuesLoginDataPacket {
@@ -5844,49 +5844,49 @@ export interface LolGameQueuesLoginDataPacket {
 }
 
 export interface LolGameQueuesLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   state: LolGameQueuesLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolGameQueuesLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolGameQueuesPlatformConfigEnabledMap {
-  gameMapId: bigint;
-  minPlayers: bigint;
+  gameMapId: number;
+  minPlayers: number;
 }
 
 export interface LolGameQueuesQueue {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   areFreeChampionsAllowed: boolean;
   assetMutator: string;
   category: LolGameQueuesQueueGameCategory;
-  championsRequiredToPlay: bigint;
+  championsRequiredToPlay: number;
   description: string;
   detailedDescription: string;
   gameMode: string;
   gameTypeConfig: LolGameQueuesQueueGameTypeConfig;
-  id: bigint;
+  id: number;
   isRanked: boolean;
   isTeamBuilderManaged: boolean;
   isTeamOnly: boolean;
-  lastToggledOffTime: bigint;
-  lastToggledOnTime: bigint;
-  mapId: bigint;
+  lastToggledOffTime: number;
+  lastToggledOnTime: number;
+  mapId: number;
   maxDivisionForPremadeSize2: string;
-  maxLevel: bigint;
-  maxSummonerLevelForFirstWinOfTheDay: bigint;
+  maxLevel: number;
+  maxSummonerLevelForFirstWinOfTheDay: number;
   maxTierForPremadeSize2: string;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
   name: string;
-  numPlayersPerTeam: bigint;
+  numPlayersPerTeam: number;
   queueAvailability: LolGameQueuesQueueAvailability;
   queueRewards: LolGameQueuesQueueReward;
   removalFromGameAllowed: boolean;
-  removalFromGameDelayMinutes: bigint;
+  removalFromGameDelayMinutes: number;
   shortName: string;
   showPositionSelector: boolean;
   spectatorEnabled: boolean;
@@ -5902,7 +5902,7 @@ export interface LolGameQueuesQueueCustomGame {
   gameServerRegions: Array<string>;
   queueAvailability: LolGameQueuesQueueAvailability;
   spectatorPolicies: Array<LolGameQueuesQueueCustomGameSpectatorPolicy>;
-  spectatorSlotLimit: bigint;
+  spectatorSlotLimit: number;
   subcategories: Array<LolGameQueuesQueueCustomGameSubcategory>;
 }
 
@@ -5915,14 +5915,14 @@ export type LolGameQueuesQueueCustomGameSpectatorPolicy =
 export interface LolGameQueuesQueueCustomGameSubcategory {
   customSpectatorPolicies: Array<LolGameQueuesQueueCustomGameSpectatorPolicy>;
   gameMode: string;
-  mapId: bigint;
-  maxLevel: bigint;
-  maxPlayerCount: bigint;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
+  mapId: number;
+  maxLevel: number;
+  maxPlayerCount: number;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
   mutators: Array<LolGameQueuesQueueGameTypeConfig>;
-  numPlayersPerTeam: bigint;
+  numPlayersPerTeam: number;
   queueAvailability: LolGameQueuesQueueAvailability;
 }
 
@@ -5932,7 +5932,7 @@ export interface LolGameQueuesQueueGameTypeConfig {
   advancedLearningQuests: boolean;
   allowTrades: boolean;
   banMode: string;
-  banTimerDuration: bigint;
+  banTimerDuration: number;
   battleBoost: boolean;
   crossTeamChampionPool: boolean;
   deathMatch: boolean;
@@ -5940,15 +5940,15 @@ export interface LolGameQueuesQueueGameTypeConfig {
   duplicatePick: boolean;
   exclusivePick: boolean;
   gameModeOverride: string;
-  id: bigint;
+  id: number;
   learningQuests: boolean;
-  mainPickTimerDuration: bigint;
-  maxAllowableBans: bigint;
+  mainPickTimerDuration: number;
+  maxAllowableBans: number;
   name: string;
-  numPlayersPerTeamOverride: bigint;
+  numPlayersPerTeamOverride: number;
   onboardCoopBeginner: boolean;
   pickMode: string;
-  postPickTimerDuration: bigint;
+  postPickTimerDuration: number;
   reroll: boolean;
   teamChampionPool: boolean;
 }
@@ -5957,7 +5957,7 @@ export interface LolGameQueuesQueueReward {
   isChampionPointsEnabled: boolean;
   isIpEnabled: boolean;
   isXpEnabled: boolean;
-  partySizeIpRewards: Array<bigint>;
+  partySizeIpRewards: Array<number>;
 }
 
 export interface LolGameQueuesQueueTranslation {
@@ -5968,10 +5968,10 @@ export interface LolGameQueuesQueueTranslation {
 }
 
 export interface LolGameSettingsLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   state: LolGameSettingsLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolGameSettingsLoginSessionStates =
@@ -5994,7 +5994,7 @@ export interface LolGameflowCrashReportingSettings {
 }
 
 export interface LolGameflowGameModeSpellList {
-  spells: Array<bigint>;
+  spells: Array<number>;
 }
 
 export interface LolGameflowGameflowAvailability {
@@ -6013,15 +6013,15 @@ export type LolGameflowGameflowAvailabilityState =
 
 export interface LolGameflowGameflowGameClient {
   observerServerIp: string;
-  observerServerPort: bigint;
+  observerServerPort: number;
   running: boolean;
   serverIp: string;
-  serverPort: bigint;
+  serverPort: number;
   visible: boolean;
 }
 
 export interface LolGameflowGameflowGameData {
-  gameId: bigint;
+  gameId: number;
   gameName: string;
   isCustomGame: boolean;
   password: string;
@@ -6033,7 +6033,7 @@ export interface LolGameflowGameflowGameData {
 }
 
 export interface LolGameflowGameflowGameDodge {
-  dodgeIds: Array<bigint>;
+  dodgeIds: Array<number>;
   phase: LolGameflowGameflowPhase;
   state: LolGameflowGameflowGameDodgeState;
 }
@@ -6052,7 +6052,7 @@ export interface LolGameflowGameflowGameMap {
   gameModeName: string;
   gameModeShortName: string;
   gameMutator: string;
-  id: bigint;
+  id: number;
   isRGM: boolean;
   mapStringId: string;
   name: string;
@@ -6080,7 +6080,7 @@ export type LolGameflowGameflowPhase =
   | "TerminatedInError";
 
 export interface LolGameflowGameflowProcessInfo {
-  pid: bigint;
+  pid: number;
   rawArgs: Array<string>;
 }
 
@@ -6106,21 +6106,21 @@ export interface LolGameflowInstallPaths {
 export interface LolGameflowLobbyStatus {
   allowedPlayAgain: boolean;
   customSpectatorPolicy: LolGameflowQueueCustomGameSpectatorPolicy;
-  invitedSummonerIds: Array<bigint>;
+  invitedSummonerIds: Array<number>;
   isCustom: boolean;
   isLeader: boolean;
   isPracticeTool: boolean;
   isSpectator: boolean;
   lobbyId: string;
-  memberSummonerIds: Array<bigint>;
-  queueId: bigint;
+  memberSummonerIds: Array<number>;
+  queueId: number;
 }
 
 export interface LolGameflowLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   state: LolGameflowLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolGameflowLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -6147,33 +6147,33 @@ export interface LolGameflowPlayerStatus {
 }
 
 export interface LolGameflowQueue {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   areFreeChampionsAllowed: boolean;
   assetMutator: string;
   category: LolGameflowQueueGameCategory;
-  championsRequiredToPlay: bigint;
+  championsRequiredToPlay: number;
   description: string;
   detailedDescription: string;
   gameMode: string;
   gameTypeConfig: LolGameflowQueueGameTypeConfig;
-  id: bigint;
+  id: number;
   isRanked: boolean;
   isTeamBuilderManaged: boolean;
   isTeamOnly: boolean;
-  lastToggledOffTime: bigint;
-  lastToggledOnTime: bigint;
-  mapId: bigint;
-  maxLevel: bigint;
-  maxSummonerLevelForFirstWinOfTheDay: bigint;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
+  lastToggledOffTime: number;
+  lastToggledOnTime: number;
+  mapId: number;
+  maxLevel: number;
+  maxSummonerLevelForFirstWinOfTheDay: number;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
   name: string;
-  numPlayersPerTeam: bigint;
+  numPlayersPerTeam: number;
   queueAvailability: LolGameflowQueueAvailability;
   queueRewards: LolGameflowQueueReward;
   removalFromGameAllowed: boolean;
-  removalFromGameDelayMinutes: bigint;
+  removalFromGameDelayMinutes: number;
   shortName: string;
   showPositionSelector: boolean;
   spectatorEnabled: boolean;
@@ -6197,21 +6197,21 @@ export interface LolGameflowQueueGameTypeConfig {
   advancedLearningQuests: boolean;
   allowTrades: boolean;
   banMode: string;
-  banTimerDuration: bigint;
+  banTimerDuration: number;
   battleBoost: boolean;
   crossTeamChampionPool: boolean;
   deathMatch: boolean;
   doNotRemove: boolean;
   duplicatePick: boolean;
   exclusivePick: boolean;
-  id: bigint;
+  id: number;
   learningQuests: boolean;
-  mainPickTimerDuration: bigint;
-  maxAllowableBans: bigint;
+  mainPickTimerDuration: number;
+  maxAllowableBans: number;
   name: string;
   onboardCoopBeginner: boolean;
   pickMode: string;
-  postPickTimerDuration: bigint;
+  postPickTimerDuration: number;
   reroll: boolean;
   teamChampionPool: boolean;
 }
@@ -6220,7 +6220,7 @@ export interface LolGameflowQueueReward {
   isChampionPointsEnabled: boolean;
   isIpEnabled: boolean;
   isXpEnabled: boolean;
-  partySizeIpRewards: Array<bigint>;
+  partySizeIpRewards: Array<number>;
 }
 
 export interface LolGameflowRegionLocale {
@@ -6267,9 +6267,9 @@ export interface LolGeoinfoGeoInfoResponse {
 }
 
 export interface LolGeoinfoLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolGeoinfoLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolGeoinfoLoginSessionState = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -6285,19 +6285,19 @@ export interface LolGeoinfoWhereAmIResponse {
 }
 
 export interface LolHeartbeatLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolHeartbeatLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolHeartbeatLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolHighlightsHighlight {
-  fileSizeBytes: bigint;
+  fileSizeBytes: number;
   filepath: string;
-  id: bigint;
+  id: number;
   mtimeIso8601: string;
-  mtimeMsUtc: bigint;
+  mtimeMsUtc: number;
   name: string;
   url: string;
 }
@@ -6320,58 +6320,58 @@ export interface LolHighlightsHighlightsSettingsResource {
 }
 
 export interface LolHonorV2AccountIdAndSummonerId {
-  accountId: bigint;
-  summonerId: bigint;
+  accountId: number;
+  summonerId: number;
 }
 
 export interface LolHonorV2ApiHonorPlayerServerRequest {
-  gameId: bigint;
+  gameId: number;
   honorCategory: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolHonorV2Ballot {
   eligiblePlayers: Array<LolHonorV2EligiblePlayer>;
-  gameId: bigint;
+  gameId: number;
 }
 
 export interface LolHonorV2DynamicHonorMessage {
   messageId: string;
-  value: bigint;
+  value: number;
 }
 
 export interface LolHonorV2EligiblePlayer {
-  championId: bigint;
-  skinIndex: bigint;
+  championId: number;
+  skinIndex: number;
   skinName: string;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
 export interface LolHonorV2EndOfGamePlayer {
   botPlayer: boolean;
-  championId: bigint;
-  gameId: bigint;
+  championId: number;
+  gameId: number;
   isReportingDisabled: boolean;
   leaver: boolean;
-  profileIconId: bigint;
-  skinIndex: bigint;
+  profileIconId: number;
+  skinIndex: number;
   skinName: string;
   stats: boolean | undefined;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
-  teamId: bigint;
-  userId: bigint;
-  wins: bigint;
+  teamId: number;
+  userId: number;
+  wins: number;
 }
 
 export interface LolHonorV2EndOfGameStats {
-  accountId: bigint;
-  championId: bigint;
+  accountId: number;
+  championId: number;
   difficulty: string;
   gameEndedInEarlySurrender: boolean;
-  gameId: bigint;
-  gameLength: bigint;
+  gameId: number;
+  gameLength: number;
   gameMode: string;
   gameMutators: Array<string>;
   gameType: string;
@@ -6380,14 +6380,14 @@ export interface LolHonorV2EndOfGameStats {
   myTeamStatus: string;
   queueType: string;
   ranked: boolean;
-  reportGameId: bigint;
-  summonerId: bigint;
+  reportGameId: number;
+  summonerId: number;
   summonerName: string;
   teams: Array<LolHonorV2EndOfGameTeam>;
 }
 
 export interface LolHonorV2EndOfGameTeam {
-  championBans: Array<bigint>;
+  championBans: Array<number>;
   fullId: string;
   isBottomTeam: boolean;
   isPlayerTeam: boolean;
@@ -6397,11 +6397,11 @@ export interface LolHonorV2EndOfGameTeam {
   players: Array<LolHonorV2EndOfGamePlayer>;
   stats: boolean | undefined;
   tag: string;
-  teamId: bigint;
+  teamId: number;
 }
 
 export interface LolHonorV2GameflowGameData {
-  gameId: bigint;
+  gameId: number;
   queue: LolHonorV2Queue;
 }
 
@@ -6436,60 +6436,60 @@ export interface LolHonorV2HonorConfig {
   Enabled: boolean;
   Honor2018Enabled: boolean;
   LedgeEndpointsEnabled: boolean;
-  SecondsToVote: bigint;
+  SecondsToVote: number;
 }
 
 export interface LolHonorV2HonorRecipient {
-  gameId: bigint;
+  gameId: number;
   honors: Array<LolHonorV2Honor>;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolHonorV2MutualHonor {
-  gameId: bigint;
+  gameId: number;
   summoners: Array<LolHonorV2MutualHonorPlayer>;
 }
 
 export interface LolHonorV2MutualHonorPlayer {
-  championId: bigint;
-  skinIndex: bigint;
-  summonerId: bigint;
+  championId: number;
+  skinIndex: number;
+  summonerId: number;
 }
 
 export interface LolHonorV2ProfileInfo {
-  checkpoint: bigint;
-  honorLevel: bigint;
+  checkpoint: number;
+  honorLevel: number;
   rewardsLocked: boolean;
 }
 
 export interface LolHonorV2Queue {
   gameMode: string;
-  id: bigint;
-  mapId: bigint;
+  id: number;
+  mapId: number;
   removalFromGameAllowed: boolean;
-  removalFromGameDelayMinutes: bigint;
+  removalFromGameDelayMinutes: number;
   type: string;
 }
 
 export interface LolHonorV2Reward {
-  quantity: bigint;
+  quantity: number;
   rewardType: string;
 }
 
 export interface LolHonorV2SequenceEvent {
   name: string;
-  priority: bigint;
+  priority: number;
 }
 
 export interface LolHonorV2ServiceProxyHonorPlayerServerRequest {
-  gameId: bigint;
+  gameId: number;
   honorType: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolHonorV2ServiceProxyRetrieveProfileResponse {
-  checkpoint: bigint;
-  honorLevel: bigint;
+  checkpoint: number;
+  honorLevel: number;
   rewardsLocked: boolean;
 }
 
@@ -6502,20 +6502,20 @@ export interface LolHonorV2VendedHonorChange {
 }
 
 export interface LolHonorV2VendedHonorState {
-  checkpoint: bigint;
-  level: bigint;
+  checkpoint: number;
+  level: number;
   rewardsLocked: boolean;
 }
 
 export interface LolHonorV2VendedReward {
   dynamicHonorMessage: LolHonorV2DynamicHonorMessage;
-  quantity: bigint;
+  quantity: number;
   rewardType: string;
 }
 
 export interface LolHonorV2VoteCompletion {
   fullTeamVote: boolean;
-  gameId: bigint;
+  gameId: number;
 }
 
 export interface LolHovercardChatSession {
@@ -6529,11 +6529,11 @@ export interface LolHovercardContentCookies {
 }
 
 export interface LolHovercardFriendResult {
-  accountId: bigint;
+  accountId: number;
   availability: string;
   gameName: string;
   gameTag: string;
-  icon: bigint;
+  icon: number;
   id: string;
   lol: string | undefined;
   name: string;
@@ -6543,20 +6543,20 @@ export interface LolHovercardFriendResult {
   product: string;
   productName: string;
   puuid: string;
-  score: bigint;
+  score: number;
   statusMessage: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolHovercardHovercardUserInfo {
-  accountId: bigint;
+  accountId: number;
   availability: string;
   gameName: string;
   gameTag: string;
-  icon: bigint;
+  icon: number;
   id: string;
   lol: string | undefined;
-  masteryScore: bigint;
+  masteryScore: number;
   name: string;
   note: string;
   partySummoners: Array<string>;
@@ -6570,13 +6570,13 @@ export interface LolHovercardHovercardUserInfo {
   remoteProductBackdropUrl: string;
   remoteProductIconUrl: string;
   statusMessage: string;
-  summonerIcon: bigint;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerIcon: number;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolHovercardPartyInfo {
-  summoners: Array<bigint>;
+  summoners: Array<number>;
 }
 
 export interface LolHovercardPatchlineMetadata {
@@ -6597,24 +6597,24 @@ export interface LolHovercardProductMetadataMap {
 }
 
 export interface LolHovercardSummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolHovercardSummonerIdAndIcon {
-  profileIconId: bigint;
+  profileIconId: number;
 }
 
 export interface LolHovercardSummonerIdAndName {
   displayName: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolHovercardTopChampionMastery {
-  score: bigint;
+  score: number;
 }
 
 export interface LolHovercardcookie {
@@ -6623,14 +6623,14 @@ export interface LolHovercardcookie {
 }
 
 export interface LolInventoryAccessTokenResource {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
 
 export interface LolInventoryCatalogItem {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
 }
 
@@ -6641,33 +6641,33 @@ export interface LolInventoryClientCacheClearMessageDTO {
 }
 
 export interface LolInventoryCurrencyDTO {
-  amount: bigint;
-  subCurrencies: bigint | undefined;
+  amount: number;
+  subCurrencies: number | undefined;
 }
 
 export interface LolInventoryInventoryCacheEntry {
-  expirationMS: bigint;
-  issuedAtMS: bigint;
-  receivedAtMS: bigint;
+  expirationMS: number;
+  issuedAtMS: number;
+  receivedAtMS: number;
   signedInventoryJwt: string;
   valid: boolean;
 }
 
 export interface LolInventoryInventoryDTO {
-  accountId: bigint;
+  accountId: number;
   expires: string;
   items: boolean | undefined | undefined;
   itemsJwt: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolInventoryInventoryItem {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolInventoryItemOwnershipType;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   uuid: string;
 }
 
@@ -6679,32 +6679,32 @@ export interface LolInventoryInventoryItemDTO {
   instanceId: string;
   instanceTypeId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   loyalty: boolean;
   lsb: boolean;
   payload: boolean | undefined;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   rental: boolean;
   usedInGameDate: string;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolInventoryInventoryItemWithPayload {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolInventoryItemOwnershipType;
   payload: boolean | undefined;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   uuid: string;
 }
 
 export interface LolInventoryInventoryNotification {
   acknowledged: boolean;
-  id: bigint;
+  id: number;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   type: string;
 }
 
@@ -6714,31 +6714,31 @@ export interface LolInventoryInventoryResponseDTO {
 
 export interface LolInventoryItemKey {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export type LolInventoryItemOwnershipType = "OWNED" | "RENTED" | "LOYALTY" | "F2P";
 
 export interface LolInventoryLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   idToken: string;
   puuid: string;
   state: LolInventoryLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolInventoryLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolInventoryLoyaltyRewards {
-  championIds: Array<bigint>;
-  freeRewardedChampionsCount: bigint;
-  freeRewardedSkinsCount: bigint;
-  ipBoost: bigint;
-  loyaltyTFTCompanionCount: bigint;
-  loyaltyTFTMapSkinCount: bigint;
-  skinIds: Array<bigint>;
-  xpBoost: bigint;
+  championIds: Array<number>;
+  freeRewardedChampionsCount: number;
+  freeRewardedSkinsCount: number;
+  ipBoost: number;
+  loyaltyTFTCompanionCount: number;
+  loyaltyTFTMapSkinCount: number;
+  skinIds: Array<number>;
+  xpBoost: number;
 }
 
 export type LolInventoryLoyaltyStatus =
@@ -6758,7 +6758,7 @@ export interface LolInventoryRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -6792,25 +6792,25 @@ export interface LolInventorySimpleInventoryResponseDTO {
 }
 
 export interface LolInventorySummonerIcon {
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolInventoryWallet {
-  ip: bigint;
-  rp: bigint;
+  ip: number;
+  rp: number;
 }
 
 export interface LolInventoryWalletCacheEntry {
-  expirationMS: bigint;
-  issuedAtMS: bigint;
-  receivedAtMS: bigint;
+  expirationMS: number;
+  issuedAtMS: number;
+  receivedAtMS: number;
   signedBalancesJwt: string;
   valid: boolean;
 }
 
 export interface LolInventoryWalletDTO {
-  accountId: bigint;
-  balances: bigint | undefined;
+  accountId: number;
+  balances: number | undefined;
   balancesJwt: string;
   expires: string;
   puuid: string;
@@ -6825,13 +6825,13 @@ export interface LolItemSetsGameDataChampion {
 }
 
 export interface LolItemSetsItemSet {
-  associatedChampions: Array<bigint>;
-  associatedMaps: Array<bigint>;
+  associatedChampions: Array<number>;
+  associatedMaps: Array<number>;
   blocks: Array<LolItemSetsItemSetBlock>;
   map: string;
   mode: string;
   preferredItemSlots: Array<LolItemSetsPreferredItemSlot>;
-  sortrank: bigint;
+  sortrank: number;
   startedFrom: string;
   title: string;
   type: string;
@@ -6846,20 +6846,20 @@ export interface LolItemSetsItemSetBlock {
 }
 
 export interface LolItemSetsItemSetItem {
-  count: bigint;
+  count: number;
   id: string;
 }
 
 export interface LolItemSetsItemSets {
-  accountId: bigint;
+  accountId: number;
   itemSets: Array<LolItemSetsItemSet>;
-  timestamp: bigint;
+  timestamp: number;
 }
 
 export interface LolItemSetsLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolItemSetsLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolItemSetsLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -6875,7 +6875,7 @@ export interface LolItemSetsNameCheckResponse {
 
 export interface LolItemSetsPreferredItemSlot {
   id: string;
-  preferredItemSlot: bigint;
+  preferredItemSlot: number;
 }
 
 export interface LolItemSetsValidateItemSetNameInput {
@@ -6892,7 +6892,7 @@ export interface LolKickoutKickoutMessage {
 }
 
 export interface LolKrPlaytimeReminderPlaytimeReminder {
-  hours: bigint;
+  hours: number;
 }
 
 export interface LolKrShutdownLawAllQueueShutdownStatus {
@@ -6930,7 +6930,7 @@ export interface LolLeagueSessionAntiAddictionTokenEnvelope {
 export interface LolLeagueSessionLeagueSessionRMSNotification {
   puuid: string;
   sessionId: string;
-  sessionInitiatedAt: bigint;
+  sessionInitiatedAt: number;
   state: string;
 }
 
@@ -6951,12 +6951,12 @@ export interface LolLeaverBusterAllSummonerData {
 }
 
 export interface LolLeaverBusterLeaverBusterNotificationResource {
-  accountId: bigint;
+  accountId: number;
   fromRms: boolean;
-  id: bigint;
+  id: number;
   msgId: string;
-  punishedGamesRemaining: bigint;
-  queueLockoutTimerExpiryUtcMillisDiff: bigint;
+  punishedGamesRemaining: number;
+  queueLockoutTimerExpiryUtcMillisDiff: number;
   type: LolLeaverBusterLeaverBusterNotificationType;
 }
 
@@ -6976,15 +6976,15 @@ export interface LolLeaverBusterLoginDataPacket {
 
 export interface LolLeaverBusterMatchmakingSearchErrorResource {
   errorType: string;
-  id: bigint;
+  id: number;
   message: string;
-  penalizedSummonerId: bigint;
+  penalizedSummonerId: number;
   penaltyTimeRemaining: number;
 }
 
 export interface LolLeaverBusterMatchmakingSearchResource {
   errors: Array<LolLeaverBusterMatchmakingSearchErrorResource>;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolLeaverBusterPlayerNotificationResource {
@@ -6995,7 +6995,7 @@ export interface LolLeaverBusterPlayerNotificationResource {
   detailKey: string;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -7003,15 +7003,15 @@ export interface LolLeaverBusterPlayerNotificationResource {
 }
 
 export interface LolLeaverBusterSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
 }
 
 export interface LolLeaverBusterSummoner {
-  acctId: bigint;
-  sumId: bigint;
+  acctId: number;
+  sumId: number;
 }
 
 export interface LolLicenseAgreementLicenseAgreement {
@@ -7030,13 +7030,13 @@ export interface LolLicenseAgreementPluginRegionLocaleChangedEvent {
 }
 
 export interface LolLoadoutsAccessTokenResource {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
 
 export interface LolLoadoutsCreateLoadoutDTO {
-  itemId: bigint;
+  itemId: number;
   loadout: LolLoadoutsItemKey | undefined;
   name: string;
   refreshTime: string;
@@ -7049,7 +7049,7 @@ export interface LolLoadoutsCreateLoadoutRequestDTO {
 }
 
 export interface LolLoadoutsCreateOrUpdateItemsRequest {
-  id: bigint;
+  id: number;
   inventoryJWTs: Array<string>;
   items: boolean | undefined | undefined;
 }
@@ -7084,18 +7084,18 @@ export interface LolLoadoutsGameflowSession {
 }
 
 export interface LolLoadoutsGetItemsRequest {
-  id: bigint;
+  id: number;
   inventoryJWTs: Array<string>;
   inventoryTypes: Array<string>;
 }
 
 export interface LolLoadoutsInventoryDTO {
-  accountId: bigint;
+  accountId: number;
   expires: string;
   items: boolean | undefined | undefined;
   itemsJwt: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLoadoutsInventoryItemDTO {
@@ -7106,13 +7106,13 @@ export interface LolLoadoutsInventoryItemDTO {
   instanceId: string;
   instanceTypeId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   lsb: boolean;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   rental: boolean;
   usedInGameDate: string;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolLoadoutsInventoryResponseDTO {
@@ -7122,11 +7122,11 @@ export interface LolLoadoutsInventoryResponseDTO {
 export interface LolLoadoutsItemKey {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolLoadoutsLoadout {
-  id: bigint;
+  id: number;
   items: boolean | undefined | undefined;
   name: string;
 }
@@ -7136,12 +7136,12 @@ export interface LolLoadoutsLoadoutRequestDTOBase {
 }
 
 export interface LolLoadoutsLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   idToken: string;
   puuid: string;
   state: LolLoadoutsLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolLoadoutsLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -7152,7 +7152,7 @@ export interface LolLoadoutsQueue {
 
 export interface LolLoadoutsScopedLoadout {
   id: string;
-  itemId: bigint;
+  itemId: number;
   loadout: LolLoadoutsItemKey | undefined;
   name: string;
   refreshTime: string;
@@ -7176,13 +7176,13 @@ export interface LolLoadoutsUpdateLoadoutRequestDTO {
 }
 
 export interface LolLobbyAccountIdAndSummonerId {
-  accountId: bigint;
-  summonerId: bigint;
+  accountId: number;
+  summonerId: number;
 }
 
 export interface LolLobbyAmbassadorMessage {
   errorCode: string;
-  httpStatus: bigint;
+  httpStatus: number;
   implementationDetails: string;
   message: string;
   payload: boolean | undefined;
@@ -7192,45 +7192,45 @@ export interface LolLobbyAutoFillQueueDto {
   autoFillEligible: boolean;
   autoFillProtectedForPromos: boolean;
   autoFillProtectedForStreaking: boolean;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolLobbyBotParticipantDto {
-  botSkillLevel: bigint;
-  championId: bigint;
+  botSkillLevel: number;
+  championId: number;
   team: string;
 }
 
 export interface LolLobbyChampionSkinSelection {
-  championId: bigint;
-  skinId: bigint;
+  championId: number;
+  skinId: number;
 }
 
 export interface LolLobbyChatBlockedPlayerResource {
   name: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLobbyChatFriend {
   lol: string | undefined;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLobbyChatFriendCounts {
-  numFriends: bigint;
-  numFriendsAvailable: bigint;
-  numFriendsAway: bigint;
-  numFriendsInChampSelect: bigint;
-  numFriendsInGame: bigint;
-  numFriendsInQueue: bigint;
-  numFriendsMobile: bigint;
-  numFriendsOnline: bigint;
+  numFriends: number;
+  numFriendsAvailable: number;
+  numFriendsAway: number;
+  numFriendsInChampSelect: number;
+  numFriendsInGame: number;
+  numFriendsInQueue: number;
+  numFriendsMobile: number;
+  numFriendsOnline: number;
 }
 
 export interface LolLobbyCollectionsChampion {
   active: boolean;
   botEnabled: boolean;
-  id: bigint;
+  id: number;
   name: string;
 }
 
@@ -7238,7 +7238,7 @@ export interface LolLobbyCollectionsChampionMinimal {
   active: boolean;
   disabledQueues: Array<string>;
   freeToPlay: boolean;
-  id: bigint;
+  id: number;
   ownership: LolLobbyCollectionsOwnership;
 }
 
@@ -7259,18 +7259,18 @@ export interface LolLobbyCustomGameDto {
   allowSpectators: string;
   gameType: string;
   lobbyName: string;
-  mapId: bigint;
-  maxNumPlayers: bigint;
+  mapId: number;
+  maxNumPlayers: number;
   ownerPuuid: string;
   partyId: string;
   privateGame: boolean;
-  spectatorCount: bigint;
-  team1Count: bigint;
-  team2Count: bigint;
+  spectatorCount: number;
+  team1Count: number;
+  team2Count: number;
 }
 
 export interface LolLobbyCustomGameSettingsDto {
-  gameId: bigint;
+  gameId: number;
   lobbyName: string;
   lobbyPassword: string;
 }
@@ -7282,15 +7282,15 @@ export interface LolLobbyCustomJoinOptionsDto {
 
 export interface LolLobbyEligibility {
   eligible: boolean;
-  queueId: bigint;
+  queueId: number;
   restrictions: Array<LolLobbyEligibilityRestriction>;
 }
 
 export interface LolLobbyEligibilityRestriction {
-  expiredTimestamp: bigint;
+  expiredTimestamp: number;
   restrictionArgs: string | undefined;
   restrictionCode: LolLobbyEligibilityRestrictionCode;
-  summonerIds: Array<bigint>;
+  summonerIds: Array<number>;
   summonerIdsString: string;
 }
 
@@ -7334,25 +7334,25 @@ export type LolLobbyEligibilityRestrictionCode =
 
 export interface LolLobbyFriendAvailabilityAnalytics {
   eventData: boolean | undefined;
-  eventTimestamp: bigint;
+  eventTimestamp: number;
   eventType: string;
-  numFriends: bigint;
-  numFriendsAvailable: bigint;
-  numFriendsAway: bigint;
-  numFriendsInChampSelect: bigint;
-  numFriendsInGame: bigint;
-  numFriendsInQueue: bigint;
-  numFriendsMobile: bigint;
-  numFriendsOnline: bigint;
+  numFriends: number;
+  numFriendsAvailable: number;
+  numFriendsAway: number;
+  numFriendsInChampSelect: number;
+  numFriendsInGame: number;
+  numFriendsInQueue: number;
+  numFriendsMobile: number;
+  numFriendsOnline: number;
   partyType: string;
   platformId: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLobbyGameDataChampionSummary {
   alias: string;
-  id: bigint;
+  id: number;
 }
 
 export interface LolLobbyGameModeDto {
@@ -7361,11 +7361,11 @@ export interface LolLobbyGameModeDto {
   customsSettings: LolLobbyCustomGameSettingsDto;
   gameCustomization: string | undefined;
   gameType: string;
-  gameTypeConfigId: bigint;
-  mapId: bigint;
-  maxPartySize: bigint;
-  maxTeamSize: bigint;
-  queueId: bigint;
+  gameTypeConfigId: number;
+  mapId: number;
+  maxPartySize: number;
+  maxTeamSize: number;
+  queueId: number;
 }
 
 export interface LolLobbyGameflowGameClient {
@@ -7377,7 +7377,7 @@ export interface LolLobbyGameflowGameData {
 }
 
 export interface LolLobbyGameflowGameDodge {
-  dodgeIds: Array<bigint>;
+  dodgeIds: Array<number>;
   phase: LolLobbyGameflowPhase;
   state: LolLobbyMatchmakingDodgeState;
 }
@@ -7421,40 +7421,40 @@ export interface LolLobbyGameflowSession {
 }
 
 export interface LolLobbyGatekeeperRestrictionDto {
-  accountId: bigint;
+  accountId: number;
   details: string | undefined;
   payload: string;
   puuid: string;
-  queueId: bigint;
+  queueId: number;
   reason: string;
-  remainingMillis: bigint;
+  remainingMillis: number;
 }
 
 export interface LolLobbyInventoryCacheEntry {
-  expirationMS: bigint;
+  expirationMS: number;
   signedInventoryJwt: string;
   valid: boolean;
 }
 
 export interface LolLobbyInventoryItem {
-  itemId: bigint;
+  itemId: number;
 }
 
 export type LolLobbyInvitationType = "invalid" | "lobby" | "party";
 
 export interface LolLobbyJoinPartyAnalytics {
   eventData: boolean | undefined;
-  eventTimestamp: bigint;
+  eventTimestamp: number;
   eventType: string;
   gameMode: string;
-  numFriendsOnline: bigint;
-  numOpenFriends: bigint;
-  numOpenParties: bigint;
-  numOtherInvites: bigint;
-  numPartyInvites: bigint;
-  numTotalInvites: bigint;
+  numFriendsOnline: number;
+  numOpenFriends: number;
+  numOpenParties: number;
+  numOtherInvites: number;
+  numPartyInvites: number;
+  numTotalInvites: number;
   partyId: string;
-  partySize: bigint;
+  partySize: number;
   platformId: string;
 }
 
@@ -7463,8 +7463,8 @@ export interface LolLobbyLcdsDynamicClientConfig {
 }
 
 export interface LolLobbyLcdsGameMetaData {
-  gameId: bigint;
-  mapId: bigint;
+  gameId: number;
+  mapId: number;
 }
 
 export interface LolLobbyLcdsPartyRewardsConfig {
@@ -7472,7 +7472,7 @@ export interface LolLobbyLcdsPartyRewardsConfig {
 }
 
 export interface LolLobbyLobby {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   autoFillEligible: boolean;
   autoFillProtectedForPromos: boolean;
   autoFillProtectedForStreaking: boolean;
@@ -7486,12 +7486,12 @@ export interface LolLobbyLobby {
   isCustom: boolean;
   isTeamBuilderManaged: boolean;
   localMember: LolLobbyLobbyMember;
-  mapId: bigint;
-  maximumParticipantListSize: bigint;
+  mapId: number;
+  maximumParticipantListSize: number;
   members: Array<LolLobbyLobbyMember>;
   premadeSizeAllowed: boolean;
   queueAvailability: LolLobbyQueueAvailability;
-  queueId: bigint;
+  queueId: number;
   removalReason: LolLobbyLobbyRemovedFromGameReason;
   requiredPositionCoverageMet: boolean;
   showPositionExcluder: boolean;
@@ -7503,7 +7503,7 @@ export interface LolLobbyLobby {
 export interface LolLobbyLobbyBotChampion {
   active: boolean;
   botDifficulties: Array<LolLobbyLobbyBotDifficulty>;
-  id: bigint;
+  id: number;
   name: string;
 }
 
@@ -7518,7 +7518,7 @@ export type LolLobbyLobbyBotDifficulty =
 
 export interface LolLobbyLobbyBotParams {
   botDifficulty: LolLobbyLobbyBotDifficulty;
-  championId: bigint;
+  championId: number;
   teamId: string;
 }
 
@@ -7526,13 +7526,13 @@ export interface LolLobbyLobbyChangeGameDto {
   customGameLobby: LolLobbyLobbyCustomGameLobby;
   gameCustomization: string | undefined;
   isCustom: boolean;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolLobbyLobbyChangeQueue {
   customGameLobby: LolLobbyLobbyCustomGameLobby;
   isCustom: boolean;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolLobbyLobbyCustomChampSelectStartResponse {
@@ -7542,20 +7542,20 @@ export interface LolLobbyLobbyCustomChampSelectStartResponse {
 
 export interface LolLobbyLobbyCustomFailedPlayer {
   reason: string;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
 export interface LolLobbyLobbyCustomGame {
-  filledPlayerSlots: bigint;
-  filledSpectatorSlots: bigint;
+  filledPlayerSlots: number;
+  filledSpectatorSlots: number;
   gameType: string;
   hasPassword: boolean;
-  id: bigint;
+  id: number;
   lobbyName: string;
-  mapId: bigint;
-  maxPlayerSlots: bigint;
-  maxSpectatorSlots: bigint;
+  mapId: number;
+  maxPlayerSlots: number;
+  maxSpectatorSlots: number;
   ownerSummonerName: string;
   partyId: string;
   passbackUrl: string;
@@ -7566,11 +7566,11 @@ export interface LolLobbyLobbyCustomGameConfiguration {
   gameMode: string;
   gameServerRegion: string;
   gameTypeConfig: LolLobbyQueueGameTypeConfig;
-  mapId: bigint;
-  maxPlayerCount: bigint;
+  mapId: number;
+  maxPlayerCount: number;
   mutators: LolLobbyQueueGameTypeConfig;
   spectatorPolicy: LolLobbyQueueCustomGameSpectatorPolicy;
-  teamSize: bigint;
+  teamSize: number;
   tournamentGameMode: string;
   tournamentPassbackDataPacket: string;
   tournamentPassbackUrl: string;
@@ -7578,7 +7578,7 @@ export interface LolLobbyLobbyCustomGameConfiguration {
 
 export interface LolLobbyLobbyCustomGameLobby {
   configuration: LolLobbyLobbyCustomGameConfiguration;
-  gameId: bigint;
+  gameId: number;
   lobbyName: string;
   lobbyPassword: string;
   practiceGameRewardsDisabledReasons: Array<string>;
@@ -7607,7 +7607,7 @@ export interface LolLobbyLobbyDto {
 }
 
 export interface LolLobbyLobbyGameConfigDto {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   customLobbyName: string;
   customMutatorName: string;
   customRewardsDisabledReasons: Array<string>;
@@ -7619,26 +7619,26 @@ export interface LolLobbyLobbyGameConfigDto {
   isCustom: boolean;
   isLobbyFull: boolean;
   isTeamBuilderManaged: boolean;
-  mapId: bigint;
-  maxHumanPlayers: bigint;
-  maxLobbySize: bigint;
-  maxTeamSize: bigint;
+  mapId: number;
+  maxHumanPlayers: number;
+  maxLobbySize: number;
+  maxTeamSize: number;
   pickType: string;
   premadeSizeAllowed: boolean;
-  queueId: bigint;
+  queueId: number;
   showPositionSelector: boolean;
 }
 
 export interface LolLobbyLobbyInvitation {
   eligibility: LolLobbyEligibility;
   errorType: string;
-  fromSummonerId: bigint;
+  fromSummonerId: number;
   fromSummonerName: string;
   id: string;
   invitationMetaData: boolean | undefined;
   state: LolLobbyLobbyInvitationState;
   timestamp: string;
-  toSummonerId: bigint;
+  toSummonerId: number;
   toSummonerName: string;
 }
 
@@ -7647,7 +7647,7 @@ export interface LolLobbyLobbyInvitationDto {
   invitationType: LolLobbyInvitationType;
   state: LolLobbyLobbyInvitationState;
   timestamp: string;
-  toSummonerId: bigint;
+  toSummonerId: number;
   toSummonerName: string;
 }
 
@@ -7664,17 +7664,17 @@ export type LolLobbyLobbyInvitationState =
 export interface LolLobbyLobbyLastQueuedLobby {
   canPlayAgain: boolean;
   members: Array<LolLobbyLobbyLastQueuedMember>;
-  queueId: bigint;
+  queueId: number;
   wasOwner: boolean;
 }
 
 export interface LolLobbyLobbyLastQueuedMember {
-  id: bigint;
+  id: number;
 }
 
 export interface LolLobbyLobbyMatchmakingLowPriorityDataResource {
   bustedLeaverAccessToken: string;
-  penalizedSummonerIds: Array<bigint>;
+  penalizedSummonerIds: Array<number>;
   penaltyTime: number;
   penaltyTimeRemaining: number;
   reason: string;
@@ -7682,9 +7682,9 @@ export interface LolLobbyLobbyMatchmakingLowPriorityDataResource {
 
 export interface LolLobbyLobbyMatchmakingSearchErrorResource {
   errorType: string;
-  id: bigint;
+  id: number;
   message: string;
-  penalizedSummonerId: bigint;
+  penalizedSummonerId: number;
   penaltyTimeRemaining: number;
 }
 
@@ -7709,11 +7709,11 @@ export interface LolLobbyLobbyMember {
   autoFillProtectedForPromos: boolean;
   autoFillProtectedForSoloing: boolean;
   autoFillProtectedForStreaking: boolean;
-  botChampionId: bigint;
+  botChampionId: number;
   botDifficulty: LolLobbyLobbyBotDifficulty;
   canInviteOthers: boolean;
   excludedPositionPreference: string;
-  id: bigint;
+  id: number;
   isBot: boolean;
   isOwner: boolean;
   isSpectator: boolean;
@@ -7725,8 +7725,8 @@ export interface LolLobbyLobbyMember {
 export interface LolLobbyLobbyNotification {
   notificationId: string;
   notificationReason: string;
-  summonerIds: Array<bigint>;
-  timestamp: bigint;
+  summonerIds: Array<number>;
+  timestamp: number;
 }
 
 export interface LolLobbyLobbyParticipantDto {
@@ -7739,7 +7739,7 @@ export interface LolLobbyLobbyParticipantDto {
   autoFillProtectedForPromos: boolean;
   autoFillProtectedForSoloing: boolean;
   autoFillProtectedForStreaking: boolean;
-  botChampionId: bigint;
+  botChampionId: number;
   botDifficulty: LolLobbyLobbyBotDifficulty;
   botId: string;
   firstPositionPreference: string;
@@ -7750,12 +7750,12 @@ export interface LolLobbyLobbyParticipantDto {
   ready: boolean;
   secondPositionPreference: string;
   showGhostedBanner: boolean;
-  summonerIconId: bigint;
-  summonerId: bigint;
+  summonerIconId: number;
+  summonerId: number;
   summonerInternalName: string;
-  summonerLevel: bigint;
+  summonerLevel: number;
   summonerName: string;
-  teamId: bigint;
+  teamId: number;
 }
 
 export type LolLobbyLobbyPartyRewardType = "Ip" | "Icon" | "None";
@@ -7764,7 +7764,7 @@ export interface LolLobbyLobbyPartyRewards {
   isCustom: boolean;
   isEnabled: boolean;
   partyRewards: Array<LolLobbyPartyReward>;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolLobbyLobbyPositionPreferences {
@@ -7786,29 +7786,29 @@ export type LolLobbyLobbyRemovedFromGameReason =
 export interface LolLobbyLobbyStatus {
   allowedPlayAgain: boolean;
   customSpectatorPolicy: LolLobbyQueueCustomGameSpectatorPolicy;
-  invitedSummonerIds: Array<bigint>;
+  invitedSummonerIds: Array<number>;
   isCustom: boolean;
   isLeader: boolean;
   isPracticeTool: boolean;
   isSpectator: boolean;
   lobbyId: string;
-  memberSummonerIds: Array<bigint>;
-  queueId: bigint;
+  memberSummonerIds: Array<number>;
+  queueId: number;
 }
 
 export interface LolLobbyLobbyTimer {
-  countdown: bigint;
+  countdown: number;
   enabled: boolean;
 }
 
 export interface LolLobbyLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   gasToken: boolean | undefined;
   idToken: string;
   puuid: string;
   state: LolLobbyLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
   userAuthToken: string;
   username: string;
 }
@@ -7818,26 +7818,26 @@ export type LolLobbyLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_
 export type LolLobbyMatchmakingDodgeState = "Invalid" | "PartyDodged" | "StrangerDodged";
 
 export interface LolLobbyOpenPartyToggleAnalytics {
-  elapsedTime: bigint;
-  endTimestamp: bigint;
+  elapsedTime: number;
+  endTimestamp: number;
   endTransition: string;
   eventData: boolean | undefined;
-  eventTimestamp: bigint;
+  eventTimestamp: number;
   eventType: string;
   finalState: string;
   gameMode: string;
   initialState: string;
-  numOfToggles: bigint;
+  numOfToggles: number;
   partyId: string;
   platformId: string;
   playerId: string;
-  startTimestamp: bigint;
+  startTimestamp: number;
   startTransition: string;
 }
 
 export interface LolLobbyPartiesInvitationAnalytics {
   eventData: boolean | undefined;
-  eventTimestamp: bigint;
+  eventTimestamp: number;
   eventType: string;
   partyId: string;
   platformId: string;
@@ -7847,7 +7847,7 @@ export interface LolLobbyPartiesInvitationAnalytics {
 export interface LolLobbyPartiesInvitationPlayerAnalytics {
   puuid: string;
   role: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLobbyPartyChatDto {
@@ -7858,58 +7858,58 @@ export interface LolLobbyPartyChatDto {
 export interface LolLobbyPartyDto {
   activeRestrictions: LolLobbyQueueRestrictionDto;
   activityLocked: boolean;
-  activityResumeUtcMillis: bigint;
-  activityStartedUtcMillis: bigint;
+  activityResumeUtcMillis: number;
+  activityStartedUtcMillis: number;
   botParticipants: Array<LolLobbyBotParticipantDto>;
   chat: LolLobbyPartyChatDto;
-  eligibilityHash: bigint;
+  eligibilityHash: number;
   eligibilityRestrictions: Array<LolLobbyGatekeeperRestrictionDto>;
   eligibilityWarnings: Array<LolLobbyGatekeeperRestrictionDto>;
   gameMode: LolLobbyGameModeDto;
-  maxPartySize: bigint;
+  maxPartySize: number;
   partyId: string;
   partyType: string;
   platformId: string;
   players: Array<LolLobbyPartyMemberDto>;
-  version: bigint;
+  version: number;
 }
 
 export type LolLobbyPartyEogStatusCategory = "kLeft" | "kPlayAgain" | "kOnEog";
 
 export interface LolLobbyPartyInviteAnalytics {
   eventData: boolean | undefined;
-  eventTimestamp: bigint;
+  eventTimestamp: number;
   eventType: string;
-  fromSummonerId: bigint;
+  fromSummonerId: number;
   gameMode: string;
   partyId: string;
   partyType: string;
   platformId: string;
-  toSummonerId: bigint;
+  toSummonerId: number;
 }
 
 export interface LolLobbyPartyMemberDto {
-  accountId: bigint;
+  accountId: number;
   canInvite: boolean;
   gameMode: LolLobbyGameModeDto;
-  inviteTimestamp: bigint;
-  invitedBySummonerId: bigint;
+  inviteTimestamp: number;
+  invitedBySummonerId: number;
   metadata: LolLobbyPartyMemberMetadataDto;
   partyId: string;
-  partyVersion: bigint;
+  partyVersion: number;
   platformId: string;
   puuid: string;
   ready: boolean;
   role: LolLobbyPartyMemberRoleEnum;
-  summonerId: bigint;
+  summonerId: number;
   team: string;
 }
 
 export interface LolLobbyPartyMemberMetadataDto {
-  championSelection: bigint;
+  championSelection: number;
   positionPref: Array<string>;
   properties: boolean | undefined;
-  skinSelection: bigint;
+  skinSelection: number;
 }
 
 export type LolLobbyPartyMemberRoleEnum =
@@ -7927,19 +7927,19 @@ export interface LolLobbyPartyNotificationEnvelopeDto {
 }
 
 export interface LolLobbyPartyPresenceData {
-  maxPlayers: bigint;
+  maxPlayers: number;
   partyId: string;
-  queueId: bigint;
-  summoners: Array<bigint>;
+  queueId: number;
+  summoners: Array<number>;
 }
 
 export interface LolLobbyPartyQueueEligibilityDto {
-  availableQueueIds: Array<bigint>;
+  availableQueueIds: Array<number>;
   partyRestrictions: Array<LolLobbyGatekeeperRestrictionDto>;
 }
 
 export interface LolLobbyPartyReward {
-  premadeSize: bigint;
+  premadeSize: number;
   type: LolLobbyLobbyPartyRewardType;
   value: string;
 }
@@ -7947,7 +7947,7 @@ export interface LolLobbyPartyReward {
 export interface LolLobbyPartyStatusDto {
   eogPlayers: Array<string>;
   leftPlayers: Array<string>;
-  partySize: bigint;
+  partySize: number;
   readyPlayers: Array<string>;
 }
 
@@ -7956,17 +7956,17 @@ export interface LolLobbyPlayerCollectionDto {
 }
 
 export interface LolLobbyPlayerDto {
-  accountId: bigint;
-  createdAt: bigint;
+  accountId: number;
+  createdAt: number;
   currentParty: LolLobbyPartyDto;
-  eligibilityHash: bigint;
+  eligibilityHash: number;
   parties: Array<LolLobbyPartyMemberDto>;
   platformId: string;
   puuid: string;
   registration: LolLobbyRegistrationCredentials;
-  serverUtcMillis: bigint;
-  summonerId: bigint;
-  version: bigint;
+  serverUtcMillis: number;
+  summonerId: number;
+  version: number;
 }
 
 export interface LolLobbyPlayerStatus {
@@ -7982,7 +7982,7 @@ export interface LolLobbyPremadeMemberDto {
   partyId: string;
   puuid: string;
   role: LolLobbyPartyMemberRoleEnum;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLobbyPremadePartyDto {
@@ -7993,45 +7993,45 @@ export interface LolLobbyPremadePartyDto {
 
 export interface LolLobbyPremadeRelationshipAnalytics {
   eventData: boolean | undefined;
-  eventTimestamp: bigint;
+  eventTimestamp: number;
   eventType: string;
   friendPlayers: Array<string>;
   platformId: string;
   premadePlayers: Array<string>;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLobbyQueue {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   areFreeChampionsAllowed: boolean;
   assetMutator: string;
   category: LolLobbyQueueGameCategory;
-  championsRequiredToPlay: bigint;
+  championsRequiredToPlay: number;
   description: string;
   detailedDescription: string;
   gameMode: string;
   gameTypeConfig: LolLobbyQueueGameTypeConfig;
-  id: bigint;
+  id: number;
   isRanked: boolean;
   isTeamBuilderManaged: boolean;
   isTeamOnly: boolean;
-  lastToggledOffTime: bigint;
-  lastToggledOnTime: bigint;
-  mapId: bigint;
+  lastToggledOffTime: number;
+  lastToggledOnTime: number;
+  mapId: number;
   maxDivisionForPremadeSize2: string;
-  maxLevel: bigint;
-  maxSummonerLevelForFirstWinOfTheDay: bigint;
+  maxLevel: number;
+  maxSummonerLevelForFirstWinOfTheDay: number;
   maxTierForPremadeSize2: string;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
   name: string;
-  numPlayersPerTeam: bigint;
+  numPlayersPerTeam: number;
   queueAvailability: LolLobbyQueueAvailability;
   queueRewards: LolLobbyQueueReward;
   removalFromGameAllowed: boolean;
-  removalFromGameDelayMinutes: bigint;
+  removalFromGameDelayMinutes: number;
   shortName: string;
   showPositionSelector: boolean;
   spectatorEnabled: boolean;
@@ -8056,7 +8056,7 @@ export interface LolLobbyQueueGameTypeConfig {
   advancedLearningQuests: boolean;
   allowTrades: boolean;
   banMode: string;
-  banTimerDuration: bigint;
+  banTimerDuration: number;
   battleBoost: boolean;
   crossTeamChampionPool: boolean;
   deathMatch: boolean;
@@ -8064,15 +8064,15 @@ export interface LolLobbyQueueGameTypeConfig {
   duplicatePick: boolean;
   exclusivePick: boolean;
   gameModeOverride: string;
-  id: bigint;
+  id: number;
   learningQuests: boolean;
-  mainPickTimerDuration: bigint;
-  maxAllowableBans: bigint;
+  mainPickTimerDuration: number;
+  maxAllowableBans: number;
   name: string;
-  numPlayersPerTeamOverride: bigint;
+  numPlayersPerTeamOverride: number;
   onboardCoopBeginner: boolean;
   pickMode: string;
-  postPickTimerDuration: bigint;
+  postPickTimerDuration: number;
   reroll: boolean;
   teamChampionPool: boolean;
 }
@@ -8085,7 +8085,7 @@ export interface LolLobbyQueueReward {
   isChampionPointsEnabled: boolean;
   isIpEnabled: boolean;
   isXpEnabled: boolean;
-  partySizeIpRewards: Array<bigint>;
+  partySizeIpRewards: Array<number>;
 }
 
 export interface LolLobbyRankedPositionInfoDTO {
@@ -8107,7 +8107,7 @@ export interface LolLobbyReadyDto {
 
 export interface LolLobbyReceivedInvitationDto {
   canAcceptInvitation: boolean;
-  fromSummonerId: bigint;
+  fromSummonerId: number;
   fromSummonerName: string;
   gameConfig: LolLobbyReceivedInvitationGameConfigDto;
   invitationId: string;
@@ -8120,8 +8120,8 @@ export interface LolLobbyReceivedInvitationDto {
 export interface LolLobbyReceivedInvitationGameConfigDto {
   gameMode: string;
   inviteGameType: string;
-  mapId: bigint;
-  queueId: bigint;
+  mapId: number;
+  queueId: number;
 }
 
 export interface LolLobbyRegistrationCredentials {
@@ -8143,7 +8143,7 @@ export interface LolLobbyRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -8154,21 +8154,21 @@ export interface LolLobbyServiceProxyPayload {
 }
 
 export interface LolLobbySummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   internalName: string;
-  profileIconId: bigint;
+  profileIconId: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolLobbyTeamBuilderActionV1 {
-  actionId: bigint;
-  actorCellId: bigint;
-  championId: bigint;
+  actionId: number;
+  actorCellId: number;
+  championId: number;
   completed: boolean;
-  duration: bigint;
+  duration: number;
   type: string;
 }
 
@@ -8177,27 +8177,27 @@ export interface LolLobbyTeamBuilderAfkCheckStateV1 {
   afkReady: boolean;
   compressAfkCheckPayload: boolean;
   inventoryDraft: LolLobbyTeamBuilderTbdInventory;
-  maxAfkMillis: bigint;
+  maxAfkMillis: number;
   multiUserChatJWT: string;
-  remainingAfkMillis: bigint;
+  remainingAfkMillis: number;
 }
 
 export interface LolLobbyTeamBuilderBackwardsTransitionInfoV1 {
   backwardsTransitionReason: string;
-  initiatorSummonerIds: Array<bigint>;
+  initiatorSummonerIds: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderCellV1 {
   assignedPosition: string;
-  cellId: bigint;
-  championId: bigint;
-  championPickIntent: bigint;
+  cellId: number;
+  championId: number;
+  championPickIntent: number;
   entitledFeatureType: string;
-  skinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  summonerId: bigint;
-  teamId: bigint;
+  skinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  summonerId: number;
+  teamId: number;
 }
 
 export interface LolLobbyTeamBuilderCellsV1 {
@@ -8206,15 +8206,15 @@ export interface LolLobbyTeamBuilderCellsV1 {
 }
 
 export interface LolLobbyTeamBuilderCeremonyV1 {
-  duration: bigint;
+  duration: number;
   name: string;
 }
 
 export interface LolLobbyTeamBuilderChampSelectAction {
-  actorCellId: bigint;
-  championId: bigint;
+  actorCellId: number;
+  championId: number;
   completed: boolean;
-  id: bigint;
+  id: number;
   isAllyAction: boolean;
   isInProgress: boolean;
   type: string;
@@ -8226,32 +8226,32 @@ export interface LolLobbyTeamBuilderChampSelectChatRoomDetails {
 }
 
 export interface LolLobbyTeamBuilderChampSelectDevPanelData {
-  counter: bigint;
-  dtoIndex: bigint;
-  queueId: bigint;
-  teamIdSuffix: bigint;
+  counter: number;
+  dtoIndex: number;
+  queueId: number;
+  teamIdSuffix: number;
 }
 
 export interface LolLobbyTeamBuilderChampSelectMySelection {
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  wardSkinId: number;
 }
 
 export interface LolLobbyTeamBuilderChampSelectPlayerSelection {
   assignedPosition: string;
-  cellId: bigint;
-  championId: bigint;
-  championPickIntent: bigint;
+  cellId: number;
+  championId: number;
+  championPickIntent: number;
   entitledFeatureType: string;
   playerType: string;
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  summonerId: bigint;
-  team: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  summonerId: number;
+  team: number;
+  wardSkinId: number;
 }
 
 export interface LolLobbyTeamBuilderChampSelectReport {
@@ -8278,21 +8278,21 @@ export interface LolLobbyTeamBuilderChampSelectSession {
   allowLockedEvents: boolean;
   allowRerolling: boolean;
   allowSkinSelection: boolean;
-  benchChampionIds: Array<bigint>;
+  benchChampionIds: Array<number>;
   benchEnabled: boolean;
-  boostableSkinCount: bigint;
+  boostableSkinCount: number;
   chatDetails: LolLobbyTeamBuilderChampSelectChatRoomDetails;
-  counter: bigint;
+  counter: number;
   entitledFeatureState: LolLobbyTeamBuilderEntitledFeatureState;
-  gameId: bigint;
+  gameId: number;
   hasSimultaneousBans: boolean;
   hasSimultaneousPicks: boolean;
   isSpectating: boolean;
-  localPlayerCellId: bigint;
-  lockedEventIndex: bigint;
+  localPlayerCellId: number;
+  lockedEventIndex: number;
   myTeam: Array<LolLobbyTeamBuilderChampSelectPlayerSelection>;
-  recoveryCounter: bigint;
-  rerollsRemaining: bigint;
+  recoveryCounter: number;
+  rerollsRemaining: number;
   skipChampionSelect: boolean;
   theirTeam: Array<LolLobbyTeamBuilderChampSelectPlayerSelection>;
   timer: LolLobbyTeamBuilderChampSelectTimer;
@@ -8300,16 +8300,16 @@ export interface LolLobbyTeamBuilderChampSelectSession {
 }
 
 export interface LolLobbyTeamBuilderChampSelectTimer {
-  adjustedTimeLeftInPhase: bigint;
-  internalNowInEpochMs: bigint;
+  adjustedTimeLeftInPhase: number;
+  internalNowInEpochMs: number;
   isInfinite: boolean;
   phase: string;
-  totalTimeInPhase: bigint;
+  totalTimeInPhase: number;
 }
 
 export interface LolLobbyTeamBuilderChampSelectTradeContract {
-  cellId: bigint;
-  id: bigint;
+  cellId: number;
+  id: number;
   state: LolLobbyTeamBuilderChampSelectTradeState;
 }
 
@@ -8322,11 +8322,11 @@ export type LolLobbyTeamBuilderChampSelectTradeState =
 
 export interface LolLobbyTeamBuilderChampionBenchStateV1 {
   benchEnabled: boolean;
-  championIds: Array<bigint>;
+  championIds: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderChampionSelectPreferences {
-  skins: bigint | undefined;
+  skins: number | undefined;
   spells: boolean | undefined | undefined;
 }
 
@@ -8339,14 +8339,14 @@ export interface LolLobbyTeamBuilderChampionSelectStateV1 {
   cells: LolLobbyTeamBuilderCellsV1;
   ceremoniesByActionSetIndex: boolean | undefined | undefined;
   championBenchState: LolLobbyTeamBuilderChampionBenchStateV1;
-  currentActionSetIndex: bigint;
-  currentTimeRemainingMillis: bigint;
-  currentTotalTimeMillis: bigint;
+  currentActionSetIndex: number;
+  currentTimeRemainingMillis: number;
+  currentTotalTimeMillis: number;
   entitledFeatureState: LolLobbyTeamBuilderEntitledFeatureStateV1;
   inventoryDraft: LolLobbyTeamBuilderTbdInventory;
   isSpectating: boolean;
   lcuSkipsSendingLoadoutsGco: boolean;
-  localPlayerCellId: bigint;
+  localPlayerCellId: number;
   lockedEventsState: LolLobbyTeamBuilderLockedEventsStateV1;
   pickIntentClearedReason: string;
   rerollState: LolLobbyTeamBuilderRerollStateV1;
@@ -8358,23 +8358,23 @@ export interface LolLobbyTeamBuilderChampionSelectStateV1 {
 }
 
 export interface LolLobbyTeamBuilderCountdownTimer {
-  counter: bigint;
+  counter: number;
   phaseName: string;
-  timer: bigint;
+  timer: number;
 }
 
 export interface LolLobbyTeamBuilderEntitledFeatureState {
-  additionalRerolls: bigint;
-  unlockedSkinIds: Array<bigint>;
+  additionalRerolls: number;
+  unlockedSkinIds: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderEntitledFeatureStateV1 {
-  additionalRerolls: bigint;
+  additionalRerolls: number;
   unlockedSkinsState: LolLobbyTeamBuilderUnlockedSkinsStateV1;
 }
 
 export interface LolLobbyTeamBuilderGameModeSpellList {
-  spells: Array<bigint>;
+  spells: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderGameflowGameClient {
@@ -8397,10 +8397,10 @@ export interface LolLobbyTeamBuilderGatekeeperRestricted {
 
 export interface LolLobbyTeamBuilderGatekeeperRestriction {
   payload: string;
-  queueId: bigint;
+  queueId: number;
   reason: string;
-  remainingMillis: bigint;
-  summonerId: bigint;
+  remainingMillis: number;
+  summonerId: number;
 }
 
 export interface LolLobbyTeamBuilderLeaverBusterAbandoned {
@@ -8408,7 +8408,7 @@ export interface LolLobbyTeamBuilderLeaverBusterAbandoned {
 }
 
 export interface LolLobbyTeamBuilderLobby {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   autoFillEligible: boolean;
   autoFillProtectedForPromos: boolean;
   autoFillProtectedForStreaking: boolean;
@@ -8421,7 +8421,7 @@ export interface LolLobbyTeamBuilderLobby {
   localMember: LolLobbyTeamBuilderLobbyMember;
   members: Array<LolLobbyTeamBuilderLobbyMember>;
   premadeSizeAllowed: boolean;
-  queueId: bigint;
+  queueId: number;
   removalReason: LolLobbyTeamBuilderLobbyRemovedFromGameReason;
   requiredPositionCoverageMet: boolean;
   showPositionExcluder: boolean;
@@ -8431,9 +8431,9 @@ export interface LolLobbyTeamBuilderLobby {
 }
 
 export interface LolLobbyTeamBuilderLobbyCountdownTimer {
-  counter: bigint;
+  counter: number;
   phaseName: string;
-  timer: bigint;
+  timer: number;
 }
 
 export interface LolLobbyTeamBuilderLobbyInvitation {
@@ -8447,7 +8447,7 @@ export interface LolLobbyTeamBuilderLobbyMember {
   autoFillProtectedForStreaking: boolean;
   canInviteOthers: boolean;
   excludedPositionPreference: string;
-  id: bigint;
+  id: number;
   isOwner: boolean;
   positionPreferences: LolLobbyTeamBuilderLobbyPositionPreferences;
   showPositionExcluder: boolean;
@@ -8477,14 +8477,14 @@ export type LolLobbyTeamBuilderLobbyRemovedFromGameReason =
 
 export interface LolLobbyTeamBuilderLockedEventsStateV1 {
   allowLockedEvents: boolean;
-  lockedEventIndex: bigint;
+  lockedEventIndex: number;
 }
 
 export interface LolLobbyTeamBuilderLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   state: LolLobbyTeamBuilderLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolLobbyTeamBuilderLoginSessionState =
@@ -8494,7 +8494,7 @@ export type LolLobbyTeamBuilderLoginSessionState =
   | "ERROR";
 
 export interface LolLobbyTeamBuilderMatchmakingDodgeData {
-  dodgerId: bigint;
+  dodgerId: number;
   state: LolLobbyTeamBuilderMatchmakingDodgeState;
 }
 
@@ -8508,13 +8508,13 @@ export type LolLobbyTeamBuilderMatchmakingDodgeWarning = "None" | "Warning" | "P
 
 export interface LolLobbyTeamBuilderMatchmakingLowPriorityData {
   bustedLeaverAccessToken: string;
-  penalizedSummonerIds: Array<bigint>;
+  penalizedSummonerIds: Array<number>;
   penaltyTime: number;
   penaltyTimeRemaining: number;
 }
 
 export interface LolLobbyTeamBuilderMatchmakingReadyCheckResource {
-  declinerIds: Array<bigint>;
+  declinerIds: Array<number>;
   dodgeWarning: LolLobbyTeamBuilderMatchmakingDodgeWarning;
   playerResponse: LolLobbyTeamBuilderMatchmakingReadyCheckResponse;
   state: LolLobbyTeamBuilderMatchmakingReadyCheckState;
@@ -8537,9 +8537,9 @@ export interface LolLobbyTeamBuilderMatchmakingSearch {
 
 export interface LolLobbyTeamBuilderMatchmakingSearchErrorResource {
   errorType: string;
-  id: bigint;
+  id: number;
   message: string;
-  penalizedSummonerId: bigint;
+  penalizedSummonerId: number;
   penaltyTimeRemaining: number;
 }
 
@@ -8550,7 +8550,7 @@ export interface LolLobbyTeamBuilderMatchmakingSearchResource {
   isCurrentlyInQueue: boolean;
   lobbyId: string;
   lowPriorityData: LolLobbyTeamBuilderMatchmakingLowPriorityData;
-  queueId: bigint;
+  queueId: number;
   readyCheck: LolLobbyTeamBuilderMatchmakingReadyCheckResource;
   searchState: LolLobbyTeamBuilderMatchmakingSearchState;
   timeInQueue: number;
@@ -8567,33 +8567,33 @@ export type LolLobbyTeamBuilderMatchmakingSearchState =
   | "ServiceShutdown";
 
 export interface LolLobbyTeamBuilderQueue {
-  allowablePremadeSizes: Array<bigint>;
+  allowablePremadeSizes: Array<number>;
   areFreeChampionsAllowed: boolean;
   assetMutator: string;
   category: LolLobbyTeamBuilderQueueGameCategory;
-  championsRequiredToPlay: bigint;
+  championsRequiredToPlay: number;
   description: string;
   detailedDescription: string;
   gameMode: string;
   gameTypeConfig: LolLobbyTeamBuilderQueueGameTypeConfig;
-  id: bigint;
+  id: number;
   isRanked: boolean;
   isTeamBuilderManaged: boolean;
   isTeamOnly: boolean;
-  lastToggledOffTime: bigint;
-  lastToggledOnTime: bigint;
-  mapId: bigint;
-  maxLevel: bigint;
-  maxSummonerLevelForFirstWinOfTheDay: bigint;
-  maximumParticipantListSize: bigint;
-  minLevel: bigint;
-  minimumParticipantListSize: bigint;
+  lastToggledOffTime: number;
+  lastToggledOnTime: number;
+  mapId: number;
+  maxLevel: number;
+  maxSummonerLevelForFirstWinOfTheDay: number;
+  maximumParticipantListSize: number;
+  minLevel: number;
+  minimumParticipantListSize: number;
   name: string;
-  numPlayersPerTeam: bigint;
+  numPlayersPerTeam: number;
   queueAvailability: LolLobbyTeamBuilderQueueAvailability;
   queueRewards: LolLobbyTeamBuilderQueueReward;
   removalFromGameAllowed: boolean;
-  removalFromGameDelayMinutes: bigint;
+  removalFromGameDelayMinutes: number;
   shortName: string;
   showPositionSelector: boolean;
   spectatorEnabled: boolean;
@@ -8611,21 +8611,21 @@ export interface LolLobbyTeamBuilderQueueGameTypeConfig {
   advancedLearningQuests: boolean;
   allowTrades: boolean;
   banMode: string;
-  banTimerDuration: bigint;
+  banTimerDuration: number;
   battleBoost: boolean;
   crossTeamChampionPool: boolean;
   deathMatch: boolean;
   doNotRemove: boolean;
   duplicatePick: boolean;
   exclusivePick: boolean;
-  id: bigint;
+  id: number;
   learningQuests: boolean;
-  mainPickTimerDuration: bigint;
-  maxAllowableBans: bigint;
+  mainPickTimerDuration: number;
+  maxAllowableBans: number;
   name: string;
   onboardCoopBeginner: boolean;
   pickMode: string;
-  postPickTimerDuration: bigint;
+  postPickTimerDuration: number;
   reroll: boolean;
   teamChampionPool: boolean;
 }
@@ -8634,34 +8634,34 @@ export interface LolLobbyTeamBuilderQueueReward {
   isChampionPointsEnabled: boolean;
   isIpEnabled: boolean;
   isXpEnabled: boolean;
-  partySizeIpRewards: Array<bigint>;
+  partySizeIpRewards: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderRerollStateV1 {
   allowRerolling: boolean;
-  rerollsRemaining: bigint;
+  rerollsRemaining: number;
 }
 
 export interface LolLobbyTeamBuilderSettingCategoryResource {
   data: LolLobbyTeamBuilderChampionSelectPreferences;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolLobbyTeamBuilderTBDMatchmakingState {
   backwardsTransitionReason: string;
-  estimatedMatchmakingTimeMillis: bigint;
-  timeInMatchmakingMillis: bigint;
+  estimatedMatchmakingTimeMillis: number;
+  timeInMatchmakingMillis: number;
 }
 
 export interface LolLobbyTeamBuilderTbLobbyStateResource {
   afkCheckState: LolLobbyTeamBuilderAfkCheckStateV1;
   championSelectState: LolLobbyTeamBuilderChampionSelectStateV1;
-  counter: bigint;
-  gameId: bigint;
+  counter: number;
+  gameId: number;
   matchmakingState: LolLobbyTeamBuilderTBDMatchmakingState;
   phaseName: string;
-  queueId: bigint;
-  recoveryCounter: bigint;
+  queueId: number;
+  recoveryCounter: number;
 }
 
 export interface LolLobbyTeamBuilderTbRemovedFromServiceNotification {
@@ -8670,31 +8670,31 @@ export interface LolLobbyTeamBuilderTbRemovedFromServiceNotification {
 }
 
 export interface LolLobbyTeamBuilderTbdInventory {
-  allChampionIds: Array<bigint>;
-  disabledChampionIds: Array<bigint>;
-  initialSpellIds: Array<bigint>;
-  lastSelectedSkinIdByChampionId: bigint | undefined;
-  skinIds: Array<bigint>;
-  spellIds: Array<bigint>;
+  allChampionIds: Array<number>;
+  disabledChampionIds: Array<number>;
+  initialSpellIds: Array<number>;
+  lastSelectedSkinIdByChampionId: number | undefined;
+  skinIds: Array<number>;
+  spellIds: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderTeamBoost {
-  availableSkins: Array<bigint>;
-  ipReward: bigint;
-  ipRewardForPurchaser: bigint;
-  price: bigint;
+  availableSkins: Array<number>;
+  ipReward: number;
+  ipRewardForPurchaser: number;
+  price: number;
   skinUnlockMode: string;
-  summonerId: bigint;
+  summonerId: number;
   unlocked: boolean;
 }
 
 export interface LolLobbyTeamBuilderTeamBuilderBoostInfo {
-  activatorCellId: bigint;
+  activatorCellId: number;
   allowBattleBoost: boolean;
   battleBoostActivated: boolean;
-  boostableSkinCount: bigint;
-  cost: bigint;
-  unlockedSkinIds: Array<bigint>;
+  boostableSkinCount: number;
+  cost: number;
+  unlockedSkinIds: Array<number>;
 }
 
 export interface LolLobbyTeamBuilderTeambuilderLeagueEdgeResponse {
@@ -8703,13 +8703,13 @@ export interface LolLobbyTeamBuilderTeambuilderLeagueEdgeResponse {
 }
 
 export interface LolLobbyTeamBuilderTradeV1 {
-  cellId: bigint;
-  id: bigint;
+  cellId: number;
+  id: number;
   state: string;
 }
 
 export interface LolLobbyTeamBuilderUnlockedSkinsStateV1 {
-  unlockedSkinIds: Array<bigint>;
+  unlockedSkinIds: Array<number>;
 }
 
 export interface LolLobbyUserInfoToken {
@@ -8718,11 +8718,11 @@ export interface LolLobbyUserInfoToken {
 
 export interface LolLobbyUserResource {
   lol: string | undefined;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLoginAccessToken {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
@@ -8740,7 +8740,7 @@ export type LolLoginAccountStateType =
   | "GENERATING";
 
 export interface LolLoginAuthorization {
-  currentAccountId: bigint;
+  currentAccountId: number;
   currentPlatformId: string;
   subject: string;
 }
@@ -8760,7 +8760,7 @@ export interface LolLoginCrashReportingEnvironment {
 }
 
 export interface LolLoginIdToken {
-  expiry: bigint;
+  expiry: number;
   token: string;
 }
 
@@ -8805,13 +8805,13 @@ export interface LolLoginLoginError {
 }
 
 export interface LolLoginLoginQueue {
-  approximateWaitTimeSeconds: bigint;
-  estimatedPositionInQueue: bigint;
+  approximateWaitTimeSeconds: number;
+  estimatedPositionInQueue: number;
   isPositionCapped: boolean;
 }
 
 export interface LolLoginLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   error: LolLoginLoginError;
   gasToken: boolean | undefined;
@@ -8820,7 +8820,7 @@ export interface LolLoginLoginSession {
   isNewPlayer: boolean;
   puuid: string;
   state: LolLoginLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
   userAuthToken: string;
   username: string;
 }
@@ -8828,8 +8828,8 @@ export interface LolLoginLoginSession {
 export type LolLoginLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolLoginLoginSessionWallet {
-  ip: bigint;
-  rp: bigint;
+  ip: number;
+  rp: number;
 }
 
 export interface LolLoginPlatformGeneratedCredentials {
@@ -8849,13 +8849,13 @@ export interface LolLoginRSOPlayerCredentials {
 }
 
 export interface LolLoginSummonerCreatedResource {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLoginSummonerSessionResource {
   displayName: string;
   isNewPlayer: boolean;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLoginUsernameAndPassword {
@@ -8864,17 +8864,17 @@ export interface LolLoginUsernameAndPassword {
 }
 
 export interface LolLootAccountIdAndSummonerId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolLootCollectionsChampionMinimal {
-  id: bigint;
+  id: number;
   ownership: LolLootCollectionsOwnership;
 }
 
 export interface LolLootCollectionsChampionSkinMinimal {
-  championId: bigint;
-  id: bigint;
+  championId: number;
+  id: number;
   name: string;
   ownership: LolLootCollectionsOwnership;
   splashPath: string;
@@ -8882,7 +8882,7 @@ export interface LolLootCollectionsChampionSkinMinimal {
 }
 
 export interface LolLootCollectionsEmote {
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolLootInventoryOwnership;
 }
 
@@ -8897,16 +8897,16 @@ export interface LolLootCollectionsRental {
 }
 
 export interface LolLootCollectionsStatstone {
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolLootInventoryOwnership;
 }
 
 export interface LolLootCollectionsSummonerIcon {
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolLootCollectionsWardSkin {
-  id: bigint;
+  id: number;
   name: string;
   ownership: LolLootCollectionsOwnership;
   wardImagePath: string;
@@ -8916,13 +8916,13 @@ export interface LolLootCollectionsWardSkin {
 export interface LolLootContextMenu {
   actionType: string;
   enabled: boolean;
-  essenceQuantity: bigint;
+  essenceQuantity: number;
   essenceType: string;
   name: string;
   recipeContextMenuAction: string;
   recipeDescription: string;
   requiredOthers: string;
-  requiredOthersCount: bigint;
+  requiredOthersCount: number;
   requiredOthersName: string;
   requiredTokens: string;
 }
@@ -8932,12 +8932,12 @@ export interface LolLootCounter {
   groupId: string;
   id: string;
   name: string;
-  startValue: bigint;
+  startValue: number;
 }
 
 export interface LolLootCounterInstance {
   counterId: string;
-  counterValue: bigint;
+  counterValue: number;
   groupId: string;
   ownerId: string;
   productId: string;
@@ -8955,13 +8955,13 @@ export interface LolLootEntityInstance {
 
 export interface LolLootGameDataSummonerEmote {
   description: string;
-  id: bigint;
+  id: number;
   inventoryIcon: string;
   name: string;
 }
 
 export interface LolLootGameDataSummonerIcon {
-  id: bigint;
+  id: number;
   imagePath: string;
 }
 
@@ -9022,7 +9022,7 @@ export interface LolLootLedgerConfigMilestoneGdsResource {
   id: string;
   name: string;
   properties: Array<LolLootLedgerConfigMilestonePropertiesGdsResource>;
-  triggerValue: bigint;
+  triggerValue: number;
 }
 
 export interface LolLootLedgerConfigMilestonePropertiesGdsResource {
@@ -9037,7 +9037,7 @@ export interface LolLootLedgerConfigMilestoneRewardGdsResource {
   id: string;
   legacyLootItem: string;
   lootItemToGrant: LolLootMilestoneLootItemRewardGdsResource;
-  quantity: bigint;
+  quantity: number;
   rewardType: string;
 }
 
@@ -9046,15 +9046,15 @@ export interface LolLootLoginDataPacket {
 }
 
 export interface LolLootLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolLootLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolLootLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolLootLoginSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
@@ -9094,30 +9094,30 @@ export interface LolLootLootDropTableEntryGdsResource {
 }
 
 export interface LolLootLootGrantNotification {
-  accountId: bigint;
-  championId: bigint;
-  gameId: bigint;
-  id: bigint;
+  accountId: number;
+  championId: number;
+  gameId: number;
+  id: number;
   lootName: string;
   messageKey: string;
   msgId: string;
   playerGrade: string;
-  playerId: bigint;
+  playerId: number;
 }
 
 export interface LolLootLootItem {
   asset: string;
   displayCategories: string;
-  expiryTime: bigint;
+  expiryTime: number;
   lootName: string;
   rarity: string;
-  rentalGames: bigint;
-  rentalSeconds: bigint;
-  storeItemId: bigint;
+  rentalGames: number;
+  rentalSeconds: number;
+  storeItemId: number;
   tags: string;
   type: string;
   upgradeLootName: string;
-  value: bigint;
+  value: number;
 }
 
 export interface LolLootLootItemGdsResource {
@@ -9126,8 +9126,8 @@ export interface LolLootLootItemGdsResource {
   endDate: string;
   id: string;
   image: string;
-  lifetimeMax: bigint;
-  mappedStoreId: bigint;
+  lifetimeMax: number;
+  mappedStoreId: number;
   name: string;
   rarity: LolLootLootRarity;
   recipeMenuActive: boolean;
@@ -9140,7 +9140,7 @@ export interface LolLootLootItemGdsResource {
 export interface LolLootLootMilestone {
   id: string;
   rewards: Array<LolLootLootMilestoneReward>;
-  threshold: bigint;
+  threshold: number;
 }
 
 export type LolLootLootMilestoneClaimStatus =
@@ -9151,16 +9151,16 @@ export type LolLootLootMilestoneClaimStatus =
 
 export interface LolLootLootMilestoneRepeat {
   multiplier: number;
-  repeatCount: bigint;
-  repeatScope: bigint;
+  repeatCount: number;
+  repeatScope: number;
 }
 
 export interface LolLootLootMilestoneReward {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
   lootItem: LolLootPlayerLoot;
-  quantity: bigint;
+  quantity: number;
   rewardGroupId: string;
   rewardType: string;
 }
@@ -9186,8 +9186,8 @@ export interface LolLootLootMilestonesClaimResponse {
 }
 
 export interface LolLootLootMilestonesCounter {
-  completedLoops: bigint;
-  counterValue: bigint;
+  completedLoops: number;
+  counterValue: number;
   lootMilestonesId: string;
   readyToClaimMilestones: Array<string>;
 }
@@ -9206,9 +9206,9 @@ export interface LolLootLootOddsResponse {
   dropRate: number;
   label: string;
   lootId: string;
-  lootOrder: bigint;
+  lootOrder: number;
   parentId: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolLootLootOutputGdsResource {
@@ -9263,7 +9263,7 @@ export interface LolLootMilestone {
   id: string;
   name: string;
   properties: string | undefined;
-  triggerValue: bigint;
+  triggerValue: number;
 }
 
 export interface LolLootMilestoneInstance {
@@ -9272,8 +9272,8 @@ export interface LolLootMilestoneInstance {
   milestoneId: string;
   ownerId: string;
   productId: string;
-  repeatSequence: bigint;
-  triggerValue: bigint;
+  repeatSequence: number;
+  triggerValue: number;
   triggered: boolean;
 }
 
@@ -9289,13 +9289,13 @@ export interface LolLootMilestonesLedgerCounterGdsResource {
   direction: string;
   id: string;
   name: string;
-  startValue: bigint;
+  startValue: number;
 }
 
 export interface LolLootMilestonesLedgerGroupRepeatGdsResource {
-  Count: bigint;
+  Count: number;
   Multiplier: number;
-  Scope: bigint;
+  Scope: number;
 }
 
 export interface LolLootMilestonesRecipeGdsResource {
@@ -9304,11 +9304,11 @@ export interface LolLootMilestonesRecipeGdsResource {
 
 export interface LolLootPlayerLoot {
   asset: string;
-  count: bigint;
+  count: number;
   disenchantLootName: string;
-  disenchantValue: bigint;
+  disenchantValue: number;
   displayCategories: string;
-  expiryTime: bigint;
+  expiryTime: number;
   isNew: boolean;
   isRental: boolean;
   itemDesc: string;
@@ -9320,37 +9320,37 @@ export interface LolLootPlayerLoot {
   lootId: string;
   lootName: string;
   parentItemStatus: LolLootItemOwnershipStatus;
-  parentStoreItemId: bigint;
+  parentStoreItemId: number;
   rarity: string;
   redeemableStatus: LolLootRedeemableStatus;
   refId: string;
-  rentalGames: bigint;
-  rentalSeconds: bigint;
+  rentalGames: number;
+  rentalSeconds: number;
   shadowPath: string;
   splashPath: string;
-  storeItemId: bigint;
+  storeItemId: number;
   tags: string;
   tilePath: string;
   type: string;
   upgradeEssenceName: string;
-  upgradeEssenceValue: bigint;
+  upgradeEssenceValue: number;
   upgradeLootName: string;
-  value: bigint;
+  value: number;
 }
 
 export interface LolLootPlayerLootDelta {
-  deltaCount: bigint;
+  deltaCount: number;
   playerLoot: LolLootPlayerLoot;
 }
 
 export interface LolLootPlayerLootMap {
   playerLoot: LolLootPlayerLoot | undefined;
-  version: bigint;
+  version: number;
 }
 
 export interface LolLootPlayerLootNotification {
   acknowledged: boolean;
-  count: bigint;
+  count: number;
   id: string;
 }
 
@@ -9379,13 +9379,13 @@ export interface LolLootRecipeMetadata {
 
 export interface LolLootRecipeOutput {
   lootName: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolLootRecipeSlot {
   lootIds: Array<string>;
-  quantity: bigint;
-  slotNumber: bigint;
+  quantity: number;
+  slotNumber: number;
   tags: string;
 }
 
@@ -9424,9 +9424,9 @@ export interface LolLootRegionLocale {
 }
 
 export interface LolLootRepeat {
-  count: bigint;
+  count: number;
   multiplier: number;
-  scope: bigint;
+  scope: number;
 }
 
 export interface LolLootRequestDTO_SelectionRequestDTO {
@@ -9462,7 +9462,7 @@ export interface LolLootReward {
   itemType: string;
   localizations: string | undefined;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolLootRewardGrant {
@@ -9484,12 +9484,12 @@ export interface LolLootSelectionRequestDTO {
 }
 
 export interface LolLootSelectionStrategyConfig {
-  maxSelectionsAllowed: bigint;
-  minSelectionsAllowed: bigint;
+  maxSelectionsAllowed: number;
+  minSelectionsAllowed: number;
 }
 
 export interface LolLootSummoner {
-  summonerLevel: bigint;
+  summonerLevel: number;
 }
 
 export interface LolLootSvcRewardGrant {
@@ -9510,7 +9510,7 @@ export interface LolLootSvcRewardGrantElement {
   itemType: string;
   localizations: string | undefined;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
   status: LolLootRewardStatus;
 }
 
@@ -9559,24 +9559,24 @@ export interface LolLoyaltyInventoryResponseDTO {
 }
 
 export interface LolLoyaltyLoginSession {
-  accountId: bigint;
+  accountId: number;
   puuid: string;
   state: LolLoyaltyLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolLoyaltyLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolLoyaltyLoyaltyRewards {
-  championIds: Array<bigint>;
-  freeRewardedChampionsCount: bigint;
-  freeRewardedSkinsCount: bigint;
+  championIds: Array<number>;
+  freeRewardedChampionsCount: number;
+  freeRewardedSkinsCount: number;
   global: LolLoyaltyGlobalRewards;
-  ipBoost: bigint;
-  loyaltyTFTCompanionCount: bigint;
-  loyaltyTFTMapSkinCount: bigint;
-  skinIds: Array<bigint>;
-  xpBoost: bigint;
+  ipBoost: number;
+  loyaltyTFTCompanionCount: number;
+  loyaltyTFTMapSkinCount: number;
+  skinIds: Array<number>;
+  xpBoost: number;
 }
 
 export type LolLoyaltyLoyaltyStatus =
@@ -9596,7 +9596,7 @@ export interface LolLoyaltyRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -9608,7 +9608,7 @@ export interface LolLoyaltyRmsEntitlementPayload {
 }
 
 export interface LolMapsGameModeSpellList {
-  spells: Array<bigint>;
+  spells: Array<number>;
 }
 
 export interface LolMapsMaps {
@@ -9620,7 +9620,7 @@ export interface LolMapsMaps {
   gameModeName: string;
   gameModeShortName: string;
   gameMutator: string;
-  id: bigint;
+  id: number;
   isDefault: boolean;
   isRGM: boolean;
   locStrings: string | undefined;
@@ -9646,7 +9646,7 @@ export interface LolMatchHistoryAcsEndPoint {
 }
 
 export interface LolMatchHistoryAcsPlayer {
-  accountId: bigint;
+  accountId: number;
   platformId: string;
 }
 
@@ -9661,22 +9661,22 @@ export interface LolMatchHistoryGAMHSMatchHistoryList {
 }
 
 export interface LolMatchHistoryGAMHSMatchHistoryMetadata {
-  data_version: bigint;
+  data_version: number;
   info_type: string;
   match_id: string;
   participants: Array<string>;
   private: boolean;
   product: string;
   tags: Array<string>;
-  timestamp: bigint;
+  timestamp: number;
 }
 
 export interface LolMatchHistoryLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   idToken: string;
   state: LolMatchHistoryLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolMatchHistoryLoginSessionStates =
@@ -9686,112 +9686,112 @@ export type LolMatchHistoryLoginSessionStates =
   | "ERROR";
 
 export interface LolMatchHistoryMHSummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolMatchHistoryMatchHistoryEvent {
-  assistingParticipantIds: Array<bigint>;
+  assistingParticipantIds: Array<number>;
   buildingType: string;
-  itemId: bigint;
-  killerId: bigint;
+  itemId: number;
+  killerId: number;
   laneType: string;
   monsterSubType: string;
   monsterType: string;
-  participantId: bigint;
+  participantId: number;
   position: LolMatchHistoryMatchHistoryPosition;
-  skillSlot: bigint;
-  teamId: bigint;
-  timestamp: bigint;
+  skillSlot: number;
+  teamId: number;
+  timestamp: number;
   towerType: string;
   type: string;
-  victimId: bigint;
+  victimId: number;
 }
 
 export interface LolMatchHistoryMatchHistoryGame {
-  gameCreation: bigint;
+  gameCreation: number;
   gameCreationDate: string;
-  gameDuration: bigint;
-  gameId: bigint;
+  gameDuration: number;
+  gameId: number;
   gameMode: string;
   gameType: string;
   gameVersion: string;
-  mapId: bigint;
+  mapId: number;
   participantIdentities: Array<LolMatchHistoryMatchHistoryParticipantIdentities>;
   participants: Array<LolMatchHistoryMatchHistoryParticipant>;
   platformId: string;
-  queueId: bigint;
-  seasonId: bigint;
+  queueId: number;
+  seasonId: number;
   teams: Array<LolMatchHistoryMatchHistoryTeam>;
 }
 
 export interface LolMatchHistoryMatchHistoryGameList {
   gameBeginDate: string;
-  gameCount: bigint;
+  gameCount: number;
   gameEndDate: string;
-  gameIndexBegin: bigint;
-  gameIndexEnd: bigint;
+  gameIndexBegin: number;
+  gameIndexEnd: number;
   games: Array<LolMatchHistoryMatchHistoryGame>;
 }
 
 export interface LolMatchHistoryMatchHistoryList {
-  accountId: bigint;
+  accountId: number;
   games: LolMatchHistoryMatchHistoryGameList;
   platformId: string;
 }
 
 export interface LolMatchHistoryMatchHistoryParticipant {
-  championId: bigint;
+  championId: number;
   highestAchievedSeasonTier: string;
-  participantId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
+  participantId: number;
+  spell1Id: number;
+  spell2Id: number;
   stats: LolMatchHistoryMatchHistoryParticipantStatistics;
-  teamId: bigint;
+  teamId: number;
   timeline: LolMatchHistoryMatchHistoryTimeline;
 }
 
 export interface LolMatchHistoryMatchHistoryParticipantFrame {
-  currentGold: bigint;
-  dominionScore: bigint;
-  jungleMinionsKilled: bigint;
-  level: bigint;
-  minionsKilled: bigint;
-  participantId: bigint;
+  currentGold: number;
+  dominionScore: number;
+  jungleMinionsKilled: number;
+  level: number;
+  minionsKilled: number;
+  participantId: number;
   position: LolMatchHistoryMatchHistoryPosition;
-  teamScore: bigint;
-  totalGold: bigint;
-  xp: bigint;
+  teamScore: number;
+  totalGold: number;
+  xp: number;
 }
 
 export interface LolMatchHistoryMatchHistoryParticipantIdentities {
-  participantId: bigint;
+  participantId: number;
   player: LolMatchHistoryMatchHistoryParticipantIdentityPlayer;
 }
 
 export interface LolMatchHistoryMatchHistoryParticipantIdentityPlayer {
-  accountId: bigint;
-  currentAccountId: bigint;
+  accountId: number;
+  currentAccountId: number;
   currentPlatformId: string;
   matchHistoryUri: string;
   platformId: string;
-  profileIcon: bigint;
-  summonerId: bigint;
+  profileIcon: number;
+  summonerId: number;
   summonerName: string;
 }
 
 export interface LolMatchHistoryMatchHistoryParticipantStatistics {
-  assists: bigint;
+  assists: number;
   causedEarlySurrender: boolean;
-  champLevel: bigint;
-  combatPlayerScore: bigint;
-  damageDealtToObjectives: bigint;
-  damageDealtToTurrets: bigint;
-  damageSelfMitigated: bigint;
-  deaths: bigint;
-  doubleKills: bigint;
+  champLevel: number;
+  combatPlayerScore: number;
+  damageDealtToObjectives: number;
+  damageDealtToTurrets: number;
+  damageSelfMitigated: number;
+  deaths: number;
+  doubleKills: number;
   earlySurrenderAccomplice: boolean;
   firstBloodAssist: boolean;
   firstBloodKill: boolean;
@@ -9801,93 +9801,93 @@ export interface LolMatchHistoryMatchHistoryParticipantStatistics {
   firstTowerKill: boolean;
   gameEndedInEarlySurrender: boolean;
   gameEndedInSurrender: boolean;
-  goldEarned: bigint;
-  goldSpent: bigint;
-  inhibitorKills: bigint;
-  item0: bigint;
-  item1: bigint;
-  item2: bigint;
-  item3: bigint;
-  item4: bigint;
-  item5: bigint;
-  item6: bigint;
-  killingSprees: bigint;
-  kills: bigint;
-  largestCriticalStrike: bigint;
-  largestKillingSpree: bigint;
-  largestMultiKill: bigint;
-  longestTimeSpentLiving: bigint;
-  magicDamageDealt: bigint;
-  magicDamageDealtToChampions: bigint;
-  magicalDamageTaken: bigint;
-  neutralMinionsKilled: bigint;
-  neutralMinionsKilledEnemyJungle: bigint;
-  neutralMinionsKilledTeamJungle: bigint;
-  objectivePlayerScore: bigint;
-  participantId: bigint;
-  pentaKills: bigint;
-  perk0: bigint;
-  perk0Var1: bigint;
-  perk0Var2: bigint;
-  perk0Var3: bigint;
-  perk1: bigint;
-  perk1Var1: bigint;
-  perk1Var2: bigint;
-  perk1Var3: bigint;
-  perk2: bigint;
-  perk2Var1: bigint;
-  perk2Var2: bigint;
-  perk2Var3: bigint;
-  perk3: bigint;
-  perk3Var1: bigint;
-  perk3Var2: bigint;
-  perk3Var3: bigint;
-  perk4: bigint;
-  perk4Var1: bigint;
-  perk4Var2: bigint;
-  perk4Var3: bigint;
-  perk5: bigint;
-  perk5Var1: bigint;
-  perk5Var2: bigint;
-  perk5Var3: bigint;
-  perkPrimaryStyle: bigint;
-  perkSubStyle: bigint;
-  physicalDamageDealt: bigint;
-  physicalDamageDealtToChampions: bigint;
-  physicalDamageTaken: bigint;
-  playerScore0: bigint;
-  playerScore1: bigint;
-  playerScore2: bigint;
-  playerScore3: bigint;
-  playerScore4: bigint;
-  playerScore5: bigint;
-  playerScore6: bigint;
-  playerScore7: bigint;
-  playerScore8: bigint;
-  playerScore9: bigint;
-  quadraKills: bigint;
-  sightWardsBoughtInGame: bigint;
+  goldEarned: number;
+  goldSpent: number;
+  inhibitorKills: number;
+  item0: number;
+  item1: number;
+  item2: number;
+  item3: number;
+  item4: number;
+  item5: number;
+  item6: number;
+  killingSprees: number;
+  kills: number;
+  largestCriticalStrike: number;
+  largestKillingSpree: number;
+  largestMultiKill: number;
+  longestTimeSpentLiving: number;
+  magicDamageDealt: number;
+  magicDamageDealtToChampions: number;
+  magicalDamageTaken: number;
+  neutralMinionsKilled: number;
+  neutralMinionsKilledEnemyJungle: number;
+  neutralMinionsKilledTeamJungle: number;
+  objectivePlayerScore: number;
+  participantId: number;
+  pentaKills: number;
+  perk0: number;
+  perk0Var1: number;
+  perk0Var2: number;
+  perk0Var3: number;
+  perk1: number;
+  perk1Var1: number;
+  perk1Var2: number;
+  perk1Var3: number;
+  perk2: number;
+  perk2Var1: number;
+  perk2Var2: number;
+  perk2Var3: number;
+  perk3: number;
+  perk3Var1: number;
+  perk3Var2: number;
+  perk3Var3: number;
+  perk4: number;
+  perk4Var1: number;
+  perk4Var2: number;
+  perk4Var3: number;
+  perk5: number;
+  perk5Var1: number;
+  perk5Var2: number;
+  perk5Var3: number;
+  perkPrimaryStyle: number;
+  perkSubStyle: number;
+  physicalDamageDealt: number;
+  physicalDamageDealtToChampions: number;
+  physicalDamageTaken: number;
+  playerScore0: number;
+  playerScore1: number;
+  playerScore2: number;
+  playerScore3: number;
+  playerScore4: number;
+  playerScore5: number;
+  playerScore6: number;
+  playerScore7: number;
+  playerScore8: number;
+  playerScore9: number;
+  quadraKills: number;
+  sightWardsBoughtInGame: number;
   teamEarlySurrendered: boolean;
-  timeCCingOthers: bigint;
-  totalDamageDealt: bigint;
-  totalDamageDealtToChampions: bigint;
-  totalDamageTaken: bigint;
-  totalHeal: bigint;
-  totalMinionsKilled: bigint;
-  totalPlayerScore: bigint;
-  totalScoreRank: bigint;
-  totalTimeCrowdControlDealt: bigint;
-  totalUnitsHealed: bigint;
-  tripleKills: bigint;
-  trueDamageDealt: bigint;
-  trueDamageDealtToChampions: bigint;
-  trueDamageTaken: bigint;
-  turretKills: bigint;
-  unrealKills: bigint;
-  visionScore: bigint;
-  visionWardsBoughtInGame: bigint;
-  wardsKilled: bigint;
-  wardsPlaced: bigint;
+  timeCCingOthers: number;
+  totalDamageDealt: number;
+  totalDamageDealtToChampions: number;
+  totalDamageTaken: number;
+  totalHeal: number;
+  totalMinionsKilled: number;
+  totalPlayerScore: number;
+  totalScoreRank: number;
+  totalTimeCrowdControlDealt: number;
+  totalUnitsHealed: number;
+  tripleKills: number;
+  trueDamageDealt: number;
+  trueDamageDealtToChampions: number;
+  trueDamageTaken: number;
+  turretKills: number;
+  unrealKills: number;
+  visionScore: number;
+  visionWardsBoughtInGame: number;
+  wardsKilled: number;
+  wardsPlaced: number;
   win: boolean;
 }
 
@@ -9897,58 +9897,58 @@ export interface LolMatchHistoryMatchHistoryPlayerChampMasteryDelta {
 
 export interface LolMatchHistoryMatchHistoryPlayerDelta {
   deltas: Array<LolMatchHistoryMatchHistoryPlayerGameDelta>;
-  originalAccountId: bigint;
+  originalAccountId: number;
   originalPlatformId: string;
 }
 
 export interface LolMatchHistoryMatchHistoryPlayerGameDelta {
   champMastery: LolMatchHistoryMatchHistoryPlayerChampMasteryDelta;
-  gameId: bigint;
+  gameId: number;
   gamePlatformId: string;
   leagueDelta: LolMatchHistoryMatchHistoryPlayerLeagueDelta;
   platformDelta: LolMatchHistoryMatchHistoryPlayerPlatformDelta;
 }
 
 export interface LolMatchHistoryMatchHistoryPlayerLeagueDelta {
-  leaguePointDelta: bigint;
+  leaguePointDelta: number;
   miniSeriesProgress: Array<string>;
   reason: string;
-  timestamp: bigint;
+  timestamp: number;
 }
 
 export interface LolMatchHistoryMatchHistoryPlayerPlatformDelta {
   compensationModeEnabled: boolean;
-  ipDelta: bigint;
-  timestamp: bigint;
-  xpDelta: bigint;
+  ipDelta: number;
+  timestamp: number;
+  xpDelta: number;
 }
 
 export interface LolMatchHistoryMatchHistoryPosition {
-  x: bigint;
-  y: bigint;
+  x: number;
+  y: number;
 }
 
 export interface LolMatchHistoryMatchHistoryTeam {
   bans: Array<LolMatchHistoryMatchHistoryTeamBan>;
-  baronKills: bigint;
-  dominionVictoryScore: bigint;
-  dragonKills: bigint;
+  baronKills: number;
+  dominionVictoryScore: number;
+  dragonKills: number;
   firstBaron: boolean;
   firstBlood: boolean;
   firstDargon: boolean;
   firstInhibitor: boolean;
   firstTower: boolean;
-  inhibitorKills: bigint;
-  riftHeraldKills: bigint;
-  teamId: bigint;
-  towerKills: bigint;
-  vilemawKills: bigint;
+  inhibitorKills: number;
+  riftHeraldKills: number;
+  teamId: number;
+  towerKills: number;
+  vilemawKills: number;
   win: string;
 }
 
 export interface LolMatchHistoryMatchHistoryTeamBan {
-  championId: bigint;
-  pickTurn: bigint;
+  championId: number;
+  pickTurn: number;
 }
 
 export interface LolMatchHistoryMatchHistoryTimeline {
@@ -9958,7 +9958,7 @@ export interface LolMatchHistoryMatchHistoryTimeline {
   damageTakenPerMinDeltas: number | undefined;
   goldPerMinDeltas: number | undefined;
   lane: string;
-  participantId: bigint;
+  participantId: number;
   role: string;
   xpDiffPerMinDeltas: number | undefined;
   xpPerMinDeltas: number | undefined;
@@ -9967,7 +9967,7 @@ export interface LolMatchHistoryMatchHistoryTimeline {
 export interface LolMatchHistoryMatchHistoryTimelineFrame {
   events: Array<LolMatchHistoryMatchHistoryEvent>;
   participantFrames: LolMatchHistoryMatchHistoryParticipantFrame | undefined;
-  timestamp: bigint;
+  timestamp: number;
 }
 
 export interface LolMatchHistoryMatchHistoryTimelineFrames {
@@ -9975,13 +9975,13 @@ export interface LolMatchHistoryMatchHistoryTimelineFrames {
 }
 
 export interface LolMatchHistoryRecentlyPlayedSummoner {
-  championId: bigint;
+  championId: number;
   gameCreationDate: string;
-  gameId: bigint;
+  gameId: number;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
-  teamId: bigint;
+  teamId: number;
 }
 
 export interface LolMatchHistorySummoner {
@@ -9994,7 +9994,7 @@ export interface LolMatchmakingGameflowGameData {
 }
 
 export interface LolMatchmakingGameflowGameDodge {
-  dodgeIds: Array<bigint>;
+  dodgeIds: Array<number>;
   state: LolMatchmakingMatchmakingDodgeState;
 }
 
@@ -10035,21 +10035,21 @@ export interface LolMatchmakingLobbyStatus {
   isLeader: boolean;
   isSpectator: boolean;
   lobbyId: string;
-  memberSummonerIds: Array<bigint>;
-  queueId: bigint;
+  memberSummonerIds: Array<number>;
+  queueId: number;
 }
 
 export interface LolMatchmakingLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   state: LolMatchmakingLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolMatchmakingLoginSessionState = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolMatchmakingMatchmakingDodgeData {
-  dodgerId: bigint;
+  dodgerId: number;
   state: LolMatchmakingMatchmakingDodgeState;
 }
 
@@ -10063,14 +10063,14 @@ export type LolMatchmakingMatchmakingDodgeWarning = "None" | "Warning" | "Penalt
 
 export interface LolMatchmakingMatchmakingLowPriorityData {
   bustedLeaverAccessToken: string;
-  penalizedSummonerIds: Array<bigint>;
+  penalizedSummonerIds: Array<number>;
   penaltyTime: number;
   penaltyTimeRemaining: number;
   reason: string;
 }
 
 export interface LolMatchmakingMatchmakingReadyCheckResource {
-  declinerIds: Array<bigint>;
+  declinerIds: Array<number>;
   dodgeWarning: LolMatchmakingMatchmakingDodgeWarning;
   playerResponse: LolMatchmakingMatchmakingReadyCheckResponse;
   state: LolMatchmakingMatchmakingReadyCheckState;
@@ -10090,9 +10090,9 @@ export type LolMatchmakingMatchmakingReadyCheckState =
 
 export interface LolMatchmakingMatchmakingSearchErrorResource {
   errorType: string;
-  id: bigint;
+  id: number;
   message: string;
-  penalizedSummonerId: bigint;
+  penalizedSummonerId: number;
   penaltyTimeRemaining: number;
 }
 
@@ -10103,7 +10103,7 @@ export interface LolMatchmakingMatchmakingSearchResource {
   isCurrentlyInQueue: boolean;
   lobbyId: string;
   lowPriorityData: LolMatchmakingMatchmakingLowPriorityData;
-  queueId: bigint;
+  queueId: number;
   readyCheck: LolMatchmakingMatchmakingReadyCheckResource;
   searchState: LolMatchmakingMatchmakingSearchState;
   timeInQueue: number;
@@ -10125,7 +10125,7 @@ export interface LolMatchmakingPlayerStatus {
 }
 
 export interface LolMatchmakingQueue {
-  id: bigint;
+  id: number;
   isTeamBuilderManaged: boolean;
 }
 
@@ -10137,14 +10137,14 @@ export type LolMatchmakingQueueCustomGameSpectatorPolicy =
 
 export interface LolMissionsCollectionsChampion {
   freeToPlay: boolean;
-  id: bigint;
+  id: number;
   ownership: LolMissionsCollectionsOwnership;
   skins: Array<LolMissionsCollectionsChampionSkin>;
 }
 
 export interface LolMissionsCollectionsChampionSkin {
-  championId: bigint;
-  id: bigint;
+  championId: number;
+  id: number;
   ownership: LolMissionsCollectionsOwnership;
 }
 
@@ -10159,15 +10159,15 @@ export interface LolMissionsCollectionsRental {
 }
 
 export interface LolMissionsCollectionsSummoner {
-  summonerLevel: bigint;
+  summonerLevel: number;
 }
 
 export interface LolMissionsCollectionsSummonerIcons {
-  icons: Array<bigint>;
+  icons: Array<number>;
 }
 
 export interface LolMissionsCollectionsWardSkin {
-  id: bigint;
+  id: number;
   ownership: LolMissionsCollectionsOwnership;
 }
 
@@ -10194,14 +10194,14 @@ export interface LolMissionsGameflowSession {
 export type LolMissionsGrantStatus = "PENDING_FULFILLMENT" | "PENDING_SELECTION" | "FULFILLED";
 
 export interface LolMissionsInventoryItemWithPayload {
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolMissionsLoginSession {
-  accountId: bigint;
+  accountId: number;
   platformId: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolMissionsLoyaltyStatus =
@@ -10230,7 +10230,7 @@ export interface LolMissionsMissionsNotificationResource {
   detailKey: string;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -10262,7 +10262,7 @@ export interface LolMissionsRewardGrantElement {
   itemType: string;
   localizations: string | undefined;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
   rewardStatus: LolMissionsRewardStatus;
 }
 
@@ -10304,8 +10304,8 @@ export interface LolMissionsRewardsProductConfig {
 }
 
 export interface LolMissionsSelectionStrategyConfig {
-  maxSelectionsAllowed: bigint;
-  minSelectionsAllowed: bigint;
+  maxSelectionsAllowed: number;
+  minSelectionsAllowed: number;
 }
 
 export interface LolMissionsSeriesOpt {
@@ -10319,12 +10319,12 @@ export interface LolMissionsSvcReward {
   itemId: string;
   localizations: string | undefined;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolMissionsTftBattlepass {
   milestones: Array<LolMissionsTftBattlepassMilestone>;
-  totalPointsEarned: bigint;
+  totalPointsEarned: number;
 }
 
 export interface LolMissionsTftBattlepassMilestone {
@@ -10332,18 +10332,18 @@ export interface LolMissionsTftBattlepassMilestone {
   iconImageUrl: string;
   label: string;
   missionId: string;
-  percentComplete: bigint;
-  pointsForMilestone: bigint;
+  percentComplete: number;
+  pointsForMilestone: number;
   rewards: Array<PlayerMissionRewardDTO>;
   state: string;
 }
 
 export interface LolMissionsTftOrb {
   missionId: string;
-  rewardLevel: bigint;
+  rewardLevel: number;
   rewards: Array<PlayerMissionRewardDTO>;
   status: string;
-  unlockTime: bigint;
+  unlockTime: number;
 }
 
 export interface LolMissionsTftPaidBattlepass {
@@ -10351,20 +10351,20 @@ export interface LolMissionsTftPaidBattlepass {
   bonuses: Array<LolMissionsTftPaidBattlepassMilestone>;
   info: LolMissionsTftPaidBattlepassInfo;
   lastViewedMilestone: LolMissionsTftPaidBattlepassMilestone;
-  lastViewedProgress: bigint;
+  lastViewedProgress: number;
   milestones: Array<LolMissionsTftPaidBattlepassMilestone>;
   progressMissionId: string;
-  totalPointsEarned: bigint;
+  totalPointsEarned: number;
 }
 
 export interface LolMissionsTftPaidBattlepassInfo {
   backgroundImageUrl: string;
   description: string;
-  endDate: bigint;
+  endDate: number;
   internalName: string;
   pcPurchaseRequirement: string;
   premium: boolean;
-  startDate: bigint;
+  startDate: number;
   title: string;
 }
 
@@ -10377,15 +10377,15 @@ export interface LolMissionsTftPaidBattlepassMilestone {
   isKeystone: boolean;
   isLocked: boolean;
   isPaid: boolean;
-  level: bigint;
+  level: number;
   missionId: string;
-  pointsEarnedForMilestone: bigint;
-  pointsNeededForMilestone: bigint;
+  pointsEarnedForMilestone: number;
+  pointsNeededForMilestone: number;
   rewards: Array<PlayerMissionRewardDTO>;
   state: string;
   status: string;
   title: string;
-  totalPointsForMilestone: bigint;
+  totalPointsForMilestone: number;
 }
 
 export interface LolMissionsTftWeeklyMissions {
@@ -10397,7 +10397,7 @@ export interface LolMissionsUserInfo {
 }
 
 export interface LolModeProgressionInventoryRewardItem {
-  itemId: bigint;
+  itemId: number;
   uuid: string;
 }
 
@@ -10411,7 +10411,7 @@ export interface LolModeProgressionLoadout {
 export interface LolModeProgressionLoadoutsSlot {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolNpeRewardsAccountSettingsData {
@@ -10421,7 +10421,7 @@ export interface LolNpeRewardsAccountSettingsData {
 
 export interface LolNpeRewardsAccountSettingsPayload {
   data: LolNpeRewardsAccountSettingsData;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolNpeRewardsAllRewards {
@@ -10435,17 +10435,17 @@ export interface LolNpeRewardsChallengesProgress {
 
 export interface LolNpeRewardsChallengesSettings {
   allMissionsCompleted: boolean;
-  totalCount: bigint;
+  totalCount: number;
 }
 
 export interface LolNpeRewardsLoginSeriesSettings {
   allRewardsClaimed: boolean;
-  lastCompletedMissionDate: bigint;
+  lastCompletedMissionDate: number;
   lastCompletedMissionInternalName: string;
 }
 
 export interface LolNpeRewardsMission {
-  completedDate: bigint;
+  completedDate: number;
   display: LolNpeRewardsMissionDisplay;
   internalName: string;
   metadata: LolNpeRewardsMissionsRewardPackMetaData;
@@ -10478,14 +10478,14 @@ export interface LolNpeRewardsObjective {
 }
 
 export interface LolNpeRewardsProgress {
-  currentProgress: bigint;
-  lastViewedProgress: bigint;
-  totalCount: bigint;
+  currentProgress: number;
+  lastViewedProgress: number;
+  totalCount: number;
 }
 
 export interface LolNpeRewardsRequirements {
-  day: bigint;
-  level: bigint;
+  day: number;
+  level: number;
   missionInternalName: string;
 }
 
@@ -10495,8 +10495,8 @@ export interface LolNpeRewardsReward {
 }
 
 export interface LolNpeRewardsRewardPack {
-  delay: bigint;
-  index: bigint;
+  delay: number;
+  index: number;
   majorReward: LolNpeRewardsReward;
   minorRewards: Array<LolNpeRewardsReward>;
   premiumReward: boolean;
@@ -10504,7 +10504,7 @@ export interface LolNpeRewardsRewardPack {
   rewardKey: string;
   state: string;
   type: string;
-  unlockTime: bigint;
+  unlockTime: number;
 }
 
 export interface LolNpeRewardsRewardSeries {
@@ -10516,12 +10516,12 @@ export interface LolNpeRewardsRewardSeriesState {
 }
 
 export interface LolNpeRewardsSummoner {
-  summonerLevel: bigint;
+  summonerLevel: number;
 }
 
 export interface LolNpeTutorialPathAccountSettingsCategoryResource {
   data: LolNpeTutorialPathAccountSettingsTutorial;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolNpeTutorialPathAccountSettingsTutorial {
@@ -10534,7 +10534,7 @@ export interface LolNpeTutorialPathCollectionsChampion {
   alias: string;
   banVoPath: string;
   chooseVoPath: string;
-  id: bigint;
+  id: number;
   name: string;
   passive: LolNpeTutorialPathCollectionsChampionSpell;
   roles: Array<string>;
@@ -10549,7 +10549,7 @@ export interface LolNpeTutorialPathCollectionsChampionSpell {
 }
 
 export interface LolNpeTutorialPathExpiringWarning {
-  alertTime: bigint;
+  alertTime: number;
   message: string;
   type: string;
 }
@@ -10581,7 +10581,7 @@ export interface LolNpeTutorialPathIds {
 
 export interface LolNpeTutorialPathLobbyChangeQueue {
   isCustom: boolean;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolNpeTutorialPathLobbyDto {
@@ -10590,27 +10590,27 @@ export interface LolNpeTutorialPathLobbyDto {
 }
 
 export interface LolNpeTutorialPathLobbyGameConfigDto {
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolNpeTutorialPathMission {
   backgroundImageUrl: string;
   celebrationType: string;
   clientNotifyLevel: string;
-  completedDate: bigint;
+  completedDate: number;
   completionExpression: string;
-  cooldownTimeMillis: bigint;
+  cooldownTimeMillis: number;
   description: string;
   display: LolNpeTutorialPathMissionDisplay;
   displayType: string;
-  endTime: bigint;
+  endTime: number;
   expiringWarnings: Array<LolNpeTutorialPathExpiringWarning>;
   helperText: string;
   iconImageUrl: string;
   id: string;
   internalName: string;
   isNew: boolean;
-  lastUpdatedTimestamp: bigint;
+  lastUpdatedTimestamp: number;
   locale: string;
   metadata: LolNpeTutorialPathMissionMetadata;
   missionType: string;
@@ -10619,7 +10619,7 @@ export interface LolNpeTutorialPathMission {
   rewardStrategy: LolNpeTutorialPathRewardStrategy;
   rewards: Array<LolNpeTutorialPathReward>;
   seriesName: string;
-  startTime: bigint;
+  startTime: number;
   status: string;
   title: string;
   viewed: boolean;
@@ -10637,14 +10637,14 @@ export interface LolNpeTutorialPathObjective {
   description: string;
   progress: LolNpeTutorialPathProgress;
   rewardGroups: Array<string>;
-  sequence: bigint;
+  sequence: number;
   type: string;
 }
 
 export interface LolNpeTutorialPathProgress {
-  currentProgress: bigint;
-  lastViewedProgress: bigint;
-  totalCount: bigint;
+  currentProgress: number;
+  lastViewedProgress: number;
+  totalCount: number;
 }
 
 export interface LolNpeTutorialPathRequirement {
@@ -10655,19 +10655,19 @@ export interface LolNpeTutorialPathReward {
   description: string;
   iconUrl: string;
   itemId: string;
-  quantity: bigint;
+  quantity: number;
   rewardFulfilled: boolean;
   rewardGroup: string;
   rewardGroupSelected: boolean;
   rewardType: string;
-  sequence: bigint;
+  sequence: number;
   uniqueName: string;
 }
 
 export interface LolNpeTutorialPathRewardStrategy {
   groupStrategy: string;
-  selectMaxGroupCount: bigint;
-  selectMinGroupCount: bigint;
+  selectMaxGroupCount: number;
+  selectMinGroupCount: number;
 }
 
 export interface LolNpeTutorialPathSeries {
@@ -10682,20 +10682,20 @@ export interface LolNpeTutorialPathSeriesOpt {
 }
 
 export interface LolNpeTutorialPathSummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   nameChangeFlag: boolean;
-  percentCompleteForNextLevel: bigint;
-  profileIconId: bigint;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  percentCompleteForNextLevel: number;
+  profileIconId: number;
+  summonerId: number;
+  summonerLevel: number;
   unnamed: boolean;
-  xpSinceLastLevel: bigint;
-  xpUntilNextLevel: bigint;
+  xpSinceLastLevel: number;
+  xpUntilNextLevel: number;
 }
 
 export interface LolNpeTutorialPathSummonerIcon {
-  profileIconId: bigint;
+  profileIconId: number;
 }
 
 export interface LolNpeTutorialPathTutorial {
@@ -10706,7 +10706,7 @@ export interface LolNpeTutorialPathTutorial {
   queueId: string;
   rewards: Array<LolNpeTutorialPathTutorialReward>;
   status: LolNpeTutorialPathTutorialStatus;
-  stepNumber: bigint;
+  stepNumber: number;
   title: string;
   type: LolNpeTutorialPathTutorialType;
   useChosenChampion: boolean;
@@ -10716,7 +10716,7 @@ export interface LolNpeTutorialPathTutorial {
 export interface LolNpeTutorialPathTutorialMetadata {
   displayRewards: string | undefined;
   queueId: string;
-  stepNumber: bigint;
+  stepNumber: number;
   useChosenChampion: boolean;
   useQuickSearchMatchmaking: boolean;
 }
@@ -10727,7 +10727,7 @@ export interface LolNpeTutorialPathTutorialReward {
   itemId: string;
   rewardFulfilled: boolean;
   rewardType: string;
-  sequence: bigint;
+  sequence: number;
   uniqueName: string;
 }
 
@@ -10767,9 +10767,9 @@ export type LolPatchComponentStateAction =
   | "Migrating";
 
 export interface LolPatchComponentStateProgress {
-  bytesComplete: bigint;
+  bytesComplete: number;
   bytesPerSecond: number;
-  bytesRequired: bigint;
+  bytesRequired: number;
 }
 
 export type LolPatchComponentStateWorkType = "Scanning" | "Network" | "Disk";
@@ -10838,7 +10838,7 @@ export interface LolPatchPatcherInstallSettings {
   game_patcher: string;
   game_patcher_available: boolean;
   locales: Array<string>;
-  max_download_speed_mbps: bigint;
+  max_download_speed_mbps: number;
 }
 
 export interface LolPatchPatcherRegionSettings {
@@ -10848,7 +10848,7 @@ export interface LolPatchPatcherRegionSettings {
 }
 
 export interface LolPatchPatcherSelfUpdateSettings {
-  restart_delay: bigint;
+  restart_delay: number;
 }
 
 export interface LolPatchPatcherSettings {
@@ -10875,7 +10875,7 @@ export interface LolPatchPublishedReleaseResponse {
   game_patch_url: string;
   timestamp: string;
   toggles: number | undefined;
-  version: bigint;
+  version: number;
 }
 
 export interface LolPatchRegionLocale {
@@ -10916,17 +10916,17 @@ export interface LolPatchUxResource {
 }
 
 export interface LolPerksChampSelectAction {
-  actorCellId: bigint;
-  championId: bigint;
+  actorCellId: number;
+  championId: number;
   completed: boolean;
-  id: bigint;
+  id: number;
   type: string;
 }
 
 export interface LolPerksChampSelectBannedChampions {
-  myTeamBans: Array<bigint>;
-  numBans: bigint;
-  theirTeamBans: Array<bigint>;
+  myTeamBans: Array<number>;
+  numBans: number;
+  theirTeamBans: Array<number>;
 }
 
 export interface LolPerksChampSelectChatRoomDetails {
@@ -10935,23 +10935,23 @@ export interface LolPerksChampSelectChatRoomDetails {
 }
 
 export interface LolPerksChampSelectMySelection {
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  wardSkinId: bigint;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  wardSkinId: number;
 }
 
 export interface LolPerksChampSelectPlayerSelection {
   assignedPosition: string;
-  cellId: bigint;
-  championId: bigint;
-  championPickIntent: bigint;
-  selectedSkinId: bigint;
-  spell1Id: bigint;
-  spell2Id: bigint;
-  summonerId: bigint;
-  team: bigint;
-  wardSkinId: bigint;
+  cellId: number;
+  championId: number;
+  championPickIntent: number;
+  selectedSkinId: number;
+  spell1Id: number;
+  spell2Id: number;
+  summonerId: number;
+  team: number;
+  wardSkinId: number;
 }
 
 export interface LolPerksChampSelectSession {
@@ -10959,7 +10959,7 @@ export interface LolPerksChampSelectSession {
   bans: LolPerksChampSelectBannedChampions;
   chatDetails: LolPerksChampSelectChatRoomDetails;
   isSpectating: boolean;
-  localPlayerCellId: bigint;
+  localPlayerCellId: number;
   myTeam: Array<LolPerksChampSelectPlayerSelection>;
   theirTeam: Array<LolPerksChampSelectPlayerSelection>;
   timer: LolPerksChampSelectTimer;
@@ -10967,25 +10967,25 @@ export interface LolPerksChampSelectSession {
 }
 
 export interface LolPerksChampSelectTimer {
-  adjustedTimeLeftInPhase: bigint;
-  internalNowInEpochMs: bigint;
+  adjustedTimeLeftInPhase: number;
+  internalNowInEpochMs: number;
   isInfinite: boolean;
   phase: string;
-  totalTimeInPhase: bigint;
+  totalTimeInPhase: number;
 }
 
 export interface LolPerksChampSelectTradeContract {
-  cellId: bigint;
-  id: bigint;
+  cellId: number;
+  id: number;
   state: LolPerksChampSelectTradeState;
 }
 
 export type LolPerksChampSelectTradeState = "AVAILABLE" | "BUSY" | "INVALID" | "RECEIVED" | "SENT";
 
 export interface LolPerksChampionPreferredStyle {
-  championId: bigint;
+  championId: number;
   championName: string;
-  style: bigint;
+  style: number;
 }
 
 export type LolPerksCustomizationLimits =
@@ -10997,19 +10997,19 @@ export type LolPerksCustomizationLimits =
   | "CanUseAdvancedStyles";
 
 export interface LolPerksDefaultStatModsPerSubStyle {
-  id: bigint;
-  perks: Array<bigint>;
+  id: number;
+  perks: Array<number>;
 }
 
 export interface LolPerksGameCustomizationDTO {
   category: string;
   content: string;
   isTeambuilder: boolean;
-  queueType: bigint;
+  queueType: number;
 }
 
 export interface LolPerksGameflowGameData {
-  gameId: bigint;
+  gameId: number;
   isCustomGame: boolean;
   queue: LolPerksQueue;
 }
@@ -11045,13 +11045,13 @@ export interface LolPerksGetResultFromServiceDTO {
 }
 
 export interface LolPerksInventoryRunePageCount {
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolPerksLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolPerksLoginSessionState;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolPerksLoginSessionState = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -11066,13 +11066,13 @@ export interface LolPerksNameCheckReponse {
 }
 
 export interface LolPerksPerkBook {
-  currentPageId: bigint;
+  currentPageId: number;
   pages: Array<LolPerksPerkPageResource>;
 }
 
 export interface LolPerksPerkGDSResource {
   iconPath: string;
-  id: bigint;
+  id: number;
   longDesc: string;
   majorChangePatchVersion: string;
   name: string;
@@ -11081,29 +11081,29 @@ export interface LolPerksPerkGDSResource {
 }
 
 export interface LolPerksPerkIdListResource {
-  perkIds: Array<bigint>;
+  perkIds: Array<number>;
 }
 
 export interface LolPerksPerkPageResource {
-  autoModifiedSelections: Array<bigint>;
+  autoModifiedSelections: Array<number>;
   current: boolean;
-  id: bigint;
+  id: number;
   isActive: boolean;
   isDeletable: boolean;
   isEditable: boolean;
   isValid: boolean;
-  lastModified: bigint;
+  lastModified: number;
   name: string;
-  order: bigint;
-  primaryStyleId: bigint;
-  selectedPerkIds: Array<bigint>;
-  subStyleId: bigint;
+  order: number;
+  primaryStyleId: number;
+  selectedPerkIds: Array<number>;
+  subStyleId: number;
 }
 
 export interface LolPerksPerkSettingResource {
-  perkIds: Array<bigint>;
-  perkStyle: bigint;
-  perkSubStyle: bigint;
+  perkIds: Array<number>;
+  perkStyle: number;
+  perkSubStyle: number;
 }
 
 export interface LolPerksPerkSettings {
@@ -11113,15 +11113,15 @@ export interface LolPerksPerkSettings {
 }
 
 export interface LolPerksPerkStyleResource {
-  allowedSubStyles: Array<bigint>;
+  allowedSubStyles: Array<number>;
   assetMap: string | undefined;
   defaultPageName: string;
-  defaultPerks: Array<bigint>;
-  defaultPerksWhenSplashed: Array<bigint>;
+  defaultPerks: Array<number>;
+  defaultPerksWhenSplashed: Array<number>;
   defaultStatModsPerSubStyle: Array<LolPerksDefaultStatModsPerSubStyle>;
-  defaultSubStyle: bigint;
+  defaultSubStyle: number;
   iconPath: string;
-  id: bigint;
+  id: number;
   isAdvanced: boolean;
   name: string;
   slots: Array<LolPerksPerkStyleSlotResource>;
@@ -11130,19 +11130,19 @@ export interface LolPerksPerkStyleResource {
 }
 
 export interface LolPerksPerkStyleSlotResource {
-  perks: Array<bigint>;
+  perks: Array<number>;
   slotLabel: string;
   type: string;
 }
 
 export interface LolPerksPerkSubStyleBonusResource {
-  perkId: bigint;
-  styleId: bigint;
+  perkId: number;
+  styleId: number;
 }
 
 export interface LolPerksPerkUIPerk {
   iconPath: string;
-  id: bigint;
+  id: number;
   longDesc: string;
   name: string;
   shortDesc: string;
@@ -11150,19 +11150,19 @@ export interface LolPerksPerkUIPerk {
 }
 
 export interface LolPerksPerkUISlot {
-  perks: Array<bigint>;
+  perks: Array<number>;
   slotLabel: string;
   type: string;
 }
 
 export interface LolPerksPerkUIStyle {
-  allowedSubStyles: Array<bigint>;
+  allowedSubStyles: Array<number>;
   assetMap: string | undefined;
   defaultPageName: string;
-  defaultPerks: Array<bigint>;
-  defaultSubStyle: bigint;
+  defaultPerks: Array<number>;
+  defaultSubStyle: number;
   iconPath: string;
-  id: bigint;
+  id: number;
   name: string;
   slots: Array<LolPerksPerkUISlot>;
   subStyleBonus: Array<LolPerksPerkSubStyleBonusResource>;
@@ -11175,11 +11175,11 @@ export interface LolPerksPlatformConfig {
 }
 
 export interface LolPerksPlayerInventory {
-  ownedPageCount: bigint;
+  ownedPageCount: number;
 }
 
 export interface LolPerksQueue {
-  id: bigint;
+  id: number;
   isTeamBuilderManaged: boolean;
 }
 
@@ -11187,7 +11187,7 @@ export interface LolPerksRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -11197,47 +11197,47 @@ export interface LolPerksServiceSettings {
 
 export interface LolPerksSettingsStorageContainer {
   data: LolPerksPerkSettings;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolPerksSummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   internalName: string;
-  percentCompleteForNextLevel: bigint;
-  profileIconId: bigint;
+  percentCompleteForNextLevel: number;
+  profileIconId: number;
   puuid: string;
   rerollPoints: LolPerksSummonerRerollPoints;
-  summonerId: bigint;
-  summonerLevel: bigint;
-  xpSinceLastLevel: bigint;
-  xpUntilNextLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
+  xpSinceLastLevel: number;
+  xpUntilNextLevel: number;
 }
 
 export interface LolPerksSummonerRerollPoints {
-  currentPoints: bigint;
-  maxRolls: bigint;
-  numberOfRolls: bigint;
-  pointsCostToRoll: bigint;
-  pointsToReroll: bigint;
+  currentPoints: number;
+  maxRolls: number;
+  numberOfRolls: number;
+  pointsCostToRoll: number;
+  pointsToReroll: number;
 }
 
 export interface LolPerksUISettings {
   gameplayPatchVersionSeen: string;
-  gameplayUpdatedPerksSeen: Array<bigint>;
+  gameplayUpdatedPerksSeen: Array<number>;
   gridModeEnabled: boolean;
   showLongDescriptions: boolean;
   showPresetPages: boolean;
 }
 
 export interface LolPerksUpdatePageOrderRequest {
-  destinationPageId: bigint;
-  offset: bigint;
-  targetPageId: bigint;
+  destinationPageId: number;
+  offset: number;
+  targetPageId: number;
 }
 
 export interface LolPerksValidatePageNameData {
-  id: bigint;
+  id: number;
   name: string;
 }
 
@@ -11247,22 +11247,22 @@ export interface LolPerksValidatePageNameResponse {
 }
 
 export interface LolPersonalizedOffersAccessTokenResource {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
 
 export interface LolPersonalizedOffersOffer {
-  discountPrice: bigint;
+  discountPrice: number;
   expirationDate: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   name: string;
   offerId: string;
-  originalPrice: bigint;
+  originalPrice: number;
   owned: boolean;
   revealed: boolean;
-  spotIndex: bigint;
+  spotIndex: number;
 }
 
 export interface LolPersonalizedOffersOfferData {
@@ -11280,9 +11280,9 @@ export interface LolPersonalizedOffersOfferIds {
 
 export interface LolPersonalizedOffersOfferRequest {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   offerId: string;
-  price: bigint;
+  price: number;
 }
 
 export interface LolPersonalizedOffersOfferRequests {
@@ -11297,8 +11297,8 @@ export interface LolPersonalizedOffersPromotion {
 
 export interface LolPersonalizedOffersPurchaseItem {
   inventoryType: string;
-  itemId: bigint;
-  pricePaid: bigint;
+  itemId: number;
+  pricePaid: number;
 }
 
 export interface LolPersonalizedOffersPurchaseResponse {
@@ -11307,14 +11307,14 @@ export interface LolPersonalizedOffersPurchaseResponse {
 }
 
 export interface LolPersonalizedOffersUIOffer {
-  championId: bigint;
-  discountPrice: bigint;
+  championId: number;
+  discountPrice: number;
   expirationDate: string;
   id: string;
-  originalPrice: bigint;
+  originalPrice: number;
   owned: boolean;
   revealed: boolean;
-  skinId: bigint;
+  skinId: number;
   skinName: string;
   type: string;
 }
@@ -11327,19 +11327,19 @@ export interface LolPersonalizedOffersUIStatus {
 }
 
 export interface LolPersonalizedOffersWallet {
-  rp: bigint;
+  rp: number;
 }
 
 export interface LolPftGameClientEndOfGameStats {
-  gameId: bigint;
+  gameId: number;
   gameMode: string;
   isRanked: boolean;
-  queueId: bigint;
+  queueId: number;
   statsBlock: boolean | undefined;
 }
 
 export interface LolPftGameflowGameDodge {
-  dodgeIds: Array<bigint>;
+  dodgeIds: Array<number>;
   state: LolPftGameflowGameDodgeState;
 }
 
@@ -11379,101 +11379,101 @@ export type LolPftLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OU
 
 export interface LolPftPFTEndOfGamePlayer {
   botPlayer: boolean;
-  championId: bigint;
-  elo: bigint;
-  eloChange: bigint;
-  gameId: bigint;
+  championId: number;
+  elo: number;
+  eloChange: number;
+  gameId: number;
   isReportingDisabled: boolean;
-  items: Array<bigint>;
+  items: Array<number>;
   leaver: boolean;
-  leaves: bigint;
-  level: bigint;
-  losses: bigint;
-  profileIconId: bigint;
+  leaves: number;
+  level: number;
+  losses: number;
+  profileIconId: number;
   skinName: string;
-  spell1Id: bigint;
-  spell2Id: bigint;
+  spell1Id: number;
+  spell2Id: number;
   stats: boolean | undefined;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
-  teamId: bigint;
-  userId: bigint;
-  wins: bigint;
+  teamId: number;
+  userId: number;
+  wins: number;
 }
 
 export interface LolPftPFTEndOfGamePoints {
-  pointChangeFromChampionsOwned: bigint;
-  pointChangeFromGameplay: bigint;
-  pointsUntilNextReroll: bigint;
-  pointsUsed: bigint;
-  previousPoints: bigint;
-  rerollCount: bigint;
-  totalPoints: bigint;
+  pointChangeFromChampionsOwned: number;
+  pointChangeFromGameplay: number;
+  pointsUntilNextReroll: number;
+  pointsUsed: number;
+  previousPoints: number;
+  rerollCount: number;
+  totalPoints: number;
 }
 
 export interface LolPftPFTEndOfGameStats {
-  accountId: bigint;
-  basePoints: bigint;
-  battleBoostIpEarned: bigint;
-  boostIpEarned: bigint;
-  boostXpEarned: bigint;
+  accountId: number;
+  basePoints: number;
+  battleBoostIpEarned: number;
+  boostIpEarned: number;
+  boostXpEarned: number;
   causedEarlySurrender: boolean;
-  championId: bigint;
-  coOpVsAiMinutesLeftToday: bigint;
-  coOpVsAiMsecsUntilReset: bigint;
-  completionBonusPoints: bigint;
-  customMinutesLeftToday: bigint;
-  customMsecsUntilReset: bigint;
+  championId: number;
+  coOpVsAiMinutesLeftToday: number;
+  coOpVsAiMsecsUntilReset: number;
+  completionBonusPoints: number;
+  customMinutesLeftToday: number;
+  customMsecsUntilReset: number;
   difficulty: string;
   earlySurrenderAccomplice: boolean;
-  elo: bigint;
-  eloChange: bigint;
-  experienceEarned: bigint;
-  experienceTotal: bigint;
-  firstWinBonus: bigint;
+  elo: number;
+  eloChange: number;
+  experienceEarned: number;
+  experienceTotal: number;
+  firstWinBonus: number;
   gameEndedInEarlySurrender: boolean;
-  gameId: bigint;
-  gameLength: bigint;
+  gameId: number;
+  gameLength: number;
   gameMode: string;
   gameMutators: Array<string>;
   gameType: string;
   imbalancedTeamsNoPoints: boolean;
   invalid: boolean;
-  ipEarned: bigint;
-  ipTotal: bigint;
+  ipEarned: number;
+  ipTotal: number;
   isAramGame: boolean;
   leveledUp: boolean;
-  loyaltyBoostIpEarned: bigint;
-  loyaltyBoostXpEarned: bigint;
+  loyaltyBoostIpEarned: number;
+  loyaltyBoostXpEarned: number;
   myTeamStatus: string;
-  newSpells: Array<bigint>;
-  odinBonusIp: bigint;
-  partyRewardsBonusIpEarned: bigint;
+  newSpells: Array<number>;
+  odinBonusIp: number;
+  partyRewardsBonusIpEarned: number;
   pointsPenalties: boolean | undefined;
-  previousLevel: bigint;
-  previousXpTotal: bigint;
-  queueBonusEarned: bigint;
+  previousLevel: number;
+  previousXpTotal: number;
+  queueBonusEarned: number;
   queueType: string;
   ranked: boolean;
-  reportGameId: bigint;
+  reportGameId: number;
   rerollData: LolPftPFTEndOfGamePoints;
   roomName: string;
   roomPassword: string;
-  rpEarned: bigint;
+  rpEarned: number;
   sendStatsToTournamentProvider: boolean;
-  skinId: bigint;
-  skinIndex: bigint;
-  summonerId: bigint;
+  skinId: number;
+  skinIndex: number;
+  summonerId: number;
   summonerName: string;
-  talentPointsGained: bigint;
+  talentPointsGained: number;
   teamEarlySurrendered: boolean;
   teams: Array<LolPftPFTEndOfGameTeam>;
-  timeUntilNextFirstWinBonus: bigint;
-  userId: bigint;
+  timeUntilNextFirstWinBonus: number;
+  userId: number;
 }
 
 export interface LolPftPFTEndOfGameTeam {
-  championBans: Array<bigint>;
+  championBans: Array<number>;
   fullId: string;
   isBottomTeam: boolean;
   isPlayerTeam: boolean;
@@ -11483,17 +11483,17 @@ export interface LolPftPFTEndOfGameTeam {
   players: Array<LolPftPFTEndOfGamePlayer>;
   stats: boolean | undefined;
   tag: string;
-  teamId: bigint;
+  teamId: number;
 }
 
 export interface LolPftPFTEvent {
   action: string;
   data: Array<boolean | undefined>;
-  playerSurveyId: bigint;
+  playerSurveyId: number;
 }
 
 export interface LolPftPFTMetadata {
-  accountId: bigint;
+  accountId: number;
   appName: string;
   appVersion: string;
   env: string;
@@ -11505,7 +11505,7 @@ export interface LolPftPFTMetadata {
 }
 
 export interface LolPftPFTQuestionResponse {
-  questionId: bigint;
+  questionId: number;
   responseData: boolean | undefined;
 }
 
@@ -11513,7 +11513,7 @@ export interface LolPftPFTSurvey {
   caption: string;
   data: boolean | undefined | undefined;
   display: string;
-  id: bigint;
+  id: number;
   title: string;
   type: string;
 }
@@ -11525,27 +11525,27 @@ export interface LolPftPFTSurveyResults {
 
 export interface LolPftPFTSurveyV1 {
   caption: string;
-  id: bigint;
+  id: number;
   title: string;
   type: string;
   url: string;
 }
 
 export interface LolPftSummoner {
-  accountId: bigint;
+  accountId: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
   unnamed: boolean;
 }
 
 export interface LolPlayerBehaviorBanNotification {
   displayReformCard: boolean;
-  id: bigint;
+  id: number;
   isPermaBan: boolean;
   reason: string;
   source: LolPlayerBehaviorNotificationSource;
-  timeUntilBanExpires: bigint;
+  timeUntilBanExpires: number;
 }
 
 export interface LolPlayerBehaviorCodeOfConductNotification {
@@ -11584,7 +11584,7 @@ export interface LolPlayerBehaviorPlayerBehavior_GameflowSessionResource {
 }
 
 export interface LolPlayerBehaviorPlayerBehavior_SimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
@@ -11598,7 +11598,7 @@ export interface LolPlayerBehaviorPlayerNotificationResource {
   detailKey: string;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -11607,15 +11607,15 @@ export interface LolPlayerBehaviorPlayerNotificationResource {
 
 export interface LolPlayerBehaviorReformCard {
   chatLogs: Array<string>;
-  gameIds: Array<bigint>;
-  id: bigint;
+  gameIds: Array<number>;
+  id: number;
   playerFacingMessage: string;
-  punishmentLengthGames: bigint;
-  punishmentLengthTime: bigint;
+  punishmentLengthGames: number;
+  punishmentLengthTime: number;
   punishmentType: string;
   reason: string;
-  restrictedChatGamesRemaining: bigint;
-  timeWhenPunishmentExpires: bigint;
+  restrictedChatGamesRemaining: number;
+  timeWhenPunishmentExpires: number;
 }
 
 export interface LolPlayerBehaviorReformCardChatLogs {
@@ -11625,35 +11625,35 @@ export interface LolPlayerBehaviorReformCardChatLogs {
 }
 
 export interface LolPlayerBehaviorReformCardV2 {
-  id: bigint;
+  id: number;
   playerFacingMessage: string;
-  punishedForGameIds: Array<bigint>;
+  punishedForGameIds: Array<number>;
   punishedForReformCardChatLogs: Array<LolPlayerBehaviorReformCardChatLogs>;
-  punishedUntilDateMillis: bigint;
-  punishmentLengthGames: bigint;
-  punishmentLengthMillis: bigint;
+  punishedUntilDateMillis: number;
+  punishmentLengthGames: number;
+  punishmentLengthMillis: number;
   punishmentReason: string;
   punishmentType: string;
 }
 
 export interface LolPlayerBehaviorReporterFeedback {
-  accountId: bigint;
-  id: bigint;
+  accountId: number;
+  id: number;
   messageId: string;
   type: string;
 }
 
 export interface LolPlayerBehaviorRestrictionNotification {
   displayReformCard: boolean;
-  expirationMillis: bigint;
-  gamesRemaining: bigint;
-  id: bigint;
+  expirationMillis: number;
+  gamesRemaining: number;
+  id: number;
   source: LolPlayerBehaviorNotificationSource;
 }
 
 export interface LolPlayerBehaviorSettingsResource {
   data: boolean | undefined;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolPlayerBehaviorUserInfo {
@@ -11672,7 +11672,7 @@ export interface LolPlayerBehaviorUserInfoRestriction {
 }
 
 export interface LolPlayerBehaviorUserInfoRestrictionData {
-  expirationMillis: bigint;
+  expirationMillis: number;
   gameData: LolPlayerBehaviorUserInfoRestrictionGameData;
   gameLocation: string;
 }
@@ -11693,21 +11693,21 @@ export interface LolPlayerLevelUpEndOfGameStats {
   gameMutators: Array<string>;
   gameType: string;
   leveledUp: boolean;
-  newSpells: Array<bigint>;
-  previousLevel: bigint;
+  newSpells: Array<number>;
+  previousLevel: number;
   queueType: string;
-  rpEarned: bigint;
+  rpEarned: number;
 }
 
 export interface LolPlayerLevelUpGameDataSummonerSpell {
-  id: bigint;
-  summonerLevel: bigint;
+  id: number;
+  summonerLevel: number;
 }
 
 export interface LolPlayerLevelUpLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolPlayerLevelUpLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolPlayerLevelUpLoginSessionStates =
@@ -11718,38 +11718,38 @@ export type LolPlayerLevelUpLoginSessionStates =
 
 export interface LolPlayerLevelUpPlayerLevelUpEvent {
   leveledUp: boolean;
-  newQueues: Array<bigint>;
+  newQueues: Array<number>;
   newRuneSlotUnlocked: boolean;
-  newSpells: Array<bigint>;
-  newSummonerLevel: bigint;
+  newSpells: Array<number>;
+  newSummonerLevel: number;
   nowHasAccessToLoot: boolean;
   nowHasAccessToPublicChatRooms: boolean;
-  rpEarned: bigint;
+  rpEarned: number;
   switchedToStandardFreeToPlayChampRotation: boolean;
 }
 
 export interface LolPlayerLevelUpPlayerLevelUpEventAck {
-  newSummonerLevel: bigint;
+  newSummonerLevel: number;
   seenThisEvent: boolean;
 }
 
 export interface LolPlayerLevelUpQueue {
-  id: bigint;
-  minLevel: bigint;
+  id: number;
+  minLevel: number;
 }
 
 export interface LolPlayerMessagingDynamicCelebrationMessagingNotificationResource {
-  accountId: bigint;
+  accountId: number;
   celebrationBody: string;
   celebrationMessage: string;
   celebrationTitle: string;
   celebrationType: string;
-  id: bigint;
+  id: number;
   inventoryType: string;
   itemId: string;
   itemQuantity: string;
   msgId: string;
-  status: bigint;
+  status: number;
 }
 
 export interface LolPlayerMessagingLoginDataPacket {
@@ -11757,16 +11757,16 @@ export interface LolPlayerMessagingLoginDataPacket {
 }
 
 export interface LolPlayerMessagingPlayerMessagingNotificationResource {
-  accountId: bigint;
+  accountId: number;
   body: string;
-  id: bigint;
+  id: number;
   msgId: string;
-  status: bigint;
+  status: number;
   title: string;
 }
 
 export interface LolPlayerMessagingSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   bodyCode: string;
   msgId: string;
   params: Array<string>;
@@ -11775,10 +11775,10 @@ export interface LolPlayerMessagingSimpleMessage {
 }
 
 export interface LolPlayerPreferencesLoginSession {
-  accountId: bigint;
+  accountId: number;
   idToken: string;
   state: LolPlayerPreferencesLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolPlayerPreferencesLoginSessionStates =
@@ -11797,7 +11797,7 @@ export interface LolPlayerPreferencesPlayerPreferences {
 export interface LolPlayerPreferencesPlayerPreferencesEndpoint {
   Enabled: boolean;
   EnforceHttps: boolean;
-  Retries: bigint;
+  Retries: number;
   ServiceEndpoint: string;
   Version: string;
 }
@@ -11812,7 +11812,7 @@ export interface LolPlayerReportSenderChampSelectReport {
 
 export interface LolPlayerReportSenderEndOfGamePlayerReport {
   comment: string;
-  gameId: bigint;
+  gameId: number;
   offense: string;
   reportedPuuid: string;
 }
@@ -11848,7 +11848,7 @@ export interface LolPreEndOfGameGameflowSessionResource {
 
 export interface LolPreEndOfGameSequenceEvent {
   name: string;
-  priority: bigint;
+  priority: number;
 }
 
 export interface LolPremadeVoiceAccountSettingsCategoryDataResource {
@@ -11862,12 +11862,12 @@ export interface LolPremadeVoiceAccountSettingsCategoryDataResource {
 
 export interface LolPremadeVoiceAccountSettingsCategoryResource {
   data: LolPremadeVoiceAccountSettingsCategoryDataResource;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolPremadeVoiceAudioPropertiesResource {
   isLoopbackEnabled: boolean;
-  micEnergy: bigint;
+  micEnergy: number;
 }
 
 export type LolPremadeVoiceConfigReadinessEnum = "NotReady" | "Ready" | "Disabled";
@@ -11955,13 +11955,13 @@ export interface LolPremadeVoiceKeycodePushToTalkResource {
 
 export interface LolPremadeVoiceLocalSettingsCategoryDataResource {
   currentCaptureDeviceHandle: string;
-  inputVolume: bigint;
-  vadSensitivity: bigint;
+  inputVolume: number;
+  vadSensitivity: number;
 }
 
 export interface LolPremadeVoiceLocalSettingsCategoryResource {
   data: LolPremadeVoiceLocalSettingsCategoryDataResource;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolPremadeVoiceLoginSession {
@@ -11969,12 +11969,12 @@ export interface LolPremadeVoiceLoginSession {
 }
 
 export interface LolPremadeVoiceParticipantResource {
-  energy: bigint;
+  energy: number;
   id: string;
   isMuted: boolean;
   isSpeaking: boolean;
   name: string;
-  volume: bigint;
+  volume: number;
 }
 
 export interface LolPremadeVoicePartyDto {
@@ -11996,22 +11996,22 @@ export interface LolPremadeVoicePlayerDto {
   partyId: string;
   puuid: string;
   role: LolPremadeVoicePartyMemberRoleEnum;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolPremadeVoicePremadeVoiceParticipantDto {
   displayName: string;
-  energy: bigint;
+  energy: number;
   isMuted: boolean;
   isSpeaking: boolean;
   participantId: string;
   puuid: string;
-  summonerId: bigint;
-  volume: bigint;
+  summonerId: number;
+  volume: number;
 }
 
 export interface LolPremadeVoicePushToTalkKey {
-  key: bigint;
+  key: number;
 }
 
 export interface LolPremadeVoicePushToTalkResource {
@@ -12025,7 +12025,7 @@ export interface LolPremadeVoiceSessionResource {
   isTransmitEnabled: boolean;
   participants: Array<LolPremadeVoiceParticipantResource>;
   status: LolPremadeVoiceSessionStatus;
-  volume: bigint;
+  volume: number;
 }
 
 export type LolPremadeVoiceSessionStatus = "active" | "onHold";
@@ -12036,13 +12036,13 @@ export interface LolPremadeVoiceSettingsResource {
   inputMode: LolPremadeVoiceInputMode;
   localMicMuted: boolean;
   loopbackEnabled: boolean;
-  micLevel: bigint;
+  micLevel: number;
   muteOnConnect: boolean;
   pttActive: boolean;
   pttKey: string;
   vadActive: boolean;
-  vadHangoverTime: bigint;
-  vadSensitivity: bigint;
+  vadHangoverTime: number;
+  vadSensitivity: number;
 }
 
 export interface LolPremadeVoiceStateResource {
@@ -12050,7 +12050,7 @@ export interface LolPremadeVoiceStateResource {
 }
 
 export interface LolPremadeVoiceSummoner {
-  accountId: bigint;
+  accountId: number;
   puuid: string;
 }
 
@@ -12068,7 +12068,7 @@ export interface LolPublishingContentRegionLocale {
 }
 
 export interface LolPurchaseWidgetBalance {
-  amount: bigint;
+  amount: number;
   currencyType: string;
 }
 
@@ -12087,8 +12087,8 @@ export interface LolPurchaseWidgetBaseSkinLineDto {
 export interface LolPurchaseWidgetBundledItemPricingInfo {
   discountPrices: Array<LolPurchaseWidgetDiscountPricingInfo>;
   inventoryType: string;
-  itemId: bigint;
-  quantity: bigint;
+  itemId: number;
+  quantity: number;
 }
 
 export interface LolPurchaseWidgetCapOffer {
@@ -12107,7 +12107,7 @@ export interface LolPurchaseWidgetCapOfferPayloadEntry {
   fulfillmentTypeId: string;
   inventoryTypeUUID: string;
   itemInstanceId: string;
-  itemPriceMap: bigint | undefined;
+  itemPriceMap: number | undefined;
 }
 
 export interface LolPurchaseWidgetCapOrdersDataDto {
@@ -12124,7 +12124,7 @@ export interface LolPurchaseWidgetCapOrdersMetaDto {
 
 export interface LolPurchaseWidgetCapOrdersOfferContextDto {
   paymentOption: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolPurchaseWidgetCapOrdersOfferDto {
@@ -12152,17 +12152,17 @@ export interface LolPurchaseWidgetCatalogPluginItem {
   active: boolean;
   description: string;
   imagePath: string;
-  inactiveDate: bigint;
+  inactiveDate: number;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
   metadata: Array<LolPurchaseWidgetItemMetadataEntry>;
   name: string;
   owned: boolean;
   prices: Array<LolPurchaseWidgetCatalogPluginPrice>;
-  purchaseDate: bigint;
+  purchaseDate: number;
   questSkinInfo: LolPurchaseWidgetSkinLineInfo;
-  releaseDate: bigint;
+  releaseDate: number;
   subInventoryType: string;
   subTitle: string;
   tags: Array<string>;
@@ -12182,19 +12182,19 @@ export interface LolPurchaseWidgetCatalogPluginItemWithDetails {
   bundledItems: Array<LolPurchaseWidgetCatalogPluginItemWithDetails>;
   item: LolPurchaseWidgetCatalogPluginItem;
   minimumBundlePrices: Array<LolPurchaseWidgetCatalogPluginPrice>;
-  quantity: bigint;
+  quantity: number;
   requiredItems: Array<LolPurchaseWidgetCatalogPluginItemWithDetails>;
 }
 
 export interface LolPurchaseWidgetCatalogPluginPrice {
-  cost: bigint;
+  cost: number;
   costType: string;
   currency: string;
   sale: LolPurchaseWidgetCatalogPluginSale;
 }
 
 export interface LolPurchaseWidgetCatalogPluginSale {
-  cost: bigint;
+  cost: number;
   discount: number;
   endDate: string;
   startDate: string;
@@ -12217,7 +12217,7 @@ export interface LolPurchaseWidgetChampionSkinEmblemPosition {
 }
 
 export interface LolPurchaseWidgetDiscountPricingInfo {
-  cost: bigint;
+  cost: number;
   costType: string;
   currency: string;
   discount: number;
@@ -12228,7 +12228,7 @@ export interface LolPurchaseWidgetItemChoiceDetails {
   contents: Array<LolPurchaseWidgetItemDetails>;
   discount: string;
   displayType: string;
-  fullPrice: bigint;
+  fullPrice: number;
   item: LolPurchaseWidgetCatalogPluginItem;
   purchaseOptions: Array<LolPurchaseWidgetPurchaseOption>;
 }
@@ -12239,7 +12239,7 @@ export interface LolPurchaseWidgetItemChoices {
 }
 
 export interface LolPurchaseWidgetItemCost {
-  cost: bigint;
+  cost: number;
   currency: string;
   discount: number;
 }
@@ -12249,7 +12249,7 @@ export interface LolPurchaseWidgetItemDefinition {
   bundledItemPrice: LolPurchaseWidgetBundledItemPricingInfo;
   description: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   metadata: Array<LolPurchaseWidgetItemMetadataEntry>;
   name: string;
   owned: boolean;
@@ -12267,7 +12267,7 @@ export interface LolPurchaseWidgetItemDetails {
 
 export interface LolPurchaseWidgetItemKey {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolPurchaseWidgetItemMetadataEntry {
@@ -12277,12 +12277,12 @@ export interface LolPurchaseWidgetItemMetadataEntry {
 
 export interface LolPurchaseWidgetItemOwnership {
   itemKey: LolPurchaseWidgetItemKey;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolPurchaseWidgetItemPrice {
   currencyType: string;
-  price: bigint;
+  price: number;
   purchasable: boolean;
 }
 
@@ -12293,11 +12293,11 @@ export interface LolPurchaseWidgetItemSale {
 }
 
 export interface LolPurchaseWidgetLoginSession {
-  accountId: bigint;
+  accountId: number;
   idToken: string;
   puuid: string;
   state: LolPurchaseWidgetLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolPurchaseWidgetLoginSessionStates =
@@ -12322,7 +12322,7 @@ export interface LolPurchaseWidgetPriceOptionDto {
   currencyName: string;
   currencyPaymentOption: string;
   currencyType: string;
-  price: bigint;
+  price: number;
 }
 
 export interface LolPurchaseWidgetPurchasableItem {
@@ -12337,7 +12337,7 @@ export interface LolPurchaseWidgetPurchasableItem {
 export interface LolPurchaseWidgetPurchaseItem {
   itemKey: LolPurchaseWidgetItemKey;
   purchaseCurrencyInfo: LolPurchaseWidgetItemPrice;
-  quantity: bigint;
+  quantity: number;
   source: string;
 }
 
@@ -12359,8 +12359,8 @@ export interface LolPurchaseWidgetPurchaseOfferOrderStatuses {
 export interface LolPurchaseWidgetPurchaseOfferRequestV3 {
   currencyType: string;
   offerId: string;
-  price: bigint;
-  quantity: bigint;
+  price: number;
+  quantity: number;
 }
 
 export interface LolPurchaseWidgetPurchaseOfferResponseV3 {
@@ -12392,7 +12392,7 @@ export interface LolPurchaseWidgetRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -12436,13 +12436,13 @@ export interface LolPurchaseWidgetSkinLineItemDto {
 export interface LolPurchaseWidgetSkinLineTier {
   collectionSplashVideoPath: string;
   description: string;
-  id: bigint;
+  id: number;
   loadScreenPath: string;
   name: string;
   shortName: string;
   splashPath: string;
   splashVideoPath: string;
-  stage: bigint;
+  stage: number;
   tilePath: string;
   uncenteredSplashPath: string;
 }
@@ -12485,7 +12485,7 @@ export interface LolPurchaseWidgetValidationRequest {
 
 export interface LolPurchaseWidgetValidationRequestItem {
   itemKey: LolPurchaseWidgetItemKey;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolPurchaseWidgetValidationResponse {
@@ -12497,25 +12497,25 @@ export interface LolPurchaseWidgetValidationResponseItem {
   description: string;
   itemKey: LolPurchaseWidgetItemKey;
   name: string;
-  quantity: bigint;
+  quantity: number;
   sale: LolPurchaseWidgetSale;
   validationCurrencyInfo: Array<LolPurchaseWidgetItemPrice>;
 }
 
 export interface LolPurchaseWidgetWallet {
-  accountId: bigint;
+  accountId: number;
   balances: Array<LolPurchaseWidgetBalance>;
-  version: bigint;
+  version: number;
 }
 
 export interface LolRankedAchievedTier {
-  division: bigint;
+  division: number;
   queueType: LolRankedLeagueQueueType;
   tier: LolRankedLeagueTier;
 }
 
 export interface LolRankedEndOfGameStatsBlock {
-  gameId: bigint;
+  gameId: number;
 }
 
 export interface LolRankedEosNotificationResource {
@@ -12523,7 +12523,7 @@ export interface LolRankedEosNotificationResource {
   notificationName: string;
   notificationType: string;
   queue: string;
-  seasonEndTime: bigint;
+  seasonEndTime: number;
   tier: string;
 }
 
@@ -12535,9 +12535,9 @@ export interface LolRankedEosNotificationsConfig {
 
 export interface LolRankedEosNotificationsConfigEntry {
   name: string;
-  offsetTime1: bigint;
-  offsetTime2: bigint;
-  offsetTime3: bigint;
+  offsetTime1: number;
+  offsetTime2: number;
+  offsetTime3: number;
 }
 
 export interface LolRankedEosRewardsConfig {
@@ -12546,7 +12546,7 @@ export interface LolRankedEosRewardsConfig {
 
 export interface LolRankedEosRewardsConfigEntry {
   rewards: string | undefined;
-  season: bigint;
+  season: number;
 }
 
 export interface LolRankedEosSettingsData {
@@ -12555,7 +12555,7 @@ export interface LolRankedEosSettingsData {
 
 export interface LolRankedEosSettingsResource {
   data: LolRankedEosSettingsData;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolRankedGameflowGameData {
@@ -12586,114 +12586,114 @@ export interface LolRankedGameflowSession {
 export interface LolRankedGlobalNotification {
   notifyReason: string;
   participantId: string;
-  position: bigint;
+  position: number;
   queueType: string;
   tier: string;
 }
 
 export interface LolRankedLcuLeagueNotification {
-  afkLpPenaltyAmount: bigint;
-  afkLpPenaltyLevel: bigint;
+  afkLpPenaltyAmount: number;
+  afkLpPenaltyLevel: number;
   canDemoteFromTier: boolean;
   changeReason: string;
-  consolationLpUsed: bigint;
+  consolationLpUsed: number;
   displayType: LolRankedNotificationDisplayType;
   division: LolRankedLeagueDivision;
   eligibleForPromoHelper: boolean;
-  gameId: bigint;
-  id: bigint;
-  leaguePoints: bigint;
-  leaguePointsDelta: bigint;
+  gameId: number;
+  id: number;
+  leaguePoints: number;
+  leaguePointsDelta: number;
   miniseriesProgress: string;
-  miniseriesWins: bigint;
+  miniseriesWins: number;
   msgId: string;
   notifyReason: string;
-  numberOfPromotions: bigint;
+  numberOfPromotions: number;
   promoSeriesForRanksEnabled: boolean;
-  provisionalGamesRemaining: bigint;
+  provisionalGamesRemaining: number;
   queueType: LolRankedLeagueQueueType;
-  ratedRating: bigint;
-  ratedRatingDelta: bigint;
+  ratedRating: number;
+  ratedRatingDelta: number;
   ratedTier: LolRankedRatedTier;
   rewardEarnedId: string;
   rewardEarnedType: string;
   splitPointsNotification: LolRankedSplitPointsNotification;
   tier: LolRankedLeagueTier;
-  timeUntilInactivityStatusChanges: bigint;
+  timeUntilInactivityStatusChanges: number;
   wasAfkOrLeaver: boolean;
 }
 
 export type LolRankedLeagueDivision = "I" | "II" | "III" | "IV" | "V" | "NA";
 
 export interface LolRankedLeagueDivisionInfo {
-  apexUnlockTimeMillis: bigint;
+  apexUnlockTimeMillis: number;
   division: LolRankedLeagueDivision;
-  maxLeagueSize: bigint;
-  minLpForApexTier: bigint;
+  maxLeagueSize: number;
+  minLpForApexTier: number;
   standings: Array<LolRankedLeagueStanding>;
   tier: LolRankedLeagueTier;
-  topNumberOfPlayers: bigint;
+  topNumberOfPlayers: number;
 }
 
 export interface LolRankedLeagueLadderDTO {
-  apexUnlockTimeMillis: bigint;
+  apexUnlockTimeMillis: number;
   entries: Array<LolRankedLeagueLadderEntryDTO>;
-  maxLeagueSize: bigint;
-  minLpForTier: bigint;
-  nextApexUpdate: bigint;
-  provisionalGameThreshold: bigint;
+  maxLeagueSize: number;
+  minLpForTier: number;
+  nextApexUpdate: number;
+  provisionalGameThreshold: number;
   queueType: string;
   tier: string;
-  topNumberOfPlayers: bigint;
+  topNumberOfPlayers: number;
 }
 
 export interface LolRankedLeagueLadderEntryDTO {
   earnedRegaliaRewardIds: Array<string>;
-  leaguePoints: bigint;
-  losses: bigint;
+  leaguePoints: number;
+  losses: number;
   miniSeriesProgress: string;
-  previousDayLeaguePosition: bigint;
+  previousDayLeaguePosition: number;
   previousSeasonAchievedRank: string;
   previousSeasonAchievedTier: string;
-  provisionalGamesRemaining: bigint;
+  provisionalGamesRemaining: number;
   puuid: string;
   rank: string;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
   tier: string;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolRankedLeagueLadderInfo {
   divisions: Array<LolRankedLeagueDivisionInfo>;
-  nextApexUpdateMillis: bigint;
-  provisionalGameThreshold: bigint;
+  nextApexUpdateMillis: number;
+  provisionalGameThreshold: number;
   queueType: LolRankedLeagueQueueType;
   requestedRankedEntry: LolRankedLeagueStanding;
   tier: LolRankedLeagueTier;
 }
 
 export interface LolRankedLeagueNotification {
-  afkLpPenaltyAmount: bigint;
-  afkLpPenaltyLevel: bigint;
+  afkLpPenaltyAmount: number;
+  afkLpPenaltyLevel: number;
   canDemoteFromTier: boolean;
   changeReason: string;
-  consolationLpUsed: bigint;
+  consolationLpUsed: number;
   eligibleForPromoHelper: boolean;
-  gameId: bigint;
-  leaguePoints: bigint;
-  leaguePointsDelta: bigint;
+  gameId: number;
+  leaguePoints: number;
+  leaguePointsDelta: number;
   miniseriesProgress: string;
   notifyReason: string;
   promoSeriesForRanksEnabled: boolean;
-  provisionalGamesRemaining: bigint;
+  provisionalGamesRemaining: number;
   queueType: string;
   rank: string;
-  ratedRating: bigint;
-  ratedRatingDelta: bigint;
+  ratedRating: number;
+  ratedRatingDelta: number;
   ratedTier: string;
-  splitPoints: bigint;
-  splitPointsBreakdown: bigint | undefined;
+  splitPoints: number;
+  splitPointsBreakdown: number | undefined;
   tier: string;
   wasAfkOrLeaver: boolean;
 }
@@ -12716,23 +12716,23 @@ export interface LolRankedLeagueStanding {
   division: LolRankedLeagueDivision;
   earnedRegaliaRewardIds: Array<string>;
   isProvisional: boolean;
-  leaguePoints: bigint;
-  losses: bigint;
+  leaguePoints: number;
+  losses: number;
   miniseriesResults: Array<LolRankedMiniseries>;
   pendingDemotion: boolean;
   pendingPromotion: boolean;
-  position: bigint;
-  positionDelta: bigint;
-  previousPosition: bigint;
+  position: number;
+  positionDelta: number;
+  previousPosition: number;
   previousSeasonAchievedDivision: LolRankedLeagueDivision;
   previousSeasonAchievedTier: LolRankedLeagueTier;
-  provisionalGamesRemaining: bigint;
+  provisionalGamesRemaining: number;
   puuid: string;
-  rankedRegaliaLevel: bigint;
-  summonerId: bigint;
+  rankedRegaliaLevel: number;
+  summonerId: number;
   summonerName: string;
   tier: LolRankedLeagueTier;
-  wins: bigint;
+  wins: number;
 }
 
 export type LolRankedLeagueTier =
@@ -12760,9 +12760,9 @@ export interface LolRankedLeaguesSeasonRewardConfig {
 }
 
 export interface LolRankedLoginSession {
-  accountId: bigint;
+  accountId: number;
   state: LolRankedLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolRankedLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -12773,7 +12773,7 @@ export type LolRankedNotificationDisplayType = "NONE" | "TOAST" | "MODAL" | "VIG
 
 export interface LolRankedParticipantTiers {
   achievedTiers: Array<LolRankedAchievedTier>;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolRankedQueue {
@@ -12782,61 +12782,61 @@ export interface LolRankedQueue {
 
 export interface LolRankedQueuesAndPuuidsPayload {
   queueTypes: Array<LolRankedLeagueQueueType>;
-  summonerIds: Array<bigint>;
+  summonerIds: Array<number>;
 }
 
 export interface LolRankedRankedQueueStats {
   division: LolRankedLeagueDivision;
   isProvisional: boolean;
-  leaguePoints: bigint;
-  losses: bigint;
+  leaguePoints: number;
+  losses: number;
   miniSeriesProgress: string;
   previousSeasonAchievedDivision: LolRankedLeagueDivision;
   previousSeasonAchievedTier: LolRankedLeagueTier;
   previousSeasonEndDivision: LolRankedLeagueDivision;
   previousSeasonEndTier: LolRankedLeagueTier;
-  provisionalGameThreshold: bigint;
-  provisionalGamesRemaining: bigint;
+  provisionalGameThreshold: number;
+  provisionalGamesRemaining: number;
   queueType: LolRankedLeagueQueueType;
-  ratedRating: bigint;
+  ratedRating: number;
   ratedTier: LolRankedRatedTier;
   tier: LolRankedLeagueTier;
   warnings: LolRankedRankedQueueWarnings;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolRankedRankedQueueStatsDTO {
-  leaguePoints: bigint;
-  losses: bigint;
+  leaguePoints: number;
+  losses: number;
   miniSeriesProgress: string;
   previousSeasonAchievedRank: string;
   previousSeasonAchievedTier: string;
   previousSeasonEndRank: string;
   previousSeasonEndTier: string;
-  provisionalGameThreshold: bigint;
-  provisionalGamesRemaining: bigint;
+  provisionalGameThreshold: number;
+  provisionalGamesRemaining: number;
   queueType: string;
   rank: string;
-  ratedRating: bigint;
+  ratedRating: number;
   ratedTier: string;
   tier: string;
   warnings: LolRankedRankedQueueWarningsDTO;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolRankedRankedQueueWarnings {
-  daysUntilDecay: bigint;
-  demotionWarning: bigint;
+  daysUntilDecay: number;
+  demotionWarning: number;
   displayDecayWarning: boolean;
-  timeUntilInactivityStatusChanges: bigint;
+  timeUntilInactivityStatusChanges: number;
 }
 
 export interface LolRankedRankedQueueWarningsDTO {
-  apexDaysUntilDecay: bigint;
-  daysUntilDecay: bigint;
-  demotionWarning: bigint;
+  apexDaysUntilDecay: number;
+  daysUntilDecay: number;
+  demotionWarning: number;
   displayDecayWarning: boolean;
-  timeUntilInactivityStatusChanges: bigint;
+  timeUntilInactivityStatusChanges: number;
 }
 
 export interface LolRankedRankedStats {
@@ -12849,9 +12849,9 @@ export interface LolRankedRankedStats {
   highestRankedEntrySR: LolRankedRankedQueueStats;
   queueMap: LolRankedRankedQueueStats | undefined;
   queues: Array<LolRankedRankedQueueStats>;
-  rankedRegaliaLevel: bigint;
+  rankedRegaliaLevel: number;
   seasons: LolRankedSeasonDTO | undefined;
-  splitsProgress: bigint | undefined;
+  splitsProgress: number | undefined;
 }
 
 export interface LolRankedRankedStatsDTO {
@@ -12862,17 +12862,17 @@ export interface LolRankedRankedStatsDTO {
   highestPreviousSeasonEndTier: string;
   queues: Array<LolRankedRankedQueueStatsDTO>;
   seasons: LolRankedSeasonDTO | undefined;
-  splitsProgress: bigint | undefined;
+  splitsProgress: number | undefined;
 }
 
 export interface LolRankedRatedLadderEntryDTO {
-  previousUpdateLadderPosition: bigint;
+  previousUpdateLadderPosition: number;
   puuid: string;
-  ratedRating: bigint;
+  ratedRating: number;
   ratedTier: string;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolRankedRatedLadderInfo {
@@ -12881,52 +12881,52 @@ export interface LolRankedRatedLadderInfo {
 }
 
 export interface LolRankedRatedLadderStanding {
-  leaguePoints: bigint;
-  position: bigint;
-  positionDelta: bigint;
-  previousPosition: bigint;
+  leaguePoints: number;
+  position: number;
+  positionDelta: number;
+  previousPosition: number;
   puuid: string;
   ratedTier: LolRankedRatedTier;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
-  wins: bigint;
+  wins: number;
 }
 
 export type LolRankedRatedTier = "NONE" | "GRAY" | "GREEN" | "BLUE" | "PURPLE" | "ORANGE";
 
 export interface LolRankedRewardsInfo {
-  currentSeasonId: bigint;
+  currentSeasonId: number;
   currentSplit: LolRankedSeasonSplit;
-  currentSplitId: bigint;
+  currentSplitId: number;
   rewardInfoByRewardId: LolRankedSplitReward | undefined;
   splits: Array<LolRankedSeasonSplit>;
 }
 
 export interface LolRankedSeasonDTO {
-  currentSeasonEnd: bigint;
-  currentSeasonId: bigint;
-  nextSeasonStart: bigint;
+  currentSeasonEnd: number;
+  currentSeasonId: number;
+  nextSeasonStart: number;
 }
 
 export interface LolRankedSeasonSplit {
-  endTimeMillis: bigint;
+  endTimeMillis: number;
   rewardTrack: Array<LolRankedSplitRewardGroup>;
-  seasonId: bigint;
-  splitId: bigint;
-  startTimeMillis: bigint;
+  seasonId: number;
+  splitId: number;
+  startTimeMillis: number;
 }
 
 export interface LolRankedSeasonSplitDTO {
-  endTime: bigint;
+  endTime: number;
   rewardTrack: Array<LolRankedSplitRewardGroupDTO>;
-  seasonId: bigint;
-  splitId: bigint;
-  startTime: bigint;
+  seasonId: number;
+  splitId: number;
+  startTime: number;
 }
 
 export interface LolRankedSequenceEvent {
   name: string;
-  priority: bigint;
+  priority: number;
 }
 
 export type LolRankedSeverity = "WARNING" | "ALERT";
@@ -12940,57 +12940,57 @@ export interface LolRankedSignedRankedStatsDTO {
   jwt: string;
   queues: Array<LolRankedRankedQueueStatsDTO>;
   seasons: LolRankedSeasonDTO | undefined;
-  splitsProgress: bigint | undefined;
+  splitsProgress: number | undefined;
 }
 
 export interface LolRankedSocialLeaderboardRankedQueueStats {
   division: LolRankedLeagueDivision;
   isProvisional: boolean;
-  leaguePoints: bigint;
-  losses: bigint;
+  leaguePoints: number;
+  losses: number;
   miniSeriesProgress: string;
-  provisionalGameThreshold: bigint;
-  provisionalGamesRemaining: bigint;
+  provisionalGameThreshold: number;
+  provisionalGamesRemaining: number;
   queueType: LolRankedLeagueQueueType;
-  ratedRating: bigint;
+  ratedRating: number;
   ratedTier: LolRankedRatedTier;
   tier: LolRankedLeagueTier;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolRankedSocialLeaderboardRankedQueueStatsDTO {
-  leaguePoints: bigint;
-  losses: bigint;
+  leaguePoints: number;
+  losses: number;
   miniSeriesProgress: string;
-  provisionalGameThreshold: bigint;
-  provisionalGamesRemaining: bigint;
+  provisionalGameThreshold: number;
+  provisionalGamesRemaining: number;
   queueType: string;
   rank: string;
-  ratedRating: bigint;
+  ratedRating: number;
   ratedTier: string;
   tier: string;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolRankedSplitPointsNotification {
   nextRewardId: string;
   nextRewardType: string;
-  previousSplitPointsRequired: bigint;
-  splitPointsAfterGame: bigint;
-  splitPointsBeforeGame: bigint;
-  splitPointsBreakdown: bigint | undefined;
-  splitPointsDelta: bigint;
-  splitPointsRequired: bigint;
+  previousSplitPointsRequired: number;
+  splitPointsAfterGame: number;
+  splitPointsBeforeGame: number;
+  splitPointsBreakdown: number | undefined;
+  splitPointsDelta: number;
+  splitPointsRequired: number;
 }
 
 export interface LolRankedSplitReward {
   description: string;
   id: string;
-  pointsRequired: bigint;
-  quantity: bigint;
-  regaliaLevel: bigint;
+  pointsRequired: number;
+  quantity: number;
+  regaliaLevel: number;
   rewardType: string;
-  splitId: bigint;
+  splitId: number;
 }
 
 export interface LolRankedSplitRewardDTO {
@@ -13002,55 +13002,55 @@ export interface LolRankedSplitRewardDTO {
 
 export interface LolRankedSplitRewardGroup {
   rewards: Array<LolRankedSplitReward>;
-  splitPoints: bigint;
+  splitPoints: number;
 }
 
 export interface LolRankedSplitRewardGroupDTO {
   rewards: Array<LolRankedSplitRewardDTO>;
-  splitPoints: bigint;
+  splitPoints: number;
 }
 
 export interface LolRankedSplitRewardsMetaData {
   description: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolRankedSummoner {
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolRegaliaAccountIdAndSummonerId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolRegaliaChatPresence {
-  icon: bigint;
+  icon: number;
   lol: LolRegaliaChatPresenceLolData;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolRegaliaChatPresenceExternal {
-  icon: bigint;
+  icon: number;
   id: string;
   lol: string | undefined;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolRegaliaChatPresenceLolData {
-  level: bigint;
+  level: number;
   rankedLeagueDivision: LolRegaliaLeagueDivision;
   rankedLeagueQueue: LolRegaliaLeagueQueueType;
   rankedLeagueTier: LolRegaliaLeagueTier;
   rankedPrevSeasonDivision: LolRegaliaLeagueDivision;
   rankedPrevSeasonTier: LolRegaliaLeagueTier;
-  rankedSplitRewardLevel: bigint;
+  rankedSplitRewardLevel: number;
   regalia: LolRegaliaRegaliaSettings;
 }
 
 export interface LolRegaliaItemKey {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export type LolRegaliaLeagueDivision = "I" | "II" | "III" | "IV" | "V" | "NA";
@@ -13094,7 +13094,7 @@ export interface LolRegaliaRankedStats {
   highestPreviousSeasonAchievedTier: LolRegaliaLeagueTier;
   highestRankedEntry: LolRegaliaRankedQueueStats;
   queues: Array<LolRegaliaRankedQueueStats>;
-  rankedRegaliaLevel: bigint;
+  rankedRegaliaLevel: number;
 }
 
 export interface LolRegaliaRegalia {
@@ -13102,8 +13102,8 @@ export interface LolRegaliaRegalia {
   crestType: string;
   highestRankedEntry: LolRegaliaRegaliaRankedEntry;
   lastSeasonHighestRank: LolRegaliaLeagueTier;
-  profileIconId: bigint;
-  summonerLevel: bigint;
+  profileIconId: number;
+  summonerLevel: number;
 }
 
 export interface LolRegaliaRegaliaAsync {
@@ -13137,7 +13137,7 @@ export interface LolRegaliaRegaliaPreferences {
 export interface LolRegaliaRegaliaRankedEntry {
   division: LolRegaliaLeagueDivision;
   queueType: LolRegaliaLeagueQueueType;
-  splitRewardLevel: bigint;
+  splitRewardLevel: number;
   tier: LolRegaliaLeagueTier;
 }
 
@@ -13147,8 +13147,8 @@ export interface LolRegaliaRegaliaSettings {
 }
 
 export interface LolRegaliaRegaliaSettingsExternal {
-  bannerType: bigint;
-  crestType: bigint;
+  bannerType: number;
+  crestType: number;
 }
 
 export interface LolRegaliaRegaliaWithPreferences {
@@ -13158,15 +13158,15 @@ export interface LolRegaliaRegaliaWithPreferences {
   lastSeasonHighestRank: LolRegaliaLeagueTier;
   preferredBannerType: string;
   preferredCrestType: string;
-  profileIconId: bigint;
-  summonerLevel: bigint;
+  profileIconId: number;
+  summonerLevel: number;
 }
 
 export interface LolRegaliaSummoner {
-  profileIconId: bigint;
+  profileIconId: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolRegaliaSummonerProfile {
@@ -13240,15 +13240,15 @@ export interface LolReplaysReplayContextData {
 }
 
 export interface LolReplaysReplayCreateMetadata {
-  gameEnd: bigint;
+  gameEnd: number;
   gameType: string;
   gameVersion: string;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolReplaysReplayMetadata {
-  downloadProgress: bigint;
-  gameId: bigint;
+  downloadProgress: number;
+  gameId: number;
   state: LolReplaysMetadataState;
 }
 
@@ -13281,10 +13281,10 @@ export interface LolReplaysReplaysSettingsResource {
 }
 
 export interface LolReplaysRoflFileMetadata {
-  gameLength: bigint;
+  gameLength: number;
   gameVersion: string;
-  lastGameChunkId: bigint;
-  lastKeyFrameId: bigint;
+  lastGameChunkId: number;
+  lastKeyFrameId: number;
 }
 
 export type LolRewardsGrantStatus =
@@ -13341,7 +13341,7 @@ export interface LolRewardsReward {
   itemType: string;
   localizations: string | undefined;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LolRewardsRewardGrant {
@@ -13363,8 +13363,8 @@ export interface LolRewardsSelectionRequestDTO {
 }
 
 export interface LolRewardsSelectionStrategyConfig {
-  maxSelectionsAllowed: bigint;
-  minSelectionsAllowed: bigint;
+  maxSelectionsAllowed: number;
+  minSelectionsAllowed: number;
 }
 
 export interface LolRewardsSvcRewardGrant {
@@ -13385,7 +13385,7 @@ export interface LolRewardsSvcRewardGrantElement {
   itemType: string;
   localizations: string | undefined;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
   status: LolRewardsRewardStatus;
 }
 
@@ -13404,11 +13404,11 @@ export interface LolRewardsSvcRewardGroup {
 }
 
 export interface LolRiotMessagingServiceChampionMasteryLevelUp {
-  championId: bigint;
-  championLevel: bigint;
+  championId: number;
+  championLevel: number;
   hasLeveledUp: boolean;
-  id: bigint;
-  playerId: bigint;
+  id: number;
+  playerId: number;
 }
 
 export type LolRiotMessagingServiceGameflowPhase =
@@ -13437,7 +13437,7 @@ export interface LolRiotclientUpgraderGameflowAvailability {
 }
 
 export interface LolRsoAuthAccessToken {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
@@ -13460,7 +13460,7 @@ export type LolRsoAuthAuthHintType =
   | "ambiguous_username";
 
 export interface LolRsoAuthAuthorization {
-  currentAccountId: bigint;
+  currentAccountId: number;
   currentPlatformId: string;
   subject: string;
 }
@@ -13495,12 +13495,12 @@ export interface LolRsoAuthDeviceId {
 
 export interface LolRsoAuthEntitlementsToken {
   entitlements: Array<string>;
-  expiry: bigint;
+  expiry: number;
   token: string;
 }
 
 export interface LolRsoAuthIdToken {
-  expiry: bigint;
+  expiry: number;
   token: string;
 }
 
@@ -13591,7 +13591,7 @@ export interface LolServiceStatusRegionLocaleResource {
 export interface LolServiceStatusRiotStatusIncident {
   archive_at: string;
   created_at: string;
-  id: bigint;
+  id: number;
   incident_severity: string;
   platforms: Array<string>;
   titles: Array<LolServiceStatusRiotStatusTitle>;
@@ -13602,7 +13602,7 @@ export interface LolServiceStatusRiotStatusIncident {
 export interface LolServiceStatusRiotStatusMaintenance {
   archive_at: string;
   created_at: string;
-  id: bigint;
+  id: number;
   maintenance_status: string;
   platforms: Array<string>;
   titles: Array<LolServiceStatusRiotStatusTitle>;
@@ -13631,7 +13631,7 @@ export interface LolServiceStatusRiotStatusTranslation {
 export interface LolServiceStatusRiotStatusUpdate {
   author: string;
   created_at: string;
-  id: bigint;
+  id: number;
   publish: boolean;
   publish_locations: Array<string>;
   translations: Array<LolServiceStatusRiotStatusTranslation>;
@@ -13652,17 +13652,17 @@ export interface LolServiceStatusTickerMessage {
 }
 
 export interface LolSettingsLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   state: LolSettingsLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolSettingsLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
 
 export interface LolSettingsSettingCategory {
   data: boolean | undefined;
-  schemaVersion: bigint;
+  schemaVersion: number;
 }
 
 export interface LolShutdownShutdownNotification {
@@ -13708,12 +13708,12 @@ export interface LolSimpleDialogMessagesLoginDataPacket {
 
 export interface LolSimpleDialogMessagesMessage {
   body: boolean | undefined;
-  id: bigint;
+  id: number;
   type: string;
 }
 
 export interface LolSimpleDialogMessagesSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
@@ -13721,14 +13721,14 @@ export interface LolSimpleDialogMessagesSimpleMessage {
 
 export interface LolSocialLeaderboardFriendResource {
   availability: string;
-  icon: bigint;
+  icon: number;
   name: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolSocialLeaderboardGiftingFriend {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolSocialLeaderboardLeagueDivision = "I" | "II" | "III" | "IV" | "V" | "NA";
@@ -13757,11 +13757,11 @@ export type LolSocialLeaderboardLeagueTier =
 export interface LolSocialLeaderboardRankedQueueStats {
   division: LolSocialLeaderboardLeagueDivision;
   isProvisional: boolean;
-  leaguePoints: bigint;
-  provisionalGamesRemaining: bigint;
+  leaguePoints: number;
+  provisionalGamesRemaining: number;
   queueType: LolSocialLeaderboardLeagueQueueType;
   tier: LolSocialLeaderboardLeagueTier;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolSocialLeaderboardRankedStats {
@@ -13769,7 +13769,7 @@ export interface LolSocialLeaderboardRankedStats {
 }
 
 export interface LolSocialLeaderboardSocialLeaderboardData {
-  nextUpdateTime: bigint;
+  nextUpdateTime: number;
   rowData: Array<LolSocialLeaderboardSocialLeaderboardRowData>;
 }
 
@@ -13778,26 +13778,26 @@ export interface LolSocialLeaderboardSocialLeaderboardRowData {
   division: LolSocialLeaderboardLeagueDivision;
   isGiftable: boolean;
   isProvisional: boolean;
-  leaderboardPosition: bigint;
-  leaguePoints: bigint;
-  profileIconId: bigint;
-  provisionalGamesRemaining: bigint;
+  leaderboardPosition: number;
+  leaguePoints: number;
+  profileIconId: number;
+  provisionalGamesRemaining: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
   summonerName: string;
   tier: LolSocialLeaderboardLeagueTier;
-  wins: bigint;
+  wins: number;
 }
 
 export interface LolSocialLeaderboardSummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   internalName: string;
-  profileIconId: bigint;
+  profileIconId: number;
   puuid: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolSpectatorSpectateGameInfo {
@@ -13816,13 +13816,13 @@ export interface LolStatstonesCatalogBundle {
 }
 
 export interface LolStatstonesCatalogBundlePrice {
-  cost: bigint;
+  cost: number;
   currency: string;
 }
 
 export interface LolStatstonesCatalogItemDetails {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
   prices: Array<LolStatstonesCatalogBundlePrice>;
   releaseDate: string;
@@ -13830,24 +13830,24 @@ export interface LolStatstonesCatalogItemDetails {
 }
 
 export interface LolStatstonesChampionStatstoneSetSummary {
-  milestonesPassed: bigint;
+  milestonesPassed: number;
   name: string;
-  stonesAvailable: bigint;
-  stonesIlluminated: bigint;
-  stonesOwned: bigint;
+  stonesAvailable: number;
+  stonesIlluminated: number;
+  stonesOwned: number;
 }
 
 export interface LolStatstonesChampionStatstoneSummary {
-  championId: bigint;
-  milestonesPassed: bigint;
+  championId: number;
+  milestonesPassed: number;
   sets: Array<LolStatstonesChampionStatstoneSetSummary>;
-  stonesAvailable: bigint;
-  stonesIlluminated: bigint;
-  stonesOwned: bigint;
+  stonesAvailable: number;
+  stonesIlluminated: number;
+  stonesOwned: number;
 }
 
 export interface LolStatstonesCollectionsChampion {
-  id: bigint;
+  id: number;
   name: string;
   squarePortraitPath: string;
 }
@@ -13862,7 +13862,7 @@ export interface LolStatstonesEogNotificationEnvelope {
 export interface LolStatstonesGameDataItemReference {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolStatstonesGameDataStatstone {
@@ -13876,25 +13876,25 @@ export interface LolStatstonesGameDataStatstone {
   iconUnowned: string;
   isEpic: boolean;
   isRetired: boolean;
-  itemId: bigint;
-  milestones: Array<bigint>;
+  itemId: number;
+  milestones: Array<number>;
   name: string;
-  trackingType: bigint;
+  trackingType: number;
 }
 
 export interface LolStatstonesGameDataStatstonePack {
   contentId: string;
   description: string;
-  itemId: bigint;
+  itemId: number;
   name: string;
 }
 
 export interface LolStatstonesGameDataStatstoneSet {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   name: string;
-  price: bigint;
+  price: number;
   statstones: Array<LolStatstonesGameDataStatstone>;
 }
 
@@ -13911,7 +13911,7 @@ export interface LolStatstonesGameDataStatstonesInfo {
 
 export interface LolStatstonesLoadout {
   id: string;
-  itemId: bigint;
+  itemId: number;
   loadout: boolean | undefined | undefined;
   name: string;
   scope: string;
@@ -13920,14 +13920,14 @@ export interface LolStatstonesLoadout {
 export interface LolStatstonesLoadoutItem {
   contentId: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolStatstonesMilestoneNotificationDto {
   isCompleted: boolean;
-  level: bigint;
+  level: number;
   statstoneId: string;
-  threshold: bigint;
+  threshold: number;
 }
 
 export interface LolStatstonesMilestoneProgressNotification {
@@ -13935,11 +13935,11 @@ export interface LolStatstonesMilestoneProgressNotification {
   level: string;
   statstoneId: string;
   statstoneName: string;
-  threshold: bigint;
+  threshold: number;
 }
 
 export interface LolStatstonesNumberFormattingBehavior {
-  digitsForThousandsSeperator: bigint;
+  digitsForThousandsSeperator: number;
   trimTrailingZerosAfterDecimal: boolean;
   westernNumberGrouping: boolean;
 }
@@ -13972,19 +13972,19 @@ export interface LolStatstonesPersonalBestNotification {
 
 export interface LolStatstonesPriceInfo {
   currency: string;
-  price: bigint;
+  price: number;
 }
 
 export interface LolStatstonesProfileStatstoneSummary {
   category: string;
-  championId: bigint;
+  championId: number;
   imageUrl: string;
   name: string;
   value: string;
 }
 
 export interface LolStatstonesStatstone {
-  boundChampionItemId: bigint;
+  boundChampionItemId: number;
   category: string;
   completionValue: number;
   description: string;
@@ -14010,28 +14010,28 @@ export interface LolStatstonesStatstoneCompletion {
 
 export interface LolStatstonesStatstoneFeaturedRequest {
   existingFeatured: Array<LolStatstonesStatstone>;
-  index: bigint;
+  index: number;
 }
 
 export interface LolStatstonesStatstoneMasteryVignette {
   completedSetUuids: Array<string>;
-  masteryLevel: bigint;
-  numSetsCompleted: bigint;
+  masteryLevel: number;
+  numSetsCompleted: number;
   puuid: string;
 }
 
 export interface LolStatstonesStatstoneNotificationDto {
-  best: bigint;
-  delta: bigint;
+  best: number;
+  delta: number;
   isNewBest: boolean;
-  level: bigint;
+  level: number;
   puuid: string;
   statstoneId: string;
-  value: bigint;
+  value: number;
 }
 
 export interface LolStatstonesStatstoneNotificationEnvelopeDto {
-  gameId: bigint;
+  gameId: number;
   milestones: Array<LolStatstonesMilestoneNotificationDto>;
   updates: Array<LolStatstonesStatstoneNotificationDto>;
 }
@@ -14042,22 +14042,22 @@ export interface LolStatstonesStatstonePlayerRecord {
   dateCompleted: string;
   dateModified: string;
   entitled: boolean;
-  milestoneLevel: bigint;
-  personalBest: bigint;
+  milestoneLevel: number;
+  personalBest: number;
   puuid: string;
   statstoneId: string;
-  value: bigint;
+  value: number;
 }
 
 export interface LolStatstonesStatstoneProgress {
-  best: bigint;
+  best: number;
   category: string;
   delta: string;
   description: string;
   existingProgressPercent: string;
   imageUrl: string;
   isNewBest: boolean;
-  level: bigint;
+  level: number;
   newMilestoneDifference: string;
   newProgressPercent: string;
   nextMilestone: string;
@@ -14073,14 +14073,14 @@ export interface LolStatstonesStatstoneRekindledVignette {
 
 export interface LolStatstonesStatstoneSet {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceID: string;
-  milestonesPassed: bigint;
+  milestonesPassed: number;
   name: string;
   ownedFromPacks: Array<LolStatstonesGameDataStatstonePack>;
   prices: Array<LolStatstonesPriceInfo>;
   statstones: Array<LolStatstonesStatstone>;
-  stonesOwned: bigint;
+  stonesOwned: number;
   subInventoryType: string;
 }
 
@@ -14089,7 +14089,7 @@ export interface LolStatstonesStatstoneSetCompleteVignette {
 }
 
 export interface LolStatstonesStatstoneVignetteNotificationEnvelopeDto {
-  champId: bigint;
+  champId: number;
   champName: string;
   masteryVignetteNotifications: Array<LolStatstonesStatstoneMasteryVignette>;
   rekindledVignetteNotifications: Array<LolStatstonesStatstoneRekindledVignette>;
@@ -14099,11 +14099,11 @@ export interface LolStatstonesStatstoneVignetteNotificationEnvelopeDto {
 export interface LolStatstonesSummoner {
   displayName: string;
   puuid: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolStoreAccessTokenResource {
-  expiry: bigint;
+  expiry: number;
   scopes: Array<string>;
   token: string;
 }
@@ -14115,15 +14115,15 @@ export interface LolStoreAllSummonerData {
 
 export interface LolStoreBundleItemDTO {
   description: string;
-  discountedRp: bigint;
+  discountedRp: number;
   iconUrl: string;
   inventoryType: string;
-  ip: bigint;
-  itemId: bigint;
+  ip: number;
+  itemId: number;
   name: string;
   owned: boolean;
-  quantity: bigint;
-  rp: bigint;
+  quantity: number;
+  rp: number;
 }
 
 export interface LolStoreBundled {
@@ -14135,12 +14135,12 @@ export interface LolStoreBundled {
 export interface LolStoreBundledItem {
   discountPrices: Array<LolStoreBundledItemCost>;
   inventoryType: string;
-  itemId: bigint;
-  quantity: bigint;
+  itemId: number;
+  quantity: number;
 }
 
 export interface LolStoreBundledItemCost {
-  cost: bigint;
+  cost: number;
   costType: string;
   currency: string;
   discount: number;
@@ -14162,7 +14162,7 @@ export interface LolStoreCapOfferPayloadEntry {
   fulfillmentTypeId: string;
   inventoryTypeUUID: string;
   itemInstanceId: string;
-  itemPriceMap: bigint | undefined;
+  itemPriceMap: number | undefined;
 }
 
 export interface LolStoreCatalogInstanceToItemKeyMap {
@@ -14175,11 +14175,11 @@ export interface LolStoreCatalogItem {
   iconUrl: string;
   inactiveDate: string;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   itemInstanceId: string;
   itemRequirements: Array<LolStoreItemKey>;
   localizations: LolStoreItemLocalization | undefined;
-  maxQuantity: bigint;
+  maxQuantity: number;
   metadata: Array<LolStoreItemMetadataEntry>;
   offerId: string;
   prices: Array<LolStoreItemCost>;
@@ -14203,17 +14203,17 @@ export interface LolStoreGiftableResult {
 }
 
 export interface LolStoreGiftingConfig {
-  giftingHextecMaxDailyGiftsReceive: bigint;
-  giftingHextechMaxDailyGiftsSend: bigint;
-  giftingItemMaxDailyGiftsReceive: bigint;
-  giftingItemMaxDailyGiftsSend: bigint;
-  giftingItemMinLevelSend: bigint;
-  giftingRestrictionFlagRioter: bigint;
-  giftingRpMaxDailyGiftsReceive: bigint;
-  giftingRpMaxDailyGiftsSend: bigint;
-  giftingRpMinLevelSend: bigint;
-  recipientLevelLimitItem: bigint;
-  recipientLevelLimitRp: bigint;
+  giftingHextecMaxDailyGiftsReceive: number;
+  giftingHextechMaxDailyGiftsSend: number;
+  giftingItemMaxDailyGiftsReceive: number;
+  giftingItemMaxDailyGiftsSend: number;
+  giftingItemMinLevelSend: number;
+  giftingRestrictionFlagRioter: number;
+  giftingRpMaxDailyGiftsReceive: number;
+  giftingRpMaxDailyGiftsSend: number;
+  giftingRpMinLevelSend: number;
+  recipientLevelLimitItem: number;
+  recipientLevelLimitRp: number;
   requiresIdentityVerification: boolean;
 }
 
@@ -14221,18 +14221,18 @@ export interface LolStoreGiftingFriend {
   friendsSince: string;
   nick: string;
   oldFriends: boolean;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolStoreItemCost {
-  cost: bigint;
+  cost: number;
   currency: string;
   discount: number;
 }
 
 export interface LolStoreItemKey {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolStoreItemLocalization {
@@ -14248,7 +14248,7 @@ export interface LolStoreItemMetadataEntry {
 
 export interface LolStoreItemSale {
   active: boolean;
-  id: bigint;
+  id: number;
   item: LolStoreItemKey;
   sale: LolStoreSale;
 }
@@ -14259,11 +14259,11 @@ export interface LolStoreLoginDataPacket {
 }
 
 export interface LolStoreLoginSession {
-  accountId: bigint;
+  accountId: number;
   gasToken: boolean | undefined;
   idToken: string;
   state: LolStoreLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolStoreLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -14277,7 +14277,7 @@ export interface LolStoreNotification {
   dismissible: boolean;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -14287,7 +14287,7 @@ export interface LolStoreNotification {
 export interface LolStoreOrderNotificationResource {
   eventType: string;
   eventTypeId: string;
-  id: bigint;
+  id: number;
   status: string;
 }
 
@@ -14305,17 +14305,17 @@ export interface LolStorePageGroupingDTO {
 }
 
 export interface LolStorePlayer {
-  accountId: bigint;
-  ip: bigint;
-  rp: bigint;
-  summonerLevel: bigint;
+  accountId: number;
+  ip: number;
+  rp: number;
+  summonerLevel: number;
 }
 
 export interface LolStoreRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -14326,17 +14326,17 @@ export interface LolStoreSale {
 }
 
 export interface LolStoreServiceBalance {
-  amount: bigint;
+  amount: number;
   currency: string;
 }
 
 export interface LolStoreServiceWallet {
-  accountId: bigint;
+  accountId: number;
   balances: Array<LolStoreServiceBalance>;
 }
 
 export interface LolStoreSimpleDialogMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
@@ -14347,21 +14347,21 @@ export interface LolStoreStoreStatus {
 }
 
 export interface LolStoreSummoner {
-  acctId: bigint;
-  sumId: bigint;
+  acctId: number;
+  sumId: number;
 }
 
 export interface LolStoreSummonerLevelAndPoints {
-  summonerLevel: bigint;
+  summonerLevel: number;
 }
 
 export interface LolStoreWallet {
-  ip: bigint;
-  rp: bigint;
+  ip: number;
+  rp: number;
 }
 
 export interface LolSuggestedPlayersEndOfGamePlayer {
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
@@ -14377,12 +14377,12 @@ export interface LolSuggestedPlayersEndOfGameTeam {
 export interface LolSuggestedPlayersSuggestedPlayersConfig {
   Enabled: boolean;
   FriendsOfFriendsEnabled: boolean;
-  FriendsOfFriendsLimit: bigint;
-  MaxNumReplacements: bigint;
-  MaxNumSuggestedPlayers: bigint;
-  OnlineFriendsLimit: bigint;
-  PreviousPremadesLimit: bigint;
-  VicoriousComradesLimit: bigint;
+  FriendsOfFriendsLimit: number;
+  MaxNumReplacements: number;
+  MaxNumSuggestedPlayers: number;
+  OnlineFriendsLimit: number;
+  PreviousPremadesLimit: number;
+  VicoriousComradesLimit: number;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersDynamicClientConfig {
@@ -14392,18 +14392,18 @@ export interface LolSuggestedPlayersSuggestedPlayersDynamicClientConfig {
 export interface LolSuggestedPlayersSuggestedPlayersFriend {
   availability: string;
   name: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersKudoedPlayer {
-  kudoedSummonerId: bigint;
+  kudoedSummonerId: number;
   kudoedSummonerName: string;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersLobbyStatus {
-  invitedSummonerIds: Array<bigint>;
-  memberSummonerIds: Array<bigint>;
-  queueId: bigint;
+  invitedSummonerIds: Array<number>;
+  memberSummonerIds: Array<number>;
+  queueId: number;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersPlayerStatus {
@@ -14412,8 +14412,8 @@ export interface LolSuggestedPlayersSuggestedPlayersPlayerStatus {
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersQueue {
-  id: bigint;
-  minLevel: bigint;
+  id: number;
+  minLevel: number;
 }
 
 export type LolSuggestedPlayersSuggestedPlayersReason =
@@ -14424,38 +14424,38 @@ export type LolSuggestedPlayersSuggestedPlayersReason =
   | "LegacyPlayAgain";
 
 export interface LolSuggestedPlayersSuggestedPlayersReportedPlayer {
-  reportedSummonerId: bigint;
+  reportedSummonerId: number;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersSuggestedPlayer {
-  commonFriendId: bigint;
+  commonFriendId: number;
   commonFriendName: string;
   reason: LolSuggestedPlayersSuggestedPlayersReason;
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersSummoner {
   displayName: string;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
 }
 
 export interface LolSuggestedPlayersSuggestedPlayersVictoriousComrade {
-  summonerId: bigint;
+  summonerId: number;
   summonerName: string;
 }
 
 export interface LolSummonerAccountIdAndSummonerId {
-  accountId: bigint;
-  summonerId: bigint;
+  accountId: number;
+  summonerId: number;
 }
 
 export interface LolSummonerAutoFillQueueDto {
   autoFillEligible: boolean;
   autoFillProtectedForPromos: boolean;
   autoFillProtectedForStreaking: boolean;
-  queueId: bigint;
+  queueId: number;
 }
 
 export interface LolSummonerGameloopPlayerInfoV2 {
@@ -14464,24 +14464,24 @@ export interface LolSummonerGameloopPlayerInfoV2 {
 }
 
 export interface LolSummonerLevelField {
-  finalLevel: bigint;
-  initialLevel: bigint;
+  finalLevel: number;
+  initialLevel: number;
   progress: LolSummonerLevelProgression;
 }
 
 export interface LolSummonerLevelProgression {
-  finalLevelBoundary: bigint;
-  finalXp: bigint;
-  initialLevelBoundary: bigint;
-  initialXp: bigint;
+  finalLevelBoundary: number;
+  finalXp: number;
+  initialLevelBoundary: number;
+  initialXp: number;
 }
 
 export interface LolSummonerLoginSession {
-  accountId: bigint;
+  accountId: number;
   connected: boolean;
   puuid: string;
   state: LolSummonerLoginSessionStates;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export type LolSummonerLoginSessionStates = "IN_PROGRESS" | "SUCCEEDED" | "LOGGING_OUT" | "ERROR";
@@ -14496,12 +14496,12 @@ export type LolSummonerProfilePrivacyEnabledState = "UNKNOWN" | "ENABLED" | "DIS
 export type LolSummonerProfilePrivacySetting = "PRIVATE" | "PUBLIC";
 
 export interface LolSummonerRerollDataBagForClientV1 {
-  maximumRerolls: bigint;
-  pointCostOfReroll: bigint;
-  pointsUntilNextReroll: bigint;
-  queueId: bigint;
-  rerollCount: bigint;
-  totalPoints: bigint;
+  maximumRerolls: number;
+  pointCostOfReroll: number;
+  pointsUntilNextReroll: number;
+  queueId: number;
+  rerollCount: number;
+  totalPoints: number;
 }
 
 export interface LolSummonerStatus {
@@ -14509,26 +14509,26 @@ export interface LolSummonerStatus {
 }
 
 export interface LolSummonerSummoner {
-  accountId: bigint;
+  accountId: number;
   displayName: string;
   internalName: string;
   nameChangeFlag: boolean;
-  percentCompleteForNextLevel: bigint;
+  percentCompleteForNextLevel: number;
   privacy: LolSummonerProfilePrivacySetting;
-  profileIconId: bigint;
+  profileIconId: number;
   puuid: string;
   rerollPoints: LolSummonerSummonerRerollPoints;
-  summonerId: bigint;
-  summonerLevel: bigint;
+  summonerId: number;
+  summonerLevel: number;
   unnamed: boolean;
-  xpSinceLastLevel: bigint;
-  xpUntilNextLevel: bigint;
+  xpSinceLastLevel: number;
+  xpUntilNextLevel: number;
 }
 
 export interface LolSummonerSummonerCacheData {
   privacy: LolSummonerProfilePrivacySetting;
   summoner: LolSummonerSummoner;
-  summonerIcon: bigint;
+  summonerIcon: number;
   summonerName: string;
 }
 
@@ -14537,37 +14537,37 @@ export interface LolSummonerSummonerCreateRequest {
 }
 
 export interface LolSummonerSummonerCreatedId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolSummonerSummonerDTO {
-  accountId: bigint;
-  expPoints: bigint;
-  expToNextLevel: bigint;
-  id: bigint;
-  level: bigint;
+  accountId: number;
+  expPoints: number;
+  expToNextLevel: number;
+  id: number;
+  level: number;
   name: string;
   nameChangeFlag: boolean;
   partnerId: string;
   privacy: LolSummonerProfilePrivacySetting;
-  profileIconId: bigint;
+  profileIconId: number;
   puuid: string;
   unnamed: boolean;
 }
 
 export interface LolSummonerSummonerIcon {
   inventoryToken: string;
-  profileIconId: bigint;
+  profileIconId: number;
 }
 
 export interface LolSummonerSummonerIdAndIcon {
-  profileIconId: bigint;
-  summonerId: bigint;
+  profileIconId: number;
+  summonerId: number;
 }
 
 export interface LolSummonerSummonerIdAndName {
   displayName: string;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolSummonerSummonerProfileUpdate {
@@ -14581,17 +14581,17 @@ export interface LolSummonerSummonerRequestedName {
 }
 
 export interface LolSummonerSummonerRerollPoints {
-  currentPoints: bigint;
-  maxRolls: bigint;
-  numberOfRolls: bigint;
-  pointsCostToRoll: bigint;
-  pointsToReroll: bigint;
+  currentPoints: number;
+  maxRolls: number;
+  numberOfRolls: number;
+  pointsCostToRoll: number;
+  pointsToReroll: number;
 }
 
 export interface LolSummonerSummonerSession {
   displayName: string;
   isNewPlayer: boolean;
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolSummonerXpAndLevelMessage {
@@ -14601,7 +14601,7 @@ export interface LolSummonerXpAndLevelMessage {
 
 export interface LolTastesDataModelResponse {
   modelData: boolean | undefined;
-  responseCode: bigint;
+  responseCode: number;
 }
 
 export interface LolTftLolTftHubFooterColors {
@@ -14649,12 +14649,12 @@ export interface LolTrophiesLoadout {
 export interface LolTrophiesLoadoutItem {
   data: string | undefined;
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
 }
 
 export interface LolTrophiesOtherPlayerTrophyInventoryItem {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   payload: LolTrophiesCapClashTrophyEntitlementPayload;
   purchaseDate: string;
   uuid: string;
@@ -14666,13 +14666,13 @@ export interface LolTrophiesTournamentTrophyInventoryItem {
 }
 
 export interface LolTrophiesTrophyProfileData {
-  bracket: bigint;
+  bracket: number;
   cup: string;
   gem: string;
   pedestal: string;
-  seasonId: bigint;
+  seasonId: number;
   theme: string;
-  tier: bigint;
+  tier: number;
 }
 
 export type LolUserExperienceGameflowPhase =
@@ -14696,15 +14696,15 @@ export interface LolUserExperienceGameflowSession {
 }
 
 export interface LolWorldsTokenCardAccountIdAndSummonerId {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface LolWorldsTokenCardInventoryItem {
   inventoryType: string;
-  itemId: bigint;
+  itemId: number;
   ownershipType: LolWorldsTokenCardItemOwnershipType;
   purchaseDate: string;
-  quantity: bigint;
+  quantity: number;
   uuid: string;
 }
 
@@ -14738,12 +14738,12 @@ export interface LolWorldsTokenCardTokenUpsell {
   buttonText: string;
   currencyUrl: string;
   currentlyLocked: LolWorldsTokenCardTokenUpsellLockedType;
-  dependentInventoryId: bigint;
+  dependentInventoryId: number;
   dependentInventoryType: string;
   endDate: string;
   id: string;
   internalName: string;
-  lockedCount: bigint;
+  lockedCount: number;
   premiumCurrencyName: string;
   purchaseUrl: string;
   startDate: string;
@@ -14758,20 +14758,20 @@ export type LolWorldsTokenCardTokenUpsellLockedType = "UNASSIGNED" | "UNLOCKED" 
 export interface LootItemClientDTO {
   asset: string;
   displayCategories: string;
-  expiryTime: bigint;
+  expiryTime: number;
   lootName: string;
   rarity: string;
-  rentalGames: bigint;
-  rentalSeconds: bigint;
-  storeItemId: bigint;
+  rentalGames: number;
+  rentalSeconds: number;
+  storeItemId: number;
   tags: string;
   type: string;
   upgradeLootName: string;
-  value: bigint;
+  value: number;
 }
 
 export interface LootItemListClientDTO {
-  lastUpdate: bigint;
+  lastUpdate: number;
   lootItems: Array<LootItemClientDTO>;
 }
 
@@ -14800,7 +14800,7 @@ export interface LootLcdsRecipeClientDTO {
 }
 
 export interface LootLcdsRecipeListClientDTO {
-  lastUpdate: bigint;
+  lastUpdate: number;
   recipes: Array<LootLcdsRecipeClientDTO>;
 }
 
@@ -14820,11 +14820,11 @@ export interface LootLcdsRecipeOutputDTO {
 export interface LootLcdsRecipeSlotClientDTO {
   quantityExpression: string;
   query: string;
-  slotNumber: bigint;
+  slotNumber: number;
 }
 
 export interface LootLedgerRecipeConfigMap {
-  lastUpdate: bigint;
+  lastUpdate: number;
   lootLedgerRecipeDTOMap: LootLedgerRecipeConfiguration | undefined;
 }
 
@@ -14847,13 +14847,13 @@ export interface LootOddsDTO {
   dropRate: number;
   label: string;
   lootId: string;
-  lootOrder: bigint;
+  lootOrder: number;
   parentId: string;
-  quantity: bigint;
+  quantity: number;
 }
 
 export interface LootSimpleDialogMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
@@ -14866,7 +14866,7 @@ export interface MatchedPlayerDTO {
 
 export interface MatchmakingLcdsBustedLeaver {
   accessToken: string;
-  leaverPenaltyMillisRemaining: bigint;
+  leaverPenaltyMillisRemaining: number;
   reasonFailed: string;
   summoner: MatchmakingLcdsSummoner;
 }
@@ -14895,9 +14895,9 @@ export interface MatchmakingLcdsMatchMakerParams {
   invitationId: string;
   languages: string;
   lastMaestroMessage: string;
-  queueIds: Array<bigint>;
-  team: Array<bigint>;
-  teamId: bigint;
+  queueIds: Array<number>;
+  team: Array<number>;
+  teamId: number;
 }
 
 export interface MatchmakingLcdsMatchMakerPayload {
@@ -14905,37 +14905,37 @@ export interface MatchmakingLcdsMatchMakerPayload {
 }
 
 export interface MatchmakingLcdsPlayerParticipant {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface MatchmakingLcdsQueueDisabled {
   message: string;
-  queueId: bigint;
+  queueId: number;
   reasonFailed: string;
   summoner: MatchmakingLcdsSummoner;
 }
 
 export interface MatchmakingLcdsQueueDodger {
-  dodgePenaltyRemainingTime: bigint;
+  dodgePenaltyRemainingTime: number;
   reasonFailed: string;
   summoner: MatchmakingLcdsSummoner;
 }
 
 export interface MatchmakingLcdsQueueInfo {
-  queueId: bigint;
-  waitTime: bigint;
+  queueId: number;
+  waitTime: number;
 }
 
 export interface MatchmakingLcdsQueueRestricted {
   message: string;
-  queueId: bigint;
+  queueId: number;
   reasonFailed: string;
   summoner: MatchmakingLcdsSummoner;
 }
 
 export interface MatchmakingLcdsQueueThrottled {
   message: string;
-  queueId: bigint;
+  queueId: number;
   reasonFailed: string;
   summoner: MatchmakingLcdsSummoner;
 }
@@ -14947,12 +14947,12 @@ export interface MatchmakingLcdsSearchingForMatchNotification {
 
 export interface MatchmakingLcdsSummoner {
   name: string;
-  sumId: bigint;
+  sumId: number;
 }
 
 export interface MemberBanUnbanTournament {
-  tournamentId: bigint;
-  tournamentPhaseLockInTime: bigint;
+  tournamentId: number;
+  tournamentPhaseLockInTime: number;
   tournamentnameLocKey: string;
   tournamentnameLocKeySecondary: string;
 }
@@ -14967,10 +14967,10 @@ export interface MetricMetadata {
   destination: string;
   info: string;
   notify: MetricMetadataNotify;
-  period: bigint;
+  period: number;
   pretty_name: string;
   priority: MetricPriority;
-  sample_window_ms: bigint;
+  sample_window_ms: number;
   transientAggregation: AggregationType;
   type: MetricType;
   units: string;
@@ -15006,7 +15006,7 @@ export type MetricPriority = "low" | "medium" | "high";
 export type MetricType = "unknown" | "percentage" | "count" | "duration" | "rate";
 
 export interface MissionAlertDTO {
-  alertTime: bigint;
+  alertTime: number;
   message: string;
   type: string;
 }
@@ -15017,15 +15017,15 @@ export interface MissionDisplay {
 }
 
 export interface MissionMetadata {
-  level: bigint;
+  level: number;
   npeRewardPack: NpeRewardPackMetadata;
   tutorial: TutorialMetadata;
 }
 
 export interface MissionProgressDTO {
-  currentProgress: bigint;
-  lastViewedProgress: bigint;
-  totalCount: bigint;
+  currentProgress: number;
+  lastViewedProgress: number;
+  totalCount: number;
 }
 
 export interface MissionRequirementDTO {
@@ -15037,12 +15037,12 @@ export interface MissionsCompressedPayloadDTO {
 }
 
 export interface MultipleReplayMetadataRequestV2 {
-  gameIds: Array<bigint>;
+  gameIds: Array<number>;
   platformId: string;
 }
 
 export interface MultipleReplayMetadataResponseItemV2 {
-  gameId: bigint;
+  gameId: number;
   metadata: ReplayMetadataV2;
   status: ReplayResponseStatus;
 }
@@ -15055,7 +15055,7 @@ export interface NonTimingEventV1 {
   eventName: string;
   unit: string;
   value: string;
-  when: bigint;
+  when: number;
 }
 
 export interface NpeReward {
@@ -15064,7 +15064,7 @@ export interface NpeReward {
 }
 
 export interface NpeRewardPackMetadata {
-  index: bigint;
+  index: number;
   majorReward: NpeReward;
   minorRewards: Array<NpeReward>;
   premiumReward: boolean;
@@ -15072,23 +15072,23 @@ export interface NpeRewardPackMetadata {
 }
 
 export interface OpenedTeamDTO {
-  captainId: bigint;
+  captainId: number;
   invitationId: string;
   invitees: Array<PendingRosterInviteeDTO>;
-  logo: bigint;
-  logoColor: bigint;
+  logo: number;
+  logoColor: number;
   members: Array<OpenedTeamMemberDTO>;
   name: string;
   openPositions: Array<Position>;
   shortName: string;
-  tier: bigint;
+  tier: number;
 }
 
 export interface OpenedTeamMemberDTO {
-  friendship: bigint;
-  playerId: bigint;
+  friendship: number;
+  playerId: number;
   position: Position;
-  tier: bigint;
+  tier: number;
 }
 
 export interface PartiesVoiceDTO {
@@ -15127,9 +15127,9 @@ export type PatcherComponentStateAction =
   | "Migrating";
 
 export interface PatcherComponentStateProgress {
-  bytesComplete: bigint;
+  bytesComplete: number;
   bytesPerSecond: number;
-  bytesRequired: bigint;
+  bytesRequired: number;
 }
 
 export type PatcherComponentStateWorkType = "Scanning" | "Network" | "Disk";
@@ -15178,7 +15178,7 @@ export interface PatcherProductState {
 export interface PatcherStatus {
   connectedToPatchServer: boolean;
   hasUpdatesOnRestart: boolean;
-  successfullyInstalledVersion: bigint;
+  successfullyInstalledVersion: number;
   willRestartOnSelfUpdate: boolean;
 }
 
@@ -15193,7 +15193,7 @@ export interface PaymentsFrontEndRequest {
   isPrepaid: boolean;
   localeId: string;
   rsoToken: string;
-  summonerLevel: bigint;
+  summonerLevel: number;
   usePmcSessions: boolean;
 }
 
@@ -15207,7 +15207,7 @@ export interface PaymentsPMCStartUrlRequest {
   gifteeMessage: string;
   isPrepaid: boolean;
   localeId: string;
-  summonerLevel: bigint;
+  summonerLevel: number;
 }
 
 export interface PaymentsPMCStartUrlResult {
@@ -15216,45 +15216,45 @@ export interface PaymentsPMCStartUrlResult {
   localeId: string;
   playerFacingId: string;
   pmcStartUrl: string;
-  summonerLevel: bigint;
+  summonerLevel: number;
   userId: string;
 }
 
 export interface PendingOpenedTeamDTO {
   invitationId: string;
-  logo: bigint;
-  logoColor: bigint;
+  logo: number;
+  logoColor: number;
   name: string;
   shortName: string;
-  tier: bigint;
+  tier: number;
 }
 
 export interface PendingRosterDTO {
-  captainId: bigint;
+  captainId: number;
   highTierVariance: boolean;
   invitationId: string;
   inviteFaileds: Array<FailedInvite>;
   invitees: Array<PendingRosterInviteeDTO>;
   lft: boolean;
-  logo: bigint;
-  logoColor: bigint;
+  logo: number;
+  logoColor: number;
   members: Array<PendingRosterMemberDTO>;
   multiUserChatJWT: string;
   name: string;
   rewardLogos: Array<RewardLogo>;
   shortName: string;
   ticketOffers: Array<TicketOfferDTO>;
-  tier: bigint;
-  tournamentId: bigint;
-  version: bigint;
+  tier: number;
+  tournamentId: number;
+  version: number;
 }
 
 export interface PendingRosterInviteeDTO {
-  inviteTime: bigint;
+  inviteTime: number;
   inviteType: InviteType;
-  inviteeId: bigint;
+  inviteeId: number;
   inviteeState: PendingRosterInviteeState;
-  inviter: bigint;
+  inviter: number;
 }
 
 export type PendingRosterInviteeState =
@@ -15270,29 +15270,29 @@ export type PendingRosterInviteeState =
   | "SELFJOIN_REVOKED";
 
 export interface PendingRosterMemberDTO {
-  bet: bigint;
+  bet: number;
   betType: TicketType;
-  joinTime: bigint;
+  joinTime: number;
   memberState: PendingRosterMemberState;
-  pendingPay: bigint;
-  pendingPremiumPay: bigint;
-  playerId: bigint;
+  pendingPay: number;
+  pendingPremiumPay: number;
+  playerId: number;
   position: Position;
-  selfBet: bigint;
-  tier: bigint;
+  selfBet: number;
+  tier: number;
 }
 
 export type PendingRosterMemberState = "NOT_READY" | "FORCED_NOT_READY" | "READY" | "LEFT" | "KICK";
 
 export interface PersonalizedOffersLcdsChampionDTO {
-  championId: bigint;
+  championId: number;
   owned: boolean;
 }
 
 export interface PersonalizedOffersLcdsChampionSkinDTO {
-  championId: bigint;
+  championId: number;
   owned: boolean;
-  skinId: bigint;
+  skinId: number;
 }
 
 export interface PersonalizedOffersLcdsClientDynamicConfigurationNotification {
@@ -15306,31 +15306,31 @@ export interface PersonalizedOffersStoreFulfillmentNotification {
 }
 
 export interface PhaseInMember {
-  bet: bigint;
-  pendingPay: bigint;
-  playerId: bigint;
-  selfBet: bigint;
+  bet: number;
+  pendingPay: number;
+  playerId: number;
+  selfBet: number;
 }
 
 export interface PhaseRosterDTO {
   bracketDTO: Bracket;
-  bracketId: bigint;
-  checkinTime: bigint;
-  period: bigint;
-  phaseId: bigint;
+  bracketId: number;
+  checkinTime: number;
+  period: number;
+  phaseId: number;
   phaseRosterSubs: Array<PhaseRosterSubDTO>;
 }
 
 export interface PhaseRosterSubDTO {
-  bet: bigint;
+  bet: number;
   betType: TicketType;
-  pay: bigint;
-  playerId: bigint;
+  pay: number;
+  playerId: number;
   position: Position;
-  premiumPay: bigint;
-  replacedPlayerId: bigint;
+  premiumPay: number;
+  replacedPlayerId: number;
   subState: SubState;
-  tier: bigint;
+  tier: number;
 }
 
 export type PickModes = "NOT_PICKING" | "IN_PROGRESS" | "DONE";
@@ -15341,14 +15341,14 @@ export interface PlayerBehaviorLcdsForcedClientShutdown {
 }
 
 export interface PlayerBehaviorLcdsSimpleMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
 }
 
 export interface PlayerBehaviorSimpleMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
@@ -15359,39 +15359,39 @@ export interface PlayerDTO {
   notifications: Array<ClashOfflineNotification>;
   primaryPos: string;
   secondaryPos: string;
-  tmntLosses: bigint;
-  tmntWins: bigint;
+  tmntLosses: number;
+  tmntWins: number;
 }
 
 export interface PlayerFinderDTO {
-  friendId: bigint;
-  playerId: bigint;
+  friendId: number;
+  playerId: number;
   primaryPos: Position;
   secondaryPos: Position;
-  tier: bigint;
+  tier: number;
   type: PlayerFinderEnum;
 }
 
 export type PlayerFinderEnum = "FREEAGENT" | "FRIEND";
 
 export interface PlayerInfoDTO {
-  playerId: bigint;
+  playerId: number;
   position: string;
   role: Role;
   teamId: string;
 }
 
 export interface PlayerInventory {
-  champions: Array<bigint>;
-  icons: Array<bigint>;
+  champions: Array<number>;
+  icons: Array<number>;
   inventoryJwts: Array<string>;
-  skins: Array<bigint>;
-  wardSkins: Array<bigint>;
+  skins: Array<number>;
+  wardSkins: Array<number>;
 }
 
 export interface PlayerLootDTO {
-  count: bigint;
-  expiryTime: bigint;
+  count: number;
+  expiryTime: number;
   lootName: string;
   refId: string;
 }
@@ -15415,21 +15415,21 @@ export interface PlayerMissionDTO {
   backgroundImageUrl: string;
   celebrationType: string;
   clientNotifyLevel: string;
-  completedDate: bigint;
+  completedDate: number;
   completionExpression: string;
-  cooldownTimeMillis: bigint;
+  cooldownTimeMillis: number;
   description: string;
   display: MissionDisplay;
   displayType: string;
-  earnedDate: bigint;
-  endTime: bigint;
+  earnedDate: number;
+  endTime: number;
   expiringWarnings: Array<MissionAlertDTO>;
   helperText: string;
   iconImageUrl: string;
   id: string;
   internalName: string;
   isNew: boolean;
-  lastUpdatedTimestamp: bigint;
+  lastUpdatedTimestamp: number;
   locale: string;
   media: string | undefined;
   metadata: MissionMetadata;
@@ -15438,16 +15438,16 @@ export interface PlayerMissionDTO {
   requirements: Array<string>;
   rewardStrategy: RewardStrategy;
   rewards: Array<PlayerMissionRewardDTO>;
-  sequence: bigint;
+  sequence: number;
   seriesName: string;
-  startTime: bigint;
+  startTime: number;
   status: string;
   title: string;
   viewed: boolean;
 }
 
 export interface PlayerMissionEligibilityData {
-  level: bigint;
+  level: number;
   loyaltyEnabled: boolean;
   playerInventory: PlayerInventory;
   userInfoToken: string;
@@ -15459,7 +15459,7 @@ export interface PlayerMissionObjectiveDTO {
   progress: MissionProgressDTO;
   requirements: Array<string>;
   rewardGroups: Array<string>;
-  sequence: bigint;
+  sequence: number;
   status: string;
   type: string;
 }
@@ -15471,18 +15471,18 @@ export interface PlayerMissionRewardDTO {
   isObjectiveBasedReward: boolean;
   itemId: string;
   media: string | undefined;
-  quantity: bigint;
+  quantity: number;
   rewardFulfilled: boolean;
   rewardGroup: string;
   rewardGroupSelected: boolean;
   rewardType: string;
-  sequence: bigint;
+  sequence: number;
   smallIconUrl: string;
   uniqueName: string;
 }
 
 export interface PlayerNotificationsPlayerNotificationConfigResource {
-  ExpirationCheckFrequency: bigint;
+  ExpirationCheckFrequency: number;
 }
 
 export interface PlayerNotificationsPlayerNotificationResource {
@@ -15494,7 +15494,7 @@ export interface PlayerNotificationsPlayerNotificationResource {
   dismissible: boolean;
   expires: string;
   iconUrl: string;
-  id: bigint;
+  id: number;
   source: string;
   state: string;
   titleKey: string;
@@ -15505,12 +15505,12 @@ export interface PlayerNotificationsRiotMessagingServiceMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
 export interface PlayerParticipant {
-  summonerId: bigint;
+  summonerId: number;
 }
 
 export interface PlayerRosterHistoryDTO {
@@ -15518,10 +15518,10 @@ export interface PlayerRosterHistoryDTO {
 }
 
 export interface PlayerTierDTO {
-  playerId: bigint;
+  playerId: number;
   primaryPos: Position;
   secondPos: Position;
-  tier: bigint;
+  tier: number;
 }
 
 export interface PluginDescriptionResource {
@@ -15575,7 +15575,7 @@ export interface PluginResource {
   fullName: string;
   implementedContracts: Array<PluginResourceContract>;
   mountedAssetBundles: string | undefined;
-  orderWADFileMounted: bigint;
+  orderWADFileMounted: number;
   shortName: string;
   subtype: string;
   supertype: string;
@@ -15615,68 +15615,68 @@ export interface ProcessControlProcess {
 }
 
 export interface PublicPhaseSubDTO {
-  playerId: bigint;
-  replacedPlayerId: bigint;
+  playerId: number;
+  replacedPlayerId: number;
 }
 
 export interface PublicPhaseSubsDTO {
-  phaseId: bigint;
+  phaseId: number;
   phaseSubs: Array<PublicPhaseSubDTO>;
 }
 
 export interface PublicRosterDTO {
-  id: bigint;
-  logo: bigint;
-  logoColor: bigint;
-  memberIds: Array<bigint>;
+  id: number;
+  logo: number;
+  logoColor: number;
+  memberIds: Array<number>;
   name: string;
   phasesSubs: Array<PublicPhaseSubsDTO>;
   shortName: string;
-  tournamentId: bigint;
+  tournamentId: number;
 }
 
 export interface Punishment {
   permaBan: boolean;
   playerFacingMessage: string;
   punishedForChatLogs: Array<string>;
-  punishedForGameIds: Array<bigint>;
-  punishedUntilDateMillis: bigint;
-  punishmentLengthGames: bigint;
-  punishmentLengthMillis: bigint;
+  punishedForGameIds: Array<number>;
+  punishedUntilDateMillis: number;
+  punishmentLengthGames: number;
+  punishmentLengthMillis: number;
   punishmentReason: string;
   punishmentType: string;
 }
 
 export interface QueryResultDTO {
-  lastUpdate: bigint;
+  lastUpdate: number;
   queryToLootNames: boolean | undefined;
 }
 
 export interface RankedScoutingDTO {
-  playerId: bigint;
+  playerId: number;
   topMasteries: Array<ChampionMasteryPublicDTO>;
   topSeasonChampions: Array<ChampionScoutingDTO>;
-  totalMasteryScore: bigint;
+  totalMasteryScore: number;
 }
 
 export interface RankedScoutingMemberDTO {
   championScoutingData: Array<RankedScoutingTopChampionDTO>;
-  playerId: bigint;
+  playerId: number;
 }
 
 export interface RankedScoutingTopChampionDTO {
-  championId: bigint;
-  gameCount: bigint;
+  championId: number;
+  gameCount: number;
   kda: number;
-  rank: bigint;
-  winCount: bigint;
+  rank: number;
+  winCount: number;
 }
 
 export interface RedeemLootTransactionDTO {
-  accountId: bigint;
+  accountId: number;
   clientId: string;
   lootName: string;
-  playerId: bigint;
+  playerId: number;
   puuid: string;
 }
 
@@ -15694,7 +15694,7 @@ export type RemotingPrivilege = "None" | "User" | "Admin" | "Local";
 export type RemotingSerializedFormat = "JSON" | "YAML" | "MsgPack";
 
 export interface ReplayMetadataV2 {
-  fileSize: bigint;
+  fileSize: number;
   gameVersion: string;
 }
 
@@ -15706,20 +15706,20 @@ export type ReplayResponseStatus =
   | "INTERNAL_SERVER_ERROR";
 
 export interface RewardDetails {
-  rosterId: bigint;
-  teamMemberIds: Array<bigint>;
-  tournamentId: bigint;
+  rosterId: number;
+  teamMemberIds: Array<number>;
+  tournamentId: number;
 }
 
 export interface RewardLogo {
-  logo: bigint;
-  memberOwnedCount: bigint;
+  logo: number;
+  memberOwnedCount: number;
 }
 
 export interface RewardStrategy {
   groupStrategy: string;
-  selectMaxGroupCount: bigint;
-  selectMinGroupCount: bigint;
+  selectMaxGroupCount: number;
+  selectMinGroupCount: number;
 }
 
 export interface RiotMessagingServiceAcknowledgeBody {
@@ -15759,7 +15759,7 @@ export interface RmsMessage {
   payload: string;
   resource: string;
   service: string;
-  timestamp: bigint;
+  timestamp: number;
   version: string;
 }
 
@@ -15772,108 +15772,108 @@ export interface RosterAggregatedStatsDTO {
 
 export interface RosterDTO {
   banned: boolean;
-  captainId: bigint;
+  captainId: number;
   dynamicState: RosterDynamicStateDTO;
   eliminated: boolean;
-  id: bigint;
+  id: number;
   invitationId: string;
-  logo: bigint;
-  logoColor: bigint;
-  losses: bigint;
+  logo: number;
+  logoColor: number;
+  losses: number;
   members: Array<RosterMemberDTO>;
   multiUserChatJWT: string;
   name: string;
   phases: Array<PhaseRosterDTO>;
-  points: bigint;
+  points: number;
   shortName: string;
-  tier: bigint;
-  tournamentId: bigint;
-  version: bigint;
-  wins: bigint;
+  tier: number;
+  tournamentId: number;
+  version: number;
+  wins: number;
 }
 
 export interface RosterDynamicStateDTO {
   members: Array<PhaseInMember>;
-  phaseCheckinStates: Array<bigint>;
+  phaseCheckinStates: Array<number>;
   phaseRosterSubs: Array<PhaseRosterSubDTO>;
-  rosterId: bigint;
-  subbedMemberIds: Array<bigint>;
+  rosterId: number;
+  subbedMemberIds: Array<number>;
   ticketOffers: Array<TicketOfferDTO>;
-  tournamentId: bigint;
-  version: bigint;
+  tournamentId: number;
+  version: number;
   withdraw: RosterWithdraw;
 }
 
 export interface RosterMatchAggregatedStatsDTO {
-  duration: bigint;
-  gameId: bigint;
-  kills: bigint;
+  duration: number;
+  gameId: number;
+  kills: number;
   loserBracket: boolean;
-  opponentKills: bigint;
-  opponentLogo: bigint;
-  opponentLogoColor: bigint;
+  opponentKills: number;
+  opponentLogo: number;
+  opponentLogoColor: number;
   opponentShortName: string;
-  playerChampionIds: bigint | undefined;
-  round: bigint;
+  playerChampionIds: number | undefined;
+  round: number;
   win: boolean;
 }
 
 export interface RosterMemberDTO {
   bidType: TicketType;
-  currentBid: bigint;
-  joinTime: bigint;
-  pendingPremiumSpend: bigint;
-  pendingSpend: bigint;
-  playerId: bigint;
+  currentBid: number;
+  joinTime: number;
+  pendingPremiumSpend: number;
+  pendingSpend: number;
+  playerId: number;
   position: Position;
-  rosterId: bigint;
-  tier: bigint;
-  tournamentId: bigint;
+  rosterId: number;
+  tier: number;
+  tournamentId: number;
 }
 
 export interface RosterPeriodAggregatedStatsDTO {
-  bracketSize: bigint;
+  bracketSize: number;
   matchStats: Array<RosterMatchAggregatedStatsDTO>;
-  period: bigint;
-  playerBids: bigint | undefined;
-  time: bigint;
+  period: number;
+  playerBids: number | undefined;
+  time: number;
 }
 
 export interface RosterPlayerAggregatedStatsDTO {
-  rawStatsMax: bigint | undefined;
-  rawStatsSum: bigint | undefined;
+  rawStatsMax: number | undefined;
+  rawStatsSum: number | undefined;
   sub: boolean;
 }
 
 export interface RosterStatsDTO {
-  rosterId: bigint;
-  rosterLogo: bigint;
-  rosterLogoColor: bigint;
+  rosterId: number;
+  rosterLogo: number;
+  rosterLogoColor: number;
   rosterName: string;
   rosterShortName: string;
-  scheduleEndTime: bigint;
-  scheduleTime: bigint;
+  scheduleEndTime: number;
+  scheduleTime: number;
   stats: RosterAggregatedStatsDTO;
-  tier: bigint;
+  tier: number;
   tournamentNameLocKey: string;
   tournamentNameLocKeySecondary: string;
-  tournamentPeriods: bigint;
-  tournamentThemeId: bigint;
+  tournamentPeriods: number;
+  tournamentThemeId: number;
 }
 
 export interface RosterWithdraw {
-  declineWithdrawMembers: Array<bigint>;
-  gameStartBufferMs: bigint;
-  initVoteMember: bigint;
-  initVoteTime: bigint;
-  lockoutTimeMs: bigint;
-  voteTimeoutMs: bigint;
-  voteWithdrawMembers: Array<bigint>;
+  declineWithdrawMembers: Array<number>;
+  gameStartBufferMs: number;
+  initVoteMember: number;
+  initVoteTime: number;
+  lockoutTimeMs: number;
+  voteTimeoutMs: number;
+  voteWithdrawMembers: Array<number>;
 }
 
 export interface SanitizerContainsSanitizedRequest {
   aggressiveScan: boolean;
-  level: bigint;
+  level: number;
   text: string;
 }
 
@@ -15883,7 +15883,7 @@ export interface SanitizerContainsSanitizedResponse {
 
 export interface SanitizerSanitizeRequest {
   aggressiveScan: boolean;
-  level: bigint;
+  level: number;
   text: string;
   texts: Array<string>;
 }
@@ -15895,29 +15895,29 @@ export interface SanitizerSanitizeResponse {
 }
 
 export interface SanitizerSanitizerStatus {
-  breakingCharsCount: bigint;
-  filteredWordCountsByLevel: bigint | undefined;
+  breakingCharsCount: number;
+  filteredWordCountsByLevel: number | undefined;
   locale: string;
-  projectedCharsCount: bigint;
+  projectedCharsCount: number;
   ready: boolean;
   region: string;
-  whitelistedWordCountsByLevel: bigint | undefined;
+  whitelistedWordCountsByLevel: number | undefined;
 }
 
 export interface SeriesDTO {
-  createdDate: bigint;
+  createdDate: number;
   description: string;
   displayType: string;
   eligibilityType: string;
-  endDate: bigint;
+  endDate: number;
   id: string;
   internalName: string;
-  lastUpdatedTimestamp: bigint;
+  lastUpdatedTimestamp: number;
   media: SeriesMediaDTO;
   optInButtonText: string;
   optOutButtonText: string;
   parentInternalName: string;
-  startDate: bigint;
+  startDate: number;
   status: string;
   tags: Array<string>;
   title: string;
@@ -15940,14 +15940,14 @@ export interface ShutdownLcdsForcedClientShutdown {
 }
 
 export interface SimpleDialogMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
 }
 
 export interface SimpleDialogMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
@@ -15963,54 +15963,54 @@ export interface SpectatorLcdsSpectateAvailabilityResponseDto {
 export interface StoreLcdsChampionDTO {
   active: boolean;
   botEnabled: boolean;
-  championId: bigint;
+  championId: number;
   championSkins: Array<StoreLcdsChampionSkinDTO>;
-  endDate: bigint;
+  endDate: number;
   freeToPlay: boolean;
   freeToPlayReward: boolean;
   owned: boolean;
-  purchaseDate: bigint;
+  purchaseDate: number;
   rankedPlayEnabled: boolean;
   sources: Array<string>;
-  winCountRemaining: bigint;
+  winCountRemaining: number;
 }
 
 export interface StoreLcdsChampionSkinDTO {
-  championId: bigint;
-  endDate: bigint;
+  championId: number;
+  endDate: number;
   freeToPlayReward: boolean;
   lastSelected: boolean;
   owned: boolean;
-  purchaseDate: bigint;
-  skinId: bigint;
+  purchaseDate: number;
+  skinId: number;
   sources: Array<string>;
   stillObtainable: boolean;
-  winCountRemaining: bigint;
+  winCountRemaining: number;
 }
 
 export interface StoreLcdsSimpleDialogMessage {
-  accountId: bigint;
+  accountId: number;
   msgId: string;
   params: Array<string>;
   type: string;
 }
 
 export interface StoreLcdsSimpleDialogMessageResponse {
-  accountId: bigint;
+  accountId: number;
   command: string;
   msgId: string;
 }
 
 export interface StoreLcdsStoreAccountBalanceNotification {
-  ip: bigint;
-  rp: bigint;
+  ip: number;
+  rp: number;
 }
 
 export interface StoreLcdsStoreFulfillmentNotification {
   data: boolean | undefined;
   inventoryType: string;
-  ip: bigint;
-  rp: bigint;
+  ip: number;
+  rp: number;
 }
 
 export type SubState =
@@ -16023,14 +16023,14 @@ export type SubState =
   | "READY";
 
 export interface ThemeVp {
-  themeId: bigint;
-  themeVp: bigint;
+  themeId: number;
+  themeVp: number;
 }
 
 export interface TicketOfferDTO {
-  count: bigint;
-  offerPlayerId: bigint;
-  receivePlayerId: bigint;
+  count: number;
+  offerPlayerId: number;
+  receivePlayerId: number;
   ticketOfferState: TicketOfferState;
   type: TicketType;
 }
@@ -16040,58 +16040,58 @@ export type TicketOfferState = "ACTIVE" | "ACCEPTED" | "REJECTED" | "REVOKED";
 export type TicketType = "BASIC" | "PREMIUM";
 
 export interface TierConfig {
-  delayTime: bigint;
-  estimateTime: bigint;
-  tier: bigint;
+  delayTime: number;
+  estimateTime: number;
+  tier: number;
 }
 
 export interface TimeSeriesEventBeginV1 {
   eventName: string;
-  when: bigint;
+  when: number;
 }
 
 export interface TimeSeriesEventEndV1 {
   eventName: string;
   suffix: string;
-  when: bigint;
+  when: number;
 }
 
 export interface TimeSeriesEventMarkerV1 {
   eventName: string;
   markerName: string;
-  when: bigint;
+  when: number;
 }
 
 export interface TournamentDTO {
-  bracketFormationInitDelayMs: bigint;
-  bracketFormationIntervalMs: bigint;
+  bracketFormationInitDelayMs: number;
+  bracketFormationIntervalMs: number;
   bracketSize: string;
-  buyInOptions: Array<bigint>;
-  buyInOptionsPremium: Array<bigint>;
-  entryFee: bigint;
+  buyInOptions: Array<number>;
+  buyInOptionsPremium: Array<number>;
+  entryFee: number;
   honorRestriction: boolean;
-  id: bigint;
+  id: number;
   lastThemeOfSeason: boolean;
   lft: boolean;
-  maxInvites: bigint;
-  maxSub: bigint;
-  maxSuggestionsPerPlayer: bigint;
-  minGames: bigint;
+  maxInvites: number;
+  maxSub: number;
+  maxSuggestionsPerPlayer: number;
+  minGames: number;
   nameLocKey: string;
   nameLocKeySecondary: string;
   phases: Array<TournamentPhaseDTO>;
-  queueId: bigint;
+  queueId: number;
   rankRestriction: boolean;
-  resumeTime: bigint;
+  resumeTime: number;
   rewardConfig: Array<ClashRewardConfigClient>;
-  rosterCreateDeadline: bigint;
-  rosterSize: bigint;
-  scheduleEndTime: bigint;
-  scheduleTime: bigint;
-  scoutingTimeMs: bigint;
+  rosterCreateDeadline: number;
+  rosterSize: number;
+  scheduleEndTime: number;
+  scheduleTime: number;
+  scoutingTimeMs: number;
   smsRestriction: boolean;
   status: TournamentStatusEnum;
-  themeId: bigint;
+  themeId: number;
   tierConfigs: Array<TierConfig>;
   voiceEnabled: boolean;
 }
@@ -16106,33 +16106,33 @@ export interface TournamentInfoDTO {
   pendingRoster: PendingRosterDTO;
   roster: RosterDTO;
   subRosters: Array<RosterDTO>;
-  themeVp: bigint;
+  themeVp: number;
   tournament: TournamentDTO;
 }
 
 export interface TournamentInfoMinimalDTO {
-  time: bigint;
+  time: number;
   tournamentInfo: Array<TournamentInfoDTO>;
 }
 
 export interface TournamentPhaseDTO {
   cancelled: boolean;
   capacityStatus: CapacityEnum;
-  id: bigint;
-  limitTiers: Array<bigint>;
-  period: bigint;
-  registrationTime: bigint;
-  startTime: bigint;
-  tournamentId: bigint;
+  id: number;
+  limitTiers: Array<number>;
+  period: number;
+  registrationTime: number;
+  startTime: number;
+  tournamentId: number;
 }
 
 export interface TournamentPlayerInfoDTO {
   player: PlayerDTO;
   rosterStats: Array<RosterStatsDTO>;
-  seasonVp: bigint;
+  seasonVp: number;
   themeVps: Array<ThemeVp>;
-  tier: bigint;
-  time: bigint;
+  tier: number;
+  time: number;
   tournamentInfo: Array<TournamentInfoDTO>;
 }
 
@@ -16144,7 +16144,7 @@ export interface TracingEventV1 {
   name: string;
   src: string;
   tags: string;
-  when: bigint;
+  when: number;
 }
 
 export type TracingModuleThreadingModelV1 =
@@ -16164,7 +16164,7 @@ export type TracingModuleTypeV1 =
   | "kRemotingSource";
 
 export interface TracingModuleV1 {
-  moduleId: bigint;
+  moduleId: number;
   name: string;
   threadingModel: TracingModuleThreadingModelV1;
   type: TracingModuleTypeV1;
@@ -16173,12 +16173,12 @@ export interface TracingModuleV1 {
 export interface TracingPhaseBeginV1 {
   importance: TracingPhaseImportanceV1;
   name: string;
-  when: bigint;
+  when: number;
 }
 
 export interface TracingPhaseEndV1 {
   name: string;
-  when: bigint;
+  when: number;
 }
 
 export type TracingPhaseImportanceV1 = "trivial" | "minor" | "major";
@@ -16186,7 +16186,7 @@ export type TracingPhaseImportanceV1 = "trivial" | "minor" | "major";
 export interface TutorialMetadata {
   displayRewards: string | undefined;
   queueId: string;
-  stepNumber: bigint;
+  stepNumber: number;
   useChosenChampion: boolean;
   useQuickSearchMatchmaking: boolean;
 }
@@ -16205,45 +16205,45 @@ export interface VoiceChatAudioPropertiesResource {
   isLoopbackEnabled: boolean;
   isMicActive: boolean;
   isSpeakerActive: boolean;
-  micEnergy: bigint;
-  micVolume: bigint;
+  micEnergy: number;
+  micVolume: number;
   noiseFloorMeter: number;
-  speakerEnergy: bigint;
-  speakerVolume: bigint;
+  speakerEnergy: number;
+  speakerVolume: number;
   speechThresholdMeter: number;
 }
 
 export interface VoiceChatCallStatsResource {
   callId: string;
-  captureDeviceConsecutivelyReadCount: Array<bigint>;
+  captureDeviceConsecutivelyReadCount: Array<number>;
   codecName: string;
-  currentBars: bigint;
-  currentOpusBandwidth: bigint;
-  currentOpusBitRate: bigint;
-  currentOpusComplexity: bigint;
-  currentOpusMaxPacketSize: bigint;
-  currentOpusVbrMode: bigint;
-  incomingDiscarded: bigint;
-  incomingOutOfTime: bigint;
-  incomingPacketloss: bigint;
-  incomingReceived: bigint;
+  currentBars: number;
+  currentOpusBandwidth: number;
+  currentOpusBitRate: number;
+  currentOpusComplexity: number;
+  currentOpusMaxPacketSize: number;
+  currentOpusVbrMode: number;
+  incomingDiscarded: number;
+  incomingOutOfTime: number;
+  incomingPacketloss: number;
+  incomingReceived: number;
   lastLatencyMeasured: number;
-  latencyMeasurementCount: bigint;
-  latencyPacketsDropped: bigint;
-  latencyPacketsLost: bigint;
-  latencyPacketsMalformed: bigint;
-  latencyPacketsNegativeLatency: bigint;
-  latencyPacketsSent: bigint;
+  latencyMeasurementCount: number;
+  latencyPacketsDropped: number;
+  latencyPacketsLost: number;
+  latencyPacketsMalformed: number;
+  latencyPacketsNegativeLatency: number;
+  latencyPacketsSent: number;
   latencySum: number;
   maxLatency: number;
   minLatency: number;
-  outgoingSent: bigint;
-  plcOn: bigint;
-  plcSyntheticFrames: bigint;
+  outgoingSent: number;
+  plcOn: number;
+  plcSyntheticFrames: number;
   rFactor: number;
-  renderDeviceErrors: bigint;
-  renderDeviceOverruns: bigint;
-  renderDeviceUnderruns: bigint;
+  renderDeviceErrors: number;
+  renderDeviceOverruns: number;
+  renderDeviceUnderruns: number;
   sampleIntervalBegin: number;
   sampleIntervalEnd: number;
 }
@@ -16254,10 +16254,10 @@ export type VoiceChatCaptureDevicePermissionStatus =
   | "permissionGranted";
 
 export interface VoiceChatCodecSettingsResource {
-  codecBandwidth: bigint;
-  codecBitrate: bigint;
-  codecComplexity: bigint;
-  codecVbrMode: bigint;
+  codecBandwidth: number;
+  codecBitrate: number;
+  codecComplexity: number;
+  codecVbrMode: number;
 }
 
 export type VoiceChatConfigReadinessEnum = "NotReady" | "Ready" | "Disabled";
@@ -16266,7 +16266,7 @@ export interface VoiceChatConfigResource {
   accessTokenUri: string;
   authTokenUri: string;
   jwt2gvtUrl: string;
-  logLevel: bigint;
+  logLevel: number;
   logLevelName: string;
   logsPath: string;
   provider: string;
@@ -16290,14 +16290,14 @@ export interface VoiceChatDeviceResource {
 }
 
 export interface VoiceChatParticipantResource {
-  energy: bigint;
+  energy: number;
   id: string;
   isMuted: boolean;
   isSpeaking: boolean;
   name: string;
-  speakingTimestamp: bigint;
+  speakingTimestamp: number;
   uri: string;
-  volume: bigint;
+  volume: number;
 }
 
 export interface VoiceChatPushToTalkResource {
@@ -16306,7 +16306,7 @@ export interface VoiceChatPushToTalkResource {
 }
 
 export interface VoiceChatRsoAuthorizationResource {
-  currentAccountId: bigint;
+  currentAccountId: number;
   currentPlatformId: string;
   subject: string;
 }
@@ -16317,7 +16317,7 @@ export interface VoiceChatSessionResource {
   isTransmitEnabled: boolean;
   participants: Array<VoiceChatParticipantResource>;
   status: VoiceChatSessionStatus;
-  volume: bigint;
+  volume: number;
 }
 
 export type VoiceChatSessionStatus = "active" | "onHold";
@@ -16327,10 +16327,10 @@ export interface VoiceChatSettingsResource {
   currentRenderDeviceHandle: string;
   localMicMuted: boolean;
   loopbackEnabled: boolean;
-  micLevel: bigint;
-  speakerLevel: bigint;
-  vadHangoverTime: bigint;
-  vadSensitivity: bigint;
+  micLevel: number;
+  speakerLevel: number;
+  vadHangoverTime: number;
+  vadSensitivity: number;
 }
 
 export interface VoiceChatStateResource {
@@ -16346,15 +16346,15 @@ export type VoiceChatStateType =
   | "shuttingdown";
 
 export interface VoiceChatUpdateCodecSettingsResource {
-  codecBandwidth: bigint;
-  codecBitrate: bigint;
-  codecComplexity: bigint;
-  codecVbrMode: bigint;
+  codecBandwidth: number;
+  codecBitrate: number;
+  codecComplexity: number;
+  codecVbrMode: number;
 }
 
 export interface VoiceChatUpdateParticipantResource {
   isMuted: boolean;
-  volume: bigint;
+  volume: number;
 }
 
 export interface VoiceChatUpdateSettingsResource {
@@ -16362,24 +16362,24 @@ export interface VoiceChatUpdateSettingsResource {
   currentRenderDeviceHandle: string;
   localMicMuted: boolean;
   loopbackEnabled: boolean;
-  micLevel: bigint;
-  speakerLevel: bigint;
-  vadHangoverTime: bigint;
-  vadSensitivity: bigint;
+  micLevel: number;
+  speakerLevel: number;
+  vadHangoverTime: number;
+  vadSensitivity: number;
 }
 
 export interface VoiceChatVoiceErrorCounterResource {
-  count: bigint;
+  count: number;
   error: VoiceChatVoiceErrorResource;
-  timeOfLastError: bigint;
+  timeOfLastError: number;
 }
 
 export interface VoiceChatVoiceErrorResource {
   errorString: string;
-  responseType: bigint;
+  responseType: number;
   responseTypeString: string;
-  returnCode: bigint;
-  statusCode: bigint;
+  returnCode: number;
+  statusCode: number;
   statusString: string;
 }
 
@@ -16392,14 +16392,14 @@ export interface basicOperatingSystemInfo {
 
 export interface basicSystemInfo {
   operatingSystem: basicOperatingSystemInfo;
-  physicalMemory: bigint;
-  physicalProcessorCores: bigint;
-  processorSpeed: bigint;
+  physicalMemory: number;
+  physicalProcessorCores: number;
+  processorSpeed: number;
 }
 
 export interface cookie {
   domain: string;
-  expires: bigint;
+  expires: number;
   httponly: boolean;
   name: string;
   path: string;
